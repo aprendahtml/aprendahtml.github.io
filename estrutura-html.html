@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/estilo.css">
+		<title>Estrutura e Sintaxe do HTML</title>
+	</head>
+	<body>
+		<div class="container">
+		<header>
+			<nav class="menu">
+				<div class="logo">
+					<img src="img/html.png" alt="HTML Logo" width="80px" height="80px">
+				</div>
+				<div>
+			    	<ul class="menu-lista">
+				        <li class="menu-item menu-ativo"><a class="menu-link" href="index.html">Home</a></li>
+				     	<li class="menu-item"><a class="menu-link" href="html.html">HTML</a></li>
+				     	<li class="menu-item"><a class="menu-link" href="css.html">CSS</a></li>
+				     	<li class="menu-item"><a class="menu-link" href="javascript.html">JavaScript</a></li>
+				     	<li class="menu-item"><a class="menu-link" href="contato.html">Contato</a></li>
+			    	</ul>
+			    </div>
+			</nav>
+		</header>
+
+		<main>
+			<div class="conteudo">
+			<div class="corpo">
+			<h1>Estrutura e Sintaxe do HTML</h1>
+		<code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+		<p>Primeiro nós definimos a instrução <em><strong>doctype</strong></em> que informa ao navegador que o tipo do documento utilizado é o html 5, doctype não é um elemento, é uma instrução.</p>
+
+		<code>&lt;!DOCTYPE html&gt;</code>
+
+		<p>Depois abrimos e fechamos a tag do elemento <em><strong>html</strong></em>, todo código deve ser escrito dentro dessa tag. É recomendado usar o atributo <em><strong>lang</strong></em> com o valor <em><strong>pt-br</strong></em> para informar ao navegador que estamos usando a língua português brasileiro.</p>
+
+		<p>A sintaxe do atributo é: depois do nome da tag, um espaço, o nome do atributo, o caracter igual (<b>=</b>) e o valor entre aspas duplas (<b>“”</b>).</p>
+
+		<code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=”pt-br”&gt;
+			
+&lt;/html&gt;</pre></code>
+
+		<p>Logo abaixo da tag de abertura do elemento <em><strong>html</strong></em>, abrimos e fechamos a tag do elemento <em><strong>head</strong></em> (cabeça), dentro da tag do elemento <em><strong>head</strong></em> inserimos metadados que serão lidos pelo navegador e que não serão exibidos na página html.</p>
+
+		<code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=”pt-br”&gt;
+    &lt;head&gt;
+
+    &lt;/head&gt;
+&lt;/html&gt;</pre></code>
+
+		<p>Um dos metadados que podemos passar ao elemento <em><strong>head</strong></em> é o sistema de codificação de caracteres utilizado, no Brasil é utilizado a codificação <em><strong>utf-8</strong></em>.</p>
+
+		<p>A codificação é passada com o elemento <em><strong>meta</strong></em>, utilizando o atributo <em><strong>charset</strong></em> e o valor <em><strong>utf-8</strong></em>.</p>
+
+		<code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=”pt-br”&gt;
+    &lt;head&gt;
+        &lt;meta charset=”utf-8”&gt;
+    &lt;/head&gt;
+&lt;/html&gt;</pre></code>
+
+		<p>Note que a tag do elemento <em><strong>head</strong></em> foi escrita indentada em relação à tag do elemento <em><strong>html</strong></em>, pois  a tag <em><strong>head</strong></em> é considerado tag <em><strong>“filha”</strong></em> do elemento <em><strong>html</strong></em>, que é considerada tag <em><strong>“pai”</strong></em>, assim como a tag <em><strong>meta</strong></em> é filha da tag <em><strong>head</strong></em>.</p>
+
+		<p>Outra informação que passamos à tag <em><strong>head</strong></em> é o título da página html, que irá aparecer na barra de título do navegador e que serão lidos pelos robôs das páginas de busca.</p>
+
+		<p>O título é passado com o elemento <em><strong>title</strong></em>.</p>
+
+		<code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=”pt-br”&gt;
+    &lt;head&gt;
+        &lt;meta charset=”utf-8”&gt;
+        &lt;title&gt;Título da Página&lt;/title&gt;
+    &lt;/head&gt;
+&lt;/html&gt;</pre></code>
+
+		<p>Abaixo da tag do elemento <em><strong>head</strong></em> abrimos e fechamos a tag do elemento <em><strong>body</strong></em> (corpo), e todo o código colocado dentro do elemento <em><strong>body</strong></em> é que vai ser exibido no site pelo navegador.</p>
+
+		<code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=”pt-br”&gt;
+    &lt;head&gt;
+        &lt;meta charset=”utf-8”&gt;
+        &lt;title&gt;Título da Página&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+		<p>Essa é a sintaxe e a estrutura básica de uma página html, o que for escrito dentro da tag do elemento <em><strong>body</strong></em> será exibido pelo navegador, mas sem nenhuma estrutura, formatação, marcação de hipertexto ou interatividade.</p>
+
+		<div class="paginacao">
+				<a class="anterior" href="index.html"><< Anterior</a>
+				<a class="proxima" href="escrevendo-o-codigo-html.html">Próxima >></a>
+		</div>
+		</div>
+		</main>
+		<aside>
+			<div class="lateral">
+				<nav>
+					<h1>Índice</h1>
+					<ul class="lateral-lista">
+					    <li class="lateral-item"><a class="lateral-link" href="index.html" target="_self">O que é HTML?</a></li>
+					    <li class="lateral-item"><a class="lateral-link lateral-ativo" href="estrutura-html.html" target="_self">Estrutura e Sintaxe do HTML</a></li>
+					    <li class="lateral-item"><a class="lateral-link" href="escrevendo-o-codigo-html.html" target="_self">Escrevendo o Código HTML</a></li>
+					    <li class="lateral-item"><a class="lateral-link" href="#estrutura-basica">Teste 2</a></li>
+					    <li class="lateral-item"><a class="lateral-link" href="#estrutura-basica">Teste 3</a></li>
+					</ul>
+				</nav>
+			</div>
+		</aside>
+		<div class="clear"></div>
+		</div>
+		<footer>
+			<div class="rodape">
+				<p>Footer</p>
+			</div>
+		</footer>
+		</div>
+	</body>
+</html>
+
+		
