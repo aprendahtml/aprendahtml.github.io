@@ -51,6 +51,7 @@ object {
 .paginacao {
 	margin-top: 30px;
 	text-align: center;
+	padding-bottom: 50px;
 }
 
 .paginacao a {
@@ -252,4 +253,9 @@ kbd {
 
 abbr {
 	text-decoration: none;
+}
+
+#disqus_thread {
+	width: 600px;
+	margin: 0 auto;
 }
