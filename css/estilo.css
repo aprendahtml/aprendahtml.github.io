@@ -35,6 +35,18 @@ p {
 	text-align: justify;
 }
 
+object {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	min-height: 20%;
+}
+
+.no-padding {
+	padding: 0;
+	overflow: hidden;
+}
+
 .paginacao {
 	margin-top: 30px;
 	text-align: center;
@@ -92,9 +104,9 @@ p {
 .lateral {
 	border-right: 1px solid rgba(0, 0, 0, .1);
 	position: absolute;
-	overflow: none;
+	overflow-y: hidden;
 	width: 20%;
-	min-height: 100%;
+	min-height: 101%;
 	background-color: #e5e5e5;
 	float: left;
 	padding: 20px;
@@ -124,11 +136,6 @@ p {
 
 .lateral-link:hover {
 	color: #000;
-}
-
-.lateral-ativo {
-	color: #000;
-	text-shadow: #fff;
 }
 
 .link-externo {
@@ -218,7 +225,7 @@ main h1 {
 	text-align: center;
 }
 
-aside h1 {
+.lateral h1 {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 24px;
 	text-align: center;
