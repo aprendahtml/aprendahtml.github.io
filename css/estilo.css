@@ -20,6 +20,7 @@ main {
 h1 {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 18px;
+	text-align: center;
 }
 
 code {
@@ -247,4 +248,8 @@ kbd {
 	border-radius: 3px;
 	box-shadow: 1px 1px 1px #000;
 	margin: 0px 4px;
+}
+
+abbr {
+	text-decoration: none;
 }
