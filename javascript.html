@@ -1,140 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-	<meta charset="utf-8">
-	<title>JavaScript</title>
-</head>
-<body>
-	<h1>Teste JavaScript</h1>
-</body>
-<script>
-	// Variáveis definidas com var são globais, function scoped, a não ser que estejam dentro de funções.
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/estilo.css">
+		<title>JavaScript</title>
+	</head>
+	<body>
+		<div class="container">
+		<header>
+			<nav class="menu">
+				<div class="logo">
+					<a href="index.html" target="self"><img src="img/html.png" alt="HTML Logo" width="80px" height="80px"></a>
+				</div>
+				<div>
+			    	<ul class="menu-lista">
+				        <li class="menu-item"><a class="menu-link" href="index.html">Home</a></li>
+				     	<li class="menu-item"><a class="menu-link" href="o-que-e-html.html">HTML</a></li>
+				     	<li class="menu-item"><a class="menu-link" href="css.html">CSS</a></li>
+				     	<li class="menu-item"><a class="menu-link menu-ativo" href="javascript.html">JavaScript</a></li>
+				     	<li class="menu-item"><a class="menu-link" href="contato.html">Contato</a></li>
+			    	</ul>
+			    </div>
+			</nav>
+		</header>
 
-	var cor = 'azul';			// Cria a variável cor com o valor azul.
-	console.log(cor);			// Mostra no Console da Ferramenta do Desenvolvedor o valor da variável cor, nesse caso, azul.
-	{							// Abertura do bloco.
-		let cor = 'vermelho';	// Cria a variável cor com o valor vermelho somente para esse escopo definido pelas chaves.
-		console.log(cor);		// Mostra no Console da Ferramenta do Desenvolvedor o valor da variável cor desse escopo, nesse caso, vermelho.
-	}							// Fechamento do bloco.
-	console.log(cor);			// Mostra no Console da Ferramenta do Desenvolvedor o valor da variável cor no escopo global, nesse caso, azul.
-
-								// Se no lugar de let, dentro do bloco, a variável cor for definida com var, o próximo console.log, fora do bloco, terá o valor vermelho.
-
-	// Se for declarado variáveis com o mesmo nome com var o valor da variável será sobrescrita, mas se for criada com let dará erro.
-
-	// A variável também pode ser criada com var e depois ser atribuído um valor a ela.
-
-	var nome;
-	
-	function qualNome () {
-		nome = 'João';
-		console.log(nome);
-	}
-
-	qualNome()
-	console.log(nome);
-
-	// Se a variável for criada fora do escopo de bloco ou função e o valor da variável for atribuído dentro do escopo de bloco ou função, o console.log funciona, ele não funcionaria se a variável e o valor da variável fossem criados e atribuídos dentro do escopo de bloco ou função, nesse caso somente a função funcionaria.
-
-	// const é uma variável constante mas não é imutável, pode mudar o valor de um objeto mas não pode reatribuir o seu valor.
-
-	const idade = 18;
-
-	console.log(idade);
-
-	// idade = 21; Dá erro pois o const não pode reatribuir valor.
-
-	const nomeIdade = {
-		nome: 'João',
-		idade: 18
-	}
-
-	console.log(nomeIdade);
-
-	nomeIdade.idade = 21;			// Aqui é mudado o valor da idade do objeto nomeIdade.
-
-	console.log(nomeIdade);
-
-	nomeIdade.nome = 'Roberto';		// Aqui é mudado o valor do nome do objeto nomeIdade.
-
-	console.log(nomeIdade);
-
-	// Para deixar o objeto imutável se usa o Object.freeze.
-
-	Object.freeze(nomeIdade);
-
-	nomeIdade.idade = 50;
-
-	console.log(nomeIdade)
-
-	// Temporal Dead Zone
-
-	// Se uma variável for chamada, pelo console.log por exemplo, antes dela ser criada, dará erro se ela tiver sido criada com let ou const, mas se ela for criada com var não dará erro, ela aparecerá como undefined, indefinida.
-
-	console.log(mes);		// Chamando a variável mes antes de criá-la.
-
-	var mes = 'janeiro';	// Criando a variável mes depois de chamá-la.
-
-	// Arrow Functions
-
-	var adjetivos = ['bonita', 'linda', 'maravilhosa'];	// Variável adjetivos
-
-	// Início da função normal
-
-	var simone = adjetivos.map(function(adj) {	// Variável simone
-		return 'Simone é ' + adj +'!';			// Retorna o valor Simone é bonita!, Simone é linda!, Simone é maravilhosa!
-	});
-
-	// Fim da função normal
-
-	console.log(adjetivos);
-
-	console.log(simone);
-
-	// Início da arrow function
-
-	// É só deletar o nome function e adicionar depois do parâmetro, nesse caso (adj), os caracteres igual (=) e maior que (>), formando uma seta (arrow).
-	var simoneArrow = adjetivos.map((adj) => {
-		return 'Simone é ' + adj +'!';
-	});
-
-	// Fim da arrow function
-
-	console.log(simoneArrow);
-
-	// Início da arrow function single
-
-	// Como essa arrow function só tem um parâmetro, é chamada de single, então podemos deletar os parênteses do parâmetro, nesse caso (adj).
-
-	var simoneArrowSingle = adjetivos.map(adj => {
-		return 'Simone é ' + adj +'!';
-	});
-
-	// Fim da arrow function single
-
-	console.log(simoneArrowSingle);
-
-	// Início da arrow function one line
-
-	// Como essa arrow function só tem uma linha, é chamada de one line, então podemos deletar as chaves ({}), a palavra return e o ponto e vírgula (;) do final da linha do return.
-
-	var simoneArrowOneLine = adjetivos.map(adj => 'Simone é ' + adj +'!');
-
-	// Fim da arrow function one line
-
-	console.log(simoneArrowOneLine);
-
-	// Encadeamento de métodos com arrow function
-
-	// Início do encadeamento com arrow function
-
-	var simoneEncadeamento = adjetivos
-									.filter(adj => adj === 'linda')
-									.map(adj => 'Simone é ' + adj +'!');
-
-	// Fim do encadeamento com arrow function
-
-	console.log(simoneEncadeamento);
-
-</script>			
+		<main>
+			<div class="corpo">	
+				<h1>JavaScript</h1>
+				<h2>Página em construção</h2>
+				<h2>Colabore enviando artigos</h2>
+			<div class="paginacao">
+				<a class="anterior" href="#"><< Anterior</a>
+				<a class="proxima" href="#">Próxima >></a>
+			</div>
+			</div>
+		</main>
+		<aside>
+			<div class="lateral">
+				<nav>
+					<h1>Índice</h1>
+					<ul class="lateral-lista">
+					    <li class="lateral-item"><a class="lateral-link" href="o-que-e-html.html" target="_self">O Que é HTML?</a></li>
+					    <li class="lateral-item"><a class="lateral-link" href="estrutura-html.html" target="_self">Estrutura e Sintaxe do HTML</a></li>
+					    <li class="lateral-item"><a class="lateral-link" href="escrevendo-o-codigo-html.html" target="_self">Escrevendo o Código HTML</a></li>
+					</ul>
+				</nav>
+			</div>
+		</aside>
+		<div class="clear"></div>
+		</div>
+		<footer>
+			<div class="rodape">
+					<a href="https://github.com/aprendahtml/aprendahtml.github.io" target="_blank"><img class="rodape-logo" src="img/github.png" alt="GitHub"></a>
+			</div>
+		</footer>
+		</div>
+	</body>
 </html>

@@ -1,35 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/estilo.css">
-	<title>Contato</title>
-</head>
-<body>
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark menu-color">
-			<img class="navbar-brand" src="img/html.png" alt="HTML Logo" width="80px" height="80px">
-			<div class="collapse navbar-collapse" id="navbarNav">
-		    	<ul class="navbar-nav mr-auto">
-			        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-			     	<li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
-			     	<li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
-			     	<li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
-			     	<li class="nav-item active"><a class="nav-link" href="contato.html">Contato</a></li>
-		    	</ul>
-		    </div>
-		</nav>
-	</header>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/estilo.css">
+		<title>Contato</title>
+	</head>
+	<body>
+		<div class="container">
+		<header>
+			<nav class="menu">
+				<div class="logo">
+					<a href="index.html" target="self"><img src="img/html.png" alt="HTML Logo" width="80px" height="80px"></a>
+				</div>
+				<div>
+			    	<ul class="menu-lista">
+				        <li class="menu-item"><a class="menu-link" href="index.html">Home</a></li>
+				     	<li class="menu-item"><a class="menu-link" href="o-que-e-html.html">HTML</a></li>
+				     	<li class="menu-item"><a class="menu-link" href="css.html">CSS</a></li>
+				     	<li class="menu-item"><a class="menu-link" href="javascript.html">JavaScript</a></li>
+				     	<li class="menu-item"><a class="menu-link menu-ativo" href="contato.html">Contato</a></li>
+			    	</ul>
+			    </div>
+			</nav>
+		</header>
 
-	<main class="corpo" id="corpo">
-		<div><h1>Corpo Contato</h1></div>
-	</main>
-		<aside class="lateral">
-			<div><h1>Aside Contato</h1></div>
+		<main>
+			<div class="corpo">	
+				<h1>Contato</h1>
+				<h2>Página em construção</h2>
+				<h2>Colabore enviando artigos</h2>
+			<div class="paginacao">
+				<a class="anterior" href="#"><< Anterior</a>
+				<a class="proxima" href="#">Próxima >></a>
+			</div>
+			</div>
+		</main>
+		<aside>
+			<div class="lateral">
+				<nav>
+					<h1>Índice</h1>
+					<ul class="lateral-lista">
+					    <li class="lateral-item"><a class="lateral-link" href="o-que-e-html.html" target="_self">O Que é HTML?</a></li>
+					    <li class="lateral-item"><a class="lateral-link" href="estrutura-html.html" target="_self">Estrutura e Sintaxe do HTML</a></li>
+					    <li class="lateral-item"><a class="lateral-link" href="escrevendo-o-codigo-html.html" target="_self">Escrevendo o Código HTML</a></li>
+					</ul>
+				</nav>
+			</div>
 		</aside>
-	<footer class="rodape">
-		<div><h1>Footer Contato</h1></div>
-	</footer>
-</body>
+		<div class="clear"></div>
+		</div>
+		<footer>
+			<div class="rodape">
+					<a href="https://github.com/aprendahtml/aprendahtml.github.io" target="_blank"><img class="rodape-logo" src="img/github.png" alt="GitHub"></a>
+			</div>
+		</footer>
+		</div>
+	</body>
 </html>

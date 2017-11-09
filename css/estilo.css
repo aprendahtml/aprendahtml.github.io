@@ -152,6 +152,14 @@ p {
 	clear: both;
 }
 
+.rodape-logo {
+	width: 50px;
+	height: 50px;
+	padding: 10px;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
 .menu {
 	background-color: #6d008e;
 	position: fixed;
@@ -186,6 +194,10 @@ p {
 }
 
 .menu-link:hover {
+	color: #d3d3d3;
+}
+
+.menu-ativo {
 	color: #d3d3d3;
 }
 
