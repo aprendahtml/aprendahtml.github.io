@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109518086-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-109518086-1');
+		</script>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/estilo.css">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+		<title>Elementos Semânticos</title>
+	</head>
+	<body>
+		<div class="container">
+		<header>
+			<nav class="menu">
+				<div class="logo">
+					<a href="index.html" target="_self" title="aprendahtml.github.io"><img src="img/html.png" alt="HTML Logo" width="80px" height="80px"></a>
+				</div>
+				<div>
+			    	<ul class="menu-lista">
+				        <li class="menu-item"><a class="menu-link" href="index.html">Home</a></li>
+				     	<li class="menu-item"><a class="menu-link menu-ativo" href="o-que-e-html.html">HTML</a></li>
+				     	<li class="menu-item"><a class="menu-link" href="css.html">CSS</a></li>
+				     	<li class="menu-item"><a class="menu-link" href="javascript.html">JavaScript</a></li>
+				     	<li class="menu-item"><a class="menu-link" href="contato.html">Contato</a></li>
+			    	</ul>
+			    </div>
+			</nav>
+		</header>
+		<nav class="lateral">
+			<object data="menu-lateral.html"></object>
+		</nav>
+		<main>
+			<div class="corpo">
+				<h1>Elementos Semânticos</h1>
+						
+				<p>Segundo o dicionário, <em><b>semântica</b></em> é o ramo da linguística que estuda o significado das palavras, portanto <em><b>elemento semântico</b></em> é aquele que dá significado às informações inseridas na página html, esse significado não é passado ao usuário e sim aos motores de busca e indexação da Internet.</p>
+
+				<p>Ao se escrever uma página html, o nosso objetivo é passar ao usuário o conteúdo, os estilos e as interações, mas devemos também passar a semântica dos elementos html para os motores de busca.</p>
+
+				<p>Uma página básica, normalmente, tem um cabeçalho, na parte de cima, com o logotipo ou nome da página e um menu de navegação, esse cabeçalho deve ser incluído entre as tags <em><b>header</b></em> (não confundir com a tag <em><b>head</b></em>).</p>
+
+				<p>Abaixo do cabeçalho vem o conteúdo principal da página, com todas as informações relevantes, esse conteúdo principal deve ser incluído entre as tags <em><b>main</b></em>.</p>
+
+				<p>Abaixo do conteúdo principal da página, normalmente vem um rodapé, com informações de endereço, telefone, <em>copyright</em>, mídias sociais e outros, esse rodapé deve ser incluído entre as tags <em><b>footer</b></em>.</p>
+
+				<p>O código html ficaria assim:</p>
+
+		<code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=”pt-br”&gt;
+    &lt;head&gt;
+        &lt;meta charset=”utf-8”&gt;
+        &lt;title&gt;Título da Página&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    	&lt;header&gt;
+            &lt;!-- Incluir o cabeçalho aqui. --&gt;
+    	&lt;/header&gt;
+    	&lt;main&gt;
+            &lt;!-- Incluir o conteúdo principal aqui. --&gt;
+    	&lt;/main&gt;
+        &lt;footer&gt;
+            &lt;!-- Incluir o rodapé aqui. --&gt;
+    	&lt;/footer&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+				<p>
+					Note as linhas que começam com <b>&lt;!--</b> e terminam com <b>--&gt;</b> são comentários e não serão lidos ou executados pelo navegador. Pressionando as teclas <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>/</kbd> o <em>Sublime Text</em> já escreve os caracteres de comentário automaticamente, pressionando as teclas <kbd>Ctrl</kbd> + <kbd>/</kbd> o <em>Sublime Text</em> transforma toda a linha onde está o cursor em comentário.
+				</p>
+
+				<p>
+					Os comentários podem ser <em>inline</em>, em uma única linha, como nos exemplos acima, podem ser <em>inline code</em>, escritas ao lado do código ou podem ser <em>multiline</em> ou de múltiplas linhas, onde na primeira linha é escrito <b>&lt;!--</b> e na última linha é escrito <b>--&gt;</b> e todas as linhas que estiverem dentro dessas tags será um comentário.
+				</p>
+
+				<p>
+					Continuando com os <b>elementos semânticos</b>, dentro do <em><b>header</b></em> podemos utilizar o elemento <em>nav</em> que define um menu de navegação do site, o <em><b>nav</b></em> também pode ser usado no elemento <em><b>aside</b></em> (que veremos mais tarde), no elemento <em><b>footer</b></em> e em outros elementos, mas o seu uso é só para links de navegação do site, se for links de paginação, links externos, como o de mídias sociais, o <em><b>nav</b></em> não deve ser utilizado.
+				</p>
+
+				<p>
+					Dentro do <em><b>main</b></em> podemos utilizar outros elementos semânticos, dentre outros, o <em><b>section</b></em>, que define uma seção da página e o <em><b>article</b></em>, que define um artigo da página. O conteúdo do <em><b>article</b></em> deve ter um sentido completo, podendo ser reutilizado no mesmo site, em outro site, em um fórum ou blog. Tanto o <em><b>section</b></em> como o <em><b>article</b></em> deve ter pelo menos um <em><b>heading</b></em>.
+				</p>
+
+				<p>
+					<em><b>Headings</b></em> devem ser usados para representar semanticamente um título na página, pode ser utilizado o elemento <em><b>h1</b></em>, <em><b>h2</b></em>, <em><b>h3</b></em>, <em><b>h4</b></em>, <em><b>h5</b></em> ou <em><b>h6</b></em>, dependendo do seu nível de importância e relevância, sendo o <em><b>h1</b></em> o mais importante e o <em><b>h6</b></em> o menos importante, lembrando que cada página html só deve ter um elemento <em><b>h1</b></em>, os elementos <em><b>h2</b></em> a <em><b>h6</b></em> podem se repetir na página, mas não se deve passar de <em><b>h2</b></em> para <em><b>h4</b></em>, por exemplo.
+				</p>
+
+				<p>
+					<em><strong>Heading</strong></em> é um elemento semântico de texto, portanto só deve ser utilizado em texto, vemos na <em>Internet</em> o <em><strong>heading</strong></em> sendo usado erroneamente, por exemplo, no logotipo do <em><strong>header</strong></em> da página html.
+				</p>
+
+				<p>
+					O <em><b>heading</b></em> é muito importante para os motores de busca e também são renderizados de forma diferente, por padrão, pelo navegador, sendo o <em><b>h1</b></em> o elemento com a maior fonte e o <em><b>h6</b></em> o elemento com a menor fonte, mas o tamanho da fonte não é importante, até mesmo porque podemos, e devemos, estilizar o tamanho da fonte, o tipo da fonte, a cor da fonte e outros atributos através do <strong><abbr>CSS</abbr></strong>.
+				</p>
+
+				<p>Veja o código para exibir as tags <em><b>h1</b></em> a <em><b>h6</b></em>.</p>
+
+				<code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Título da Página&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    	&lt;h1&gt;Testando h1&lt;/h1&gt;
+    	&lt;h2&gt;Testando h2&lt;/h2&gt;
+    	&lt;h3&gt;Testando h3&lt;/h3&gt;
+    	&lt;h4&gt;Testando h4&lt;/h4&gt;
+    	&lt;h5&gt;Testando h5&lt;/h5&gt;
+    	&lt;h6&gt;Testando h6&lt;/h6&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+				<p>Veja as tags <em><b>h1</b></em> a <em><b>h6</b></em> renderizadas, por padrão, pelo navegador, sem uso do <strong><abbr>CSS</abbr></strong>.</p>
+
+			<iframe name="interno" width="100%" height="300" src="iframe/h1-a-h6.html"></iframe>
+
+			<p>
+				Lembre-se que as headings devem ser usadas em títulos, para o texto normal usamos o elemento p de parágrafo, veja um exemplo prático do uso de headings e parágrafos.
+			</p>
+
+			<p>Código:</p>
+
+			<code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Título da Página&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    	&lt;h1&gt;Receitas da Vovó&lt;/h1&gt;
+    	&lt;h2&gt;Receitas de Bolo&lt;/h2&gt;
+    	&lt;h3&gt;Bolo de Chocolate&lt;/h3&gt;
+    	&lt;h4&gt;Ingredientes:&lt;/h4&gt;
+        &lt;p&gt;
+            Lista de Ingredientes do Bolo de Chocolate
+        &lt;/p&gt;
+    	&lt;h4&gt;Modo de Preparo:&lt;/h4&gt;
+        &lt;p&gt;
+            Lista de Preparo do Bolo de Chocolate
+        &lt;/p&gt;
+        &lt;h3&gt;Bolo de Fubá&lt;/h3&gt;
+        &lt;h4&gt;Ingredientes:&lt;/h4&gt;
+        &lt;p&gt;
+            Lista de Ingredientes do Bolo de Fubá
+        &lt;/p&gt;
+        &lt;h4&gt;Modo de Preparo:&lt;/h4&gt;
+        &lt;p&gt;
+            Lista de Preparo do Bolo de Fubá
+        &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre> </code>
+
+			<p>Como será mostrado no navegador:</p>
+
+			<iframe name="interno" width="100%" height="550" src="iframe/headings-e-paragrafos.html"></iframe>
+
+			<p>
+				Note que no exemplo acima, só é usado um <em><b>h1</b></em>, pois cada página só deve ter um título principal, o <em><b>h2</b></em> é usado para o tipo da receita, nesse caso, Receitas de Bolo, o <em><b>h3</b></em> é usado para o tipo de bolo, nesse caso Bolo de Chocolate e Bolo de Fubá, o <em><b>h4</b></em> é usado para definir os Ingredientes e o Modo de Preparo, note que mesmo após o <em><b>h4</b></em>, usamos o <em><b>h3</b></em> novamente, para definir o tipo de bolo, o parágrafo é usado para escrever a Lista de Ingredientes e o Modo de Preparo, mais a frente veremos que seria melhor, mais certo e mais semântico se usarmos o elemento <em><b>ul</b></em> e <em><b>ol</b></em> para definir listas, nesse exemplo, uma <em><b>ul</b></em>, <em>unordered list</em>, lista não ordenada para os Ingredientes e uma <em><b>ol</b></em>, <em>ordered list</em>, lista ordenada para o Modo de Preparo.
+			</p>
+
+			<p>
+				Com relação ao posicionamento do <em><b>h1</b></em> ao <em><b>h6</b></em>, não se esqueça que o importante não é a ordem em que elas são escritas na página e sim a sua relevância, no exemplo acima, se no final da página adicionarmos Receitas de Doces, devemos utilizar o <em><b>h2</b></em>, que foi o <em>heading</em> usado em Receitas de Bolos.
+			</p>
+
+			<div class="paginacao">
+				<a class="anterior" href="escrevendo-o-codigo-html.html"><< Anterior</a>
+				<a class="proxima" href="#.html">Próxima >></a>
+			</div>
+			<div id="disqus_thread"></div>
+			<script>
+			var disqus_config = function () {
+			this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
+			this.page.identifier = document.title; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+			};
+			
+			(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://aprenda-html.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>			
+			</div>
+		</main>
+		<div class="clear"></div>
+		</div>
+		<footer>
+			<div class="rodape">
+					<a href="https://github.com/aprendahtml/aprendahtml.github.io" target="_blank"><img class="rodape-logo" src="img/github.png" alt="GitHub"></a>
+			</div>
+		</footer>
+		</div>
+	</body>
+</html>
