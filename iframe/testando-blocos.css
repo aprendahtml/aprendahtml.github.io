@@ -1,0 +1,23 @@
+.container {
+	width: 500px;
+	height: 500px;
+	background-color: yellow;
+}
+
+.bloco-1 {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+}
+
+.bloco-2 {
+	width: 100px;
+	height: 100px;
+	background-color: green;
+}
+
+.bloco-3 {
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+}

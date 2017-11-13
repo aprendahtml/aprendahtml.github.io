@@ -1,10 +1,10 @@
 @charset "utf-8";
 
-html {
+/*html {
 	width: 100%;
 	height: 100%;
 	min-height: 100%;
-}
+}*/
 
 body {
 	margin: 0;
@@ -31,13 +31,16 @@ h1 {
 }
 
 pre {
-	font-size: 16px;
+	font-size: 15px;
 	margin-bottom: 0px;
 	color: #fff;
 	background-color: #353535;
 	padding: 20px;
 	box-shadow: 2px 2px 2px #000;
 	border-radius: 5px;
+	width: 800px;
+	height: 100%;
+	margin: 0 auto;
 }
 
 p {
@@ -50,7 +53,8 @@ object {
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-	min-height: 20%;
+	height: 100%;
+	min-height: 100%;
 }
 
 kbd {
@@ -80,6 +84,7 @@ abbr {
 
 .no-padding {
 	width: 100%;
+	height: 100%;
 	min-height: 100%;
 	padding: 0;
 	overflow: hidden;
@@ -151,6 +156,7 @@ abbr {
 }
 
 .container-lateral {
+	height: 100%;
 	min-height: 100%;
 }
 
@@ -162,6 +168,7 @@ abbr {
 .lateral-lista {
 	list-style: none;
 	padding: 0px;
+	height: 100%
 	min-height: 100%;
 }
 
@@ -177,6 +184,8 @@ abbr {
 	text-align: right;
 	font-weight: bold;
 	text-shadow: 1px 1px 1px #fff;
+	height: 100%;
+	min-height: 100%;
 }
 
 .lateral-link:hover {
@@ -199,9 +208,9 @@ abbr {
 	left: 0;
 	width: 100%;
 	height: 80px;
-	background-color: #6d008e;
 	box-shadow: 0 -2px 2px #000;
 	clear: both;
+	background: linear-gradient(to right, #9600c4 0%, #6d008e 50%, #6d008e 100%);
 }
 
 .rodape-logo {
@@ -213,7 +222,7 @@ abbr {
 }
 
 .menu {
-	background-color: #6d008e;
+	background: linear-gradient(to right, #9600c4 0%, #6d008e 50%, #6d008e 100%);
 	position: fixed;
 	top: 0;
 	right: 0;

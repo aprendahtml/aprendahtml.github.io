@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109518086-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-109518086-1');
+        </script>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/estilo.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <title>Iniciando com CSS</title>
+    </head>
+    <body>
+        <div class="container">
+        <header>
+            <nav class="menu">
+                <div class="logo">
+                    <a href="index.html" target="_self" title="aprendahtml.github.io"><img src="img/html.png" alt="HTML Logo" width="80px" height="80px"></a>
+                </div>
+                <div>
+                    <ul class="menu-lista">
+                        <li class="menu-item"><a class="menu-link" href="index.html">Home</a></li>
+                        <li class="menu-item"><a class="menu-link menu-ativo" href="o-que-e-html.html">HTML</a></li>
+                        <li class="menu-item"><a class="menu-link" href="css.html">CSS</a></li>
+                        <li class="menu-item"><a class="menu-link" href="javascript.html">JavaScript</a></li>
+                        <li class="menu-item"><a class="menu-link" href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <nav class="lateral">
+            <object data="menu-lateral.html"></object>
+        </nav>
+        <main>
+            <div class="corpo">
+                <h1>Iniciando com CSS</h1>
+
+            <p>
+                A partir de agora, que vamos iniciar com o <em><b>CSS</b></em> e que vamos ter que fazer testes de layout, é muito importante que você mantenha aberto os arquivos <em><b>html</b></em> e <em><b>css</b></em> no editor de texto, no nosso caso o <em>Sublime Text</em>, e que mantenha aberto o arquivo <em><b>html</b></em> no navegador, no nosso caso o <em>Google Chrome</em>, para que você possa ver o resultado da renderização no navegador de cada teste de tags <em><b>html</b></em> e de atributos <em><b>css</b></em>.
+            </p>
+
+            <p>
+                Foi mostrado, ainda, muito pouco de <em><b>HTML</b></em>, mas como o <em><b>CSS</b></em> é muito atrelado ao estudo do <em><b>html</b></em>, resolvi ir mesclando os assuntos, até mesmo porque para testar e demonstrar alguns aspectos do <em><b>html</b></em> vamos precisar de alguns atributos do <em><b>css</b></em>.
+            </p>
+
+            <p>Veremos, então, uma pequena introdução ao <em><b>CSS</b></em>:</p>
+
+            <p>
+                <em><b>Cascading Style Sheets</b></em>, folhas de estilo em cascata é o responsável pela formatação dos estilos do arquivo <em><b>html</b></em>, ou seja, é com o <em><b>CSS</b></em> que definimos o tipo, o tamanho e a cor da fonte de cada elemento <em><b>html</b></em>, a cor de fundo, os espaçamentos internos e externos, as bordas, os alinhamentos, as transições e vários outros atributos de estilo.
+            </p>
+
+            <p>
+                O <em><b>CSS</b></em> pode ser <em>inline</em>, interno e externo. A recomendação é que se aplique o <em><b>CSS</b></em> externo, mas veremos as 3 aplicações.
+            </p>
+
+            <p>
+                O <em><b>CSS</b></em> <em>inline</em> é aplicado dentro do arquivo <em><b>html</b></em>, logo após um elemento <em><b>html</b></em>, através do atributo <em><b>style</b></em>, por exemplo:
+            </p>
+
+            <code><pre>
+&lt;body&gt;
+    &lt;p style=&quot;color: blue; font-family: Arial;&quot;&gt;
+        Testando o CSS inline.
+    &lt;/p&gt;
+&lt;/body&gt;</pre></code>
+
+            <p>No exemplo acima, será aplicado a fonte <em>Arial</em> com a cor azul somente a essa tag <em><b>p</b></em>.</p>
+
+            <p>
+                O <em><b>CSS</b></em> interno é aplicado dentro do arquivo <em><b>html</b></em>, dentro da tag <b>&lt;head&gt;</b>, utilizando a tag <b>&lt;style&gt;</b>, por exemplo:
+            </p>
+
+            <code><pre>
+&lt;head&gt;
+    &lt;style&gt;
+        h2 {font-family: Arial; color: blue; font-size: 14pt;}
+    &lt;/style&gt;
+&lt;/head&gt;</pre></code>
+
+            <p>
+                Note que o código <em><b>CSS</b></em> é aplicado em todos os elementos <em><b>h2</b></em> do arquivo <em><b>html</b></em>, por isso o “em cascata” em seu nome, mas com o <em><b>CSS</b></em> podemos aplicar estilos diferentes para elementos de mesmo nome, usando os atributos <em><b>class</b></em> e <em><b>id</b></em>, mas veremos esses atributos mais a frente, no <em><b>CSS</b></em> externo.
+            </p>
+
+            <p>
+                O <em><b>CSS</b></em> externo é o mais recomendado para ser aplicado. Nesse caso, criamos um arquivo com extensão .css, que tem que ser referenciado em todas as páginas <em><b>html</b></em> dentro da tag <b>&lt;head&gt;</b>, utilizando a tag <b>&lt;link&gt;</b>, por exemplo:
+            </p>
+
+            <code><pre>
+&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/estilo.css&quot;&gt;
+&lt;/head&gt;</pre></code>
+
+            <p>
+                Note que o atributo <b><em>href</em></b> indica o caminho onde está o arquivo <b>css</b> que queremos utilizar, nesse caso o arquivo é <b>estilo.css</b> que está dentro da pasta <b>css</b>.
+            </p>
+
+            <p>Sintaxe do arquivo <b>css</b>:</p>
+
+            <code><pre>
+seletor {
+    propriedade: valor;
+}</pre></code>
+
+            <p>
+                Nome do seletor, chave aberta <b>({)</b>, nome da propriedade, dois pontos <b>(:)</b>, valor para a propriedade, ponto e vírgula <b>(;)</b> e chave fechada <b>(})</b>.
+            </p>
+
+            <p>
+                Se o seletor só tiver uma propriedade, não é obrigatório o uso do ponto e vírgula após o valor, e se tiver mais de uma propriedade também não é obrigatório o seu uso após o valor da última propriedade, mas por convenção, se usa o ponto e vírgula, até porque, se adicionarmos outra propriedade ao seletor, ele já estará com o ponto e vírgula, que nesse caso já seria obrigatório.
+            </p>
+
+            <p>
+                Crie um arquivo <b>teste-css.html</b> e outro arquivo <b>teste-css.css</b>, por enquanto deixe o arquivo <b>css</b> em branco e no arquivo <b>html</b> escreva o seguinte código:
+            </p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;teste-css.css&quot;&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Teste CSS&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Teste CSS&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p>Resultado no navegador:</p>
+
+            <iframe class="frame" name="interno" width="100%" height="100" src="iframe/teste-css.html"></iframe>
+
+            <p>Agora no arquivo <b>css</b> escreva o seguinte código:</p>
+
+            <code><pre>
+h1 {
+    color: blue;
+    background-color: yellow;
+    font-size: 38px;
+}</pre></code>
+
+			<p>Resultado no navegador:</p>
+
+			<iframe class="frame" name="interno" width="100%" height="100" src="iframe/teste-1-css.html"></iframe>
+
+			
+			<p>
+				O <b>seletor</b> é o elemento html <b>h1</b>, as propriedades css dentro das chaves serão aplicadas em todos os elementos <b>h1</b> dentro do arquivo html.
+			</p>
+
+			<p>
+				As <b>propriedades</b> são <em>color</em>, <em>background-color</em> e <em>font-size</em>, que são respectivamente cor da fonte, cor do fundo e tamanho da fonte.
+			</p>
+
+			<p>Os <b>valores</b> são <em>blue</em>, <em>yellow</em> e <em>38px</em>, que são respectivamente azul, amarelo e 38 <em>pixels</em>.</p>
+			
+
+            <div class="paginacao">
+                <a class="anterior" href="elementos-semanticos.html"><< Anterior</a>
+                <a class="proxima" href="iniciando-com-box.html">Próxima >></a>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+            var disqus_config = function () {
+            this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = document.title; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            
+            (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://aprenda-html.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>            
+            </div>
+        </main>
+        <div class="clear"></div>
+        </div>
+        <footer>
+            <div class="rodape">
+                    <a href="https://github.com/aprendahtml/aprendahtml.github.io" target="_blank"><img class="rodape-logo" src="img/github.png" alt="GitHub"></a>
+            </div>
+        </footer>
+        </div>
+    </body>
+</html>
