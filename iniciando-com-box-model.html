@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109518086-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-109518086-1');
+        </script>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/estilo.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <title>Iniciando com Box Model</title>
+    </head>
+    <body>
+        <div class="container">
+        <header>
+            <nav class="menu">
+                <div class="logo">
+                    <a href="index.html" target="_self" title="aprendahtml.github.io"><img src="img/html.png" alt="HTML Logo" width="80px" height="80px"></a>
+                </div>
+                <div>
+                    <ul class="menu-lista">
+                        <li class="menu-item"><a class="menu-link" href="index.html">Home</a></li>
+                        <li class="menu-item"><a class="menu-link menu-ativo" href="o-que-e-html.html">HTML</a></li>
+                        <li class="menu-item"><a class="menu-link" href="css.html">CSS</a></li>
+                        <li class="menu-item"><a class="menu-link" href="javascript.html">JavaScript</a></li>
+                        <li class="menu-item"><a class="menu-link" href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <nav class="lateral">
+            <object data="menu-lateral.html"></object>
+        </nav>
+        <main>
+            <div class="corpo">
+                <h1>Iniciando com Box Model</h1>
+
+                <p>
+                    Para entendermos o que é <em><b>Box Model</b></em>, primeiro vamos entender o que é um <em>box</em>, ou caixa, ou bloco.
+                </p>
+
+                <p>
+                    O arquivo html é lido e renderizado pelo navegador de cima pra baixo e da esquerda para a direita, assim como você está lendo essa página e todo elemento html é renderizado como um bloco retangular, esse bloco é colocado, empilhado, um abaixo do outro ou um ao lado do outro, dependendo se o elemento html é em bloco (<b>block</b>) ou em linha (<b>inline</b>).
+                </p>
+
+                <p>
+                    Os elementos <b>block</b> são empilhados um abaixo do outro e ocupa todo o espaço lateral da página ou o espaço definido pelas propriedades <b>css</b>, <b>width</b> (largura) e <b>height</b> (altura); ou se o espaço não for definido, pelo espaço definido pela sua tag pai.
+                </p>
+
+                <p>
+                    Os elementos <b>inline</b> são empilhados um ao lado do outro e ocupa o espaço suficiente para exibir o seu conteúdo. Os elementos <b>inline</b> não podem receber algumas propriedades <b>css</b>, por exemplo, <b>width</b> e <b>height</b>.
+                </p>
+
+                <p>Exemplos de alguns elementos <b>block</b>:</p>
+
+                <p><b>div, p, h1 a h6, ul, ol, table, form, blockquote.</b></p>
+
+                <p>Exemplos de alguns elementos <b>inline</b>:</p>
+
+                <p><b>span, a, img, td, label, input, select, textarea, b, em.</b></p>
+
+                <p>Exemplo com elementos <b>block</b>:</p>
+
+                <p>Código do arquivo <b>exemplo-block.html</b>:</p>
+
+                <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-block.css&quot;&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Exemplo Block&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;bloco-1&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bloco-2&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bloco-3&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+                <p>Código do arquivo <b>exemplo-block.css</b>:</p>
+
+                <code><pre>
+.bloco-1 {
+    width: 200px;
+    height: 100px;
+    background-color: hsl(352, 100%, 50%);
+}
+
+.bloco-2 {
+    width: 200px;
+    height: 100px;
+    background-color: #1815d8;
+}
+
+.bloco-3 {
+    width: 200px;
+    height: 100px;
+    background-color: rgb(27, 188, 5);
+}</pre></code>
+
+                <p>Resultado no navegador:</p>
+
+                <iframe class="frame" name="interno" width="100%" height="350" src="iframe/exemplo-block.html"></iframe>
+
+                <p>
+                    Note que no arquivo <b>exemplo-block.html</b> usamos o arquivo css externo, <b>exemplo-block.css</b>, através da tag <b>link</b>, com os atributos <b>rel</b>, com o valor <b>stylesheet</b> (folha de estilo) e <b>href</b>, com o valor que é o caminho para o arquivo <b>css</b>.
+                </p>
+
+                <p>
+                    Usamos também o elemento html <b>div</b>, que é um elemento em bloco genérico, sem nenhum valor semântico, a <b>div</b> é muito usado para fazer divisões na página html, mas nunca use uma <b>div</b> se você puder usar uma tag com valor semântico, como <b>header, nav, main, section, article, aside, footer</b> ou outras.
+                </p>
+
+                <p>
+                    Outra novidade é o atributo <b>class</b> na tag <b>div</b>, o valor desse atributo pode ser qualquer nome para ser usado como seletor <b>css</b>, por convenção é usado a nomenclatura <b>dash-case</b>. Se usarmos a <b>div</b> como seletor de elemento no <b>css</b>, todas as <b>divs</b> vão herdar as propriedades <b>css</b> do seletor <b>div</b>, mas como nesse exemplo, nós queremos usar uma cor de fundo para cada <b>div</b>, devemos usar um <b>class</b> diferente para cada <b>div</b>. Um elemento html pode ter mais de um <b>class</b>, nesse caso é só dar um espaço depois do nome do primeiro <b>class</b> e escrever o nome do segundo <b>class</b>, tudo dentro das aspas duplas, pode-se usar aspas simples ou até mesmo sem aspas, mas por convenção, se usa aspas duplas. O <b>class</b> pode ser usado em mais de um elemento html, na mesma página ou até em outra página html do site, mas as páginas usadas tem que ter o <b>link</b> para o arquivo <b>css</b> com as propriedades do <b>class</b>.
+                </p>
+
+                <p>
+                    No lugar do class poderíamos usar o atributo <b>id</b>, que teria o mesmo resultado, a diferença básica entre o class e o <b>id</b>, além de como eles são chamados como elemento no arquivo <b>css</b>, que veremos a seguir, é que o <b>id</b> não pode ser repetido na página html, o <b>id</b> é único e um elemento html só pode ter um <b>id</b>. O <b>id</b> é muito usado para ser referenciado em arquivos <b>JavaScript</b>. Por convenção a nomenclatura do <b>id</b> é <b>lowerCamelCase</b>.
+                </p>
+
+                <p>
+                    No arquivo <b>exemplo-block.css</b> para usarmos o <b>class</b> como elemento, devemos escrever um ponto (.) antes do nome do <b>class</b>. No caso do <b>id</b>, escrevemos uma cerquilha, ou tralha <b>(#)</b> antes do nome do <b>id</b>.
+                </p>
+
+                <p>
+                    Vimos, até agora, a definição de cor pelo nome, como <b>red</b>, <b>green</b>, <b>blue</b> e outras, mas nesse arquivo <b>css</b>, fiz a definição de cores com <b>hsl</b>, <b># </b>(hexadecimal) e <b>rgb</b>, existe ainda as definições com <b>hsla</b>, <b>rgba</b> e <b>gradient</b>, o que veremos mais à frente.
+                </p>
+
+                <p>Exemplo com elementos <b>inline</b>:</p>
+
+                <p>Código do arquivo <b>exemplo-inline.html</b>:</p>
+
+                <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-inline.css&quot;&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Exemplo Inline&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;span class=&quot;inline-1&quot;&gt;Inline 1&lt;/span&gt;
+    &lt;span class=&quot;inline-2&quot;&gt;Inline 2&lt;/span&gt;
+    &lt;span class=&quot;inline-3&quot;&gt;Inline 3&lt;/span&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+                <p>Código do arquivo <b>exemplo-inline.css</b>:</p>
+
+                <code><pre>
+.inline-1 {
+    background-color: red;
+    width: 200px;
+    height: 100px;
+    font-size: 36px;
+}
+
+.inline-2 {
+    background-color: green;
+    width: 200px;
+    height: 100px;
+    font-size: 36px;
+}
+
+.inline-3 {
+    background-color: blue;
+    width: 200px;
+    height: 100px;
+    font-size: 36px;
+}</pre></code>
+
+                <p>Resultado no navegador:</p>
+
+                <iframe class="frame" name="interno" width="100%" height="150" src="iframe/exemplo-inline.html"></iframe>
+
+                <p>
+                    Usamos também o elemento html <b>span</b>, que é um elemento em linha genérico, sem nenhum valor semântico, o <b>span</b> é muito usado para estilizar uma parte de um texto, mas nunca use um <b>span</b> se você puder usar uma tag com valor semântico.
+                </p>
+
+                <p>
+                    Note que no arquivo <b>exemplo-inline.css</b> escrevemos, propositalmente, as propriedades <b>width</b> e <b>height</b>, mesmo sabendo que em elementos <b>inline</b> as propriedades <b>width</b> e <b>height</b> não são aplicadas, veja que no resultado do navegador a largura e a altura do elemento <b>inline</b> é definido pelo seu conteúdo, nesse caso pela propriedade <b>font-size</b> com o valor de <b>36 pixels</b>.
+                </p>
+
+                <p>
+                    O <b>Box Model</b> é composto de 4 itens: <b>conteúdo</b> (content), <b>padding</b> (preenchimento), <b>border</b> (borda) e <b>margin</b> (margem).
+                </p>
+
+                <p>
+                    <b>Conteúdo</b> é o que você vai inserir no <b>box</b>, pode ser um título, um parágrafo, uma imagem, um vídeo, um link, o que você quer mostrar para o usuário que vai visualizar o seu site.
+                </p>
+
+                <p>
+                    <b>Padding</b> é o espaçamento interno entre o <b>box</b> e o conteúdo, <b>padding</b> é sempre transparente.
+                </p>
+
+                <p>
+                    <b>Border</b> é a borda do <b>box</b>, que pode ser transparente ou ter uma cor definida e pode ter um tamanho definido.
+                </p>
+
+                <p>
+                    <b>Margin</b> é a margem, o espaçamento externo que o <b>box</b> tem para outro <b>box</b>, <b>margin</b> é sempre transparente.
+                </p>
+
+                <figure>
+                    <img src="img/box-model.png" alt="Box Model" title="Box Model">
+                </figure>
+
+                <p>
+                    Vamos fazer um teste no arquivo <b>exemplo-block.html</b>, incluindo um <b>h1</b> dentro da <b>div</b> com <b>class</b> <b>bloco-2</b>.
+                </p>
+
+                <p>Código html:</p>
+
+                <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-block.css&quot;&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Exemplo Block 2&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;bloco-1&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bloco-2&quot;&gt;&lt;h1&gt;Box Model&lt;/h1&gt;&lt;/div&gt;
+    &lt;div class=&quot;bloco-3&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+                <p>Resultado no navegador:</p>
+
+                <iframe class="frame" name="interno" width="100%" height="350" src="iframe/exemplo-block-2.html"></iframe>
+
+                <p>
+                    Note que o bloco vermelho se afastou, não está mais colado com o bloco azul, isso aconteceu porque o <b>h1</b> tem por padrão um valor de <b>margin top</b> (acima) e <b>margin bottom</b> (abaixo) e é esse <b>margin top</b> do <b>h1</b> que afasta o bloco vermelho.
+                </p>
+
+                <p>
+                    Então podemos dizer, que de certa forma, por padrão, os elementos html utilizam propriedades <b>css</b> automaticamente e nós podemos modificar essas propriedades, algumas pessoas utilizam um arquivo <b>css</b>, normalmente nomeado de <b>reset.css</b>, para resetar, apagar, todas essas propriedades automáticas.
+                </p>
+
+            <div class="paginacao">
+                <a class="anterior" href="iniciando-com-css.html"><< Anterior</a>
+                <a class="proxima" href="#.html">Próxima >></a>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+            var disqus_config = function () {
+            this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = document.title; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            
+            (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://aprenda-html.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>            
+            </div>
+        </main>
+        <div class="clear"></div>
+        </div>
+        <footer>
+            <div class="rodape">
+                    <a href="https://github.com/aprendahtml/aprendahtml.github.io" target="_blank"><img class="rodape-logo" src="img/github.png" alt="GitHub"></a>
+            </div>
+        </footer>
+        </div>
+    </body>
+</html>

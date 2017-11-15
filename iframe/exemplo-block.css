@@ -1,0 +1,17 @@
+.bloco-1 {
+	width: 200px;
+	height: 100px;
+	background-color: hsl(352, 100%, 50%);
+}
+
+.bloco-2 {
+	width: 200px;
+	height: 100px;
+	background-color: #1815d8;
+}
+
+.bloco-3 {
+	width: 200px;
+	height: 100px;
+	background-color: rgb(27, 188, 5);
+}
