@@ -77,6 +77,12 @@ figure {
 	text-align: center;
 }
 
+figcaption {
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+}
+
 .frame {
 	background-color: #fff;
 	border-top: 1px solid #353535;
