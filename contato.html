@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109518086-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-109518086-1');
+		</script>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/estilo.css">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
 		<title>Contato</title>
 	</head>
 	<body>
@@ -10,50 +20,59 @@
 		<header>
 			<nav class="menu">
 				<div class="logo">
-					<a href="index.html" target="self"><img src="img/html.png" alt="HTML Logo" width="80px" height="80px"></a>
+					<a href="index.html" target="_self" title="aprendahtml.github.io"><img src="img/html.png" alt="HTML Logo" width="80px" height="80px"></a>
 				</div>
 				<div>
 			    	<ul class="menu-lista">
-				        <li class="menu-item"><a class="menu-link" href="index.html">Home</a></li>
+				        <li class="menu-item"><a class="menu-link menu-ativo" href="index.html">Home</a></li>
 				     	<li class="menu-item"><a class="menu-link" href="o-que-e-html.html">HTML</a></li>
 				     	<li class="menu-item"><a class="menu-link" href="css.html">CSS</a></li>
 				     	<li class="menu-item"><a class="menu-link" href="javascript.html">JavaScript</a></li>
-				     	<li class="menu-item"><a class="menu-link menu-ativo" href="contato.html">Contato</a></li>
+				     	<li class="menu-item"><a class="menu-link" href="contato.html">Contato</a></li>
 			    	</ul>
 			    </div>
 			</nav>
 		</header>
-
+		<nav class="lateral">
+			<object data="menu-lateral.html"></object>
+		</nav>
 		<main>
-			<div class="corpo">	
+			<div class="corpo">
 				<h1>Contato</h1>
 				<h2>Página em construção</h2>
 				<h2>Colabore enviando artigos</h2>
+
 			<div class="paginacao">
-				<a class="anterior" href="#"><< Anterior</a>
-				<a class="proxima" href="#">Próxima >></a>
+				<a class="anterior" href="index.html"><< Anterior</a>
+				<a class="proxima" href="index.html">Próxima >></a>
 			</div>
+			<div id="disqus_thread"></div>
+			<script>
+			var disqus_config = function () {
+			this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
+			this.page.identifier = document.title; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+			};
+			
+			(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://aprenda-html.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 			</div>
 		</main>
-		<aside>
-			<div class="lateral">
-				<nav>
-					<h1>Índice</h1>
-					<ul class="lateral-lista">
-					    <li class="lateral-item"><a class="lateral-link" href="o-que-e-html.html" target="_self">O Que é HTML?</a></li>
-					    <li class="lateral-item"><a class="lateral-link" href="estrutura-html.html" target="_self">Estrutura e Sintaxe do HTML</a></li>
-					    <li class="lateral-item"><a class="lateral-link" href="escrevendo-o-codigo-html.html" target="_self">Escrevendo o Código HTML</a></li>
-					</ul>
-				</nav>
-			</div>
-		</aside>
 		<div class="clear"></div>
 		</div>
 		<footer>
 			<div class="rodape">
-					<a href="https://github.com/aprendahtml/aprendahtml.github.io" target="_blank"><img class="rodape-logo" src="img/github.png" alt="GitHub"></a>
-			</div>
+                <a href="https://www.facebook.com/aprenda.html.10" target="_blank"><img class="rodape-logo" src="img/facebook.png" alt="Facebook Aprenda HTML" title="Facebook Aprenda HTML"></a>
+                <a href="https://twitter.com/html5_css3_js" target="_blank"><img class="rodape-logo" src="img/twitter.png" alt="Twitter Aprenda HTML" title="Twitter Aprenda HTML"></a>
+                <a href="https://github.com/aprendahtml/aprendahtml.github.io" target="_blank"><img class="rodape-logo" src="img/github.png" alt="GitHub Aprenda HTML" title="GitHub Aprenda HTML"></a>
+            </div>
 		</footer>
 		</div>
+		<script id="dsq-count-scr" src="//aprenda-html.disqus.com/count.js" async></script>
 	</body>
 </html>
