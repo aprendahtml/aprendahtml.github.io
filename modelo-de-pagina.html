@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109518086-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-109518086-1');
+        </script>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/estilo.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <title>Modelo de Página</title>
+    </head>
+    <body>
+        <div class="container">
+        <header>
+            <nav class="menu">
+                <div class="logo">
+                    <a href="index.html" target="_self" title="aprendahtml.github.io"><img src="img/html.png" alt="HTML Logo" width="80px" height="80px"></a>
+                </div>
+                <div>
+                    <ul class="menu-lista">
+                        <li class="menu-item"><a class="menu-link" href="index.html">Home</a></li>
+                        <li class="menu-item"><a class="menu-link menu-ativo" href="o-que-e-html.html">HTML</a></li>
+                        <li class="menu-item"><a class="menu-link" href="css.html">CSS</a></li>
+                        <li class="menu-item"><a class="menu-link" href="javascript.html">JavaScript</a></li>
+                        <li class="menu-item"><a class="menu-link" href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <nav class="lateral">
+            <object data="menu-lateral.html"></object>
+        </nav>
+        <main>
+            <div class="corpo">
+                <h1>Modelo de Página</h1>
+
+                <p>
+                    Vamos escrever o código de um modelo de página, normalmente usado na internet, composto de um <b>header</b>, com logotipo e menu de navegação, um <b>main</b>, com o título, alguns parágrafos de texto e uma imagem, e o <b>footer</b> com links para Redes Sociais.  
+                </p>
+
+                <p><b>Código html:</b></p>
+
+                <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-modelo-de-pagina.css&quot;&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Exemplo Modelo de Página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header class=&quot;cabecalho&quot;&gt;
+        &lt;p&gt;Logotipo&lt;br&gt;Menu de Navegação&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;main class=&quot;corpo&quot;&gt;
+        &lt;h1&gt;Título Principal da Página&lt;/h1&gt;
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/p&gt;
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/p&gt;
+    &lt;/main&gt;
+    &lt;footer class=&quot;rodape&quot;&gt;
+        &lt;p&gt;Rodapé&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+                <p><b>Código css:</b></p>
+
+                <code><pre>
+.cabecalho {
+    width: 100%;
+    height: 80px;
+    background-color: #fdd73d;
+    font-size: 24px;
+}
+
+.corpo {
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+}
+
+.rodape {
+    width: 100%;
+    height: 60px;
+    background-color: #fdd73d;
+    font-size: 24px;
+}
+
+.corpo h1 {
+    margin-top: 0;
+}
+
+.cabecalho p {
+    margin-top: 0;
+}
+
+.rodape p {
+    margin-top: 0;
+}</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="370" src="iframe/exemplo-modelo-de-pagina.html"></iframe>
+
+            <div class="paginacao">
+                <a class="anterior" href="iniciando-com-box-model.html"><< Anterior</a>
+                <a class="proxima" href="img-figure-figcaption.html">Próxima >></a>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+            var disqus_config = function () {
+            this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = document.title; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            
+            (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://aprenda-html.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>            
+            </div>
+        </main>
+        <div class="clear"></div>
+        </div>
+        <footer>
+            <div class="rodape">
+                    <a href="https://www.facebook.com/aprenda.html.10" target="_blank"><img class="rodape-logo" src="img/facebook.png" alt="Facebook Aprenda HTML" title="Facebook Aprenda HTML"></a>
+                    <a href="https://twitter.com/html5_css3_js" target="_blank"><img class="rodape-logo" src="img/twitter.png" alt="Twitter Aprenda HTML" title="Twitter Aprenda HTML"></a>
+                    <a href="https://github.com/aprendahtml/aprendahtml.github.io" target="_blank"><img class="rodape-logo" src="img/github.png" alt="GitHub Aprenda HTML" title="GitHub Aprenda HTML"></a>
+            </div>
+        </footer>
+        </div>
+    </body>
+</html>
