@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109518086-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-109518086-1');
+        </script>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/estilo.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <title>img / figure / figcaption</title>
+    </head>
+    <body>
+        <div class="container">
+        <header>
+            <nav class="menu">
+                <div class="logo">
+                    <a href="index.html" target="_self" title="aprendahtml.github.io"><img src="img/html.png" alt="HTML Logo" width="80px" height="80px"></a>
+                </div>
+                <div>
+                    <ul class="menu-lista">
+                        <li class="menu-item"><a class="menu-link menu-ativo" href="index.html">Home</a></li>
+                        <li class="menu-item"><a class="menu-link" href="o-que-e-html.html">HTML</a></li>
+                        <li class="menu-item"><a class="menu-link" href="css.html">CSS</a></li>
+                        <li class="menu-item"><a class="menu-link" href="javascript.html">JavaScript</a></li>
+                        <li class="menu-item"><a class="menu-link" href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <nav class="lateral">
+            <object data="menu-lateral.html"></object>
+        </nav>
+        <main>
+            <div class="corpo">
+                <h1>img / figure / figcaption</h1>
+
+                <p>
+                    Vamos incluir uma imagem no lugar da palavra <b>Logotipo</b>, para isso utilizamos o elemento html <b>img</b>, já gravei a imagem na pasta <b>img</b> no mesmo diretório do arquivo html, isso é muito importante para a organização do diretório e para incluir o caminho correto da imagem no atributo <b>src</b>.
+                </p>
+
+                <p>
+                    Também vamos incluir uma foto de um bolo de chocolate, e como essa imagem faz parte do conteúdo do site fictício, que é sobre Receitas de Bolo, vamos incluir essa imagem no elemento html semântico <b>figure</b>, e no <b>figure</b> pode ser usado uma legenda para a foto usando o elemento html semântico <b>figcaption</b>, o <b>img</b> e o <b>figcaption</b> devem estar dentro da tag <b>figure</b>. 
+                </p>
+
+                <p>
+                    Na imagem do <b>logotipo</b> do site não foi usado o <b>figure</b>, pois o <b>logotipo</b> não é parte integrante do conteúdo do site.
+                </p>
+
+                <p>
+                    Para incluir uma imagem, usamos a tag <b>img</b> com o atributo obrigatório <b>src</b>, para indicar o caminho da imagem, usamos ainda o atributo <b>alt</b>, que apesar de não ser obrigatório é muito importante ser usado, até mesmo para os mecanismos de busca da <b>Internet</b>, usamos também o atributo <b>title</b>, que faz aparecer o seu valor quando colocado o <b>mouse</b> sobre a imagem. Poderíamos ainda usar os atributos <b>width</b> e <b>height</b> para definir a largura e a altura da imagem.
+                </p>
+
+                <p><b>Código html:</b></p>
+
+                <p><code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-modelo-de-pagina.css&quot;&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Receitas de Bolo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header class=&quot;cabecalho&quot;&gt;
+        &lt;img src=&quot;img/logo.png&quot; alt=&quot;Logo do Site&quot; title=&quot;Logo do Site&quot;&gt;
+        &lt;p&gt;Menu de Navegação&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;main class=&quot;corpo&quot;&gt;
+        &lt;h1&gt;Receitas de Bolo&lt;/h1&gt;
+
+        &lt;h2&gt;Bolo de Chocolate&lt;/h2&gt;
+
+        &lt;figure&gt;
+            &lt;img src=&quot;img/bolo-de-chocolate.jpg&quot; alt=&quot;Bolo de Chocolate&quot; title=&quot;Bolo de Chocolate&quot;&gt;
+            &lt;figcaption&gt;Bolo de Chocolate com Cobertura de Brigadeiro&lt;/figcaption&gt;
+        &lt;/figure&gt;
+
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/p&gt;
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcolaboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/p&gt;
+    &lt;/main&gt;
+    &lt;footer class=&quot;rodape&quot;&gt;
+        &lt;p&gt;Rodapé&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></code></p>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="800" src="iframe/exemplo-modelo-de-pagina-1.html"></iframe>
+
+                <p>
+                    O parágrafo <b>Menu de Navegação</b> foi para a linha de baixo, pois o elemento <b>p</b> é um elemento em bloco, mas nós queremos que o Menu de Navegação fique ao lado do logotipo.
+                </p>
+                
+                <p>
+                    Para isso vamos envolver as tag <b>img</b> e <b>p</b> com uma tag <b>div</b>, o <b>Sublime Text</b> tem um atalho de teclado que faz isso automaticamente, selecione o texto que você quer envolver com uma tag de abertura e de fechamento, pressione as teclas <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>W</kbd> e digite o nome da tag que você quer utilizar.
+                </p>
+
+                <p>
+                    Na <b>div</b> com o logotipo, incluímos o <b>class</b> <b>logo</b> e na <b>div</b> com o Menu de Navegação, incluímos o <b>class</b> <b>nav</b>, mais a frente veremos que podemos usar o elemento semântico <b>nav</b> para defenir um Menu de Navegação do site.
+                </p>
+
+                <p>
+                    Para deixar o logotipo e o Menu de Navegação na mesma linha, usamos no arquivo <b>css</b> a propriedade <b>display</b> com o valor <b>inline-block</b> para as <b>divs</b> com os <b>class</b> logo e nav.
+                </p>
+
+                <p>
+                    Faça cada troca no arquivo <b>html</b> e no arquivo <b>css</b>, grave e veja o resultado no navegador, no <em>Sublime Text</em> quando o arquivo não está salvo, aparece ao lado do nome do arquivo um círculo, que indica que o arquivo foi modificado e não foi salvo, e quando o arquivo é salvo, aparece ao lado do nome do arquivo um x, que indica que o arquivo foi salvo e não tem nenhuma modificação a salvar.
+                </p>
+
+                <p>
+                    Para colocar o Menu de Navegação alinhado à direita no <b>header</b>, usamos no arquivo <b>css</b>, a propriedade <b>float</b> com o valor <b>right</b>.
+                </p>
+
+                <p>
+                    O logotipo e o Menu de Navegação ficaram muito colados no <b>header</b>, para dar um espaçamento interno no logotipo e no Menu de Navegação, usamos no arquivo <b>css</b>, a propriedade <b>padding</b> com o valor de <b></b>10 pixels, tanto no <b>class</b> logo quanto no <b>class</b> nav.
+                </p>
+
+                <p>
+                    Note que a <b>div</b> do Menu de Navegação ficou um pouco acima do centro do <b>header</b>, para centralizar verticalmente a <b>div</b> com o <b>class</b> nav, vamos utilizar no arquivo <b>css</b>, as propriedades <b>position</b>, <b>top</b> e <b>transform</b>, com os respectivos valores, <b>relative</b>, <b>50%</b> e <b>translateY(-50%)</b>.
+                </p>
+
+                <p>
+                    Centralizamos os títulos <b>h1</b> e <b>h2</b>, utilizando no arquivo <b>css</b>, a propriedade <b>text-align</b> com o valor <b>center</b>.
+                </p>
+
+                <p>
+                    Estilizamos o <b>figcaption</b>, no arquivo <b>css</b>, vamos ver as propriedades usadas:
+                </p>
+
+                <p>
+                    <b>font-family: "Arial", sans-serif;</b><br>
+                    Utiliza a fonte <b>Arial</b>, se o usuário não tiver a fonte instalada, utiliza qualquer outra fonte sem serifa (<b>sans-serif</b>).
+                </p>
+
+                <p>
+                    <b>font-weight: bold;</b><br>
+                    Aplica um peso na fonte, nesse caso, negrito (<b>bold</b>).
+                </p>
+
+                <p>
+                    <b>font-style: italic;</b><br>
+                    Aplica um estilo na fonte, nesse caso, itálico.
+                </p>
+
+                <p>
+                    <b>background-color: #686868;</b><br>
+                    Aplica uma cor de fundo, nesse caso, cinza escuro, definido pelo valor em hexadecimal.
+                </p>
+
+                <p>
+                    <b>color: #fff;</b><br>
+                    Aplica uma cor na fonte, nesse caso, branco, definido pelo valor em hexadecimal. Note que o valor em hexadecimal só tem 3 dígitos, isso acontece porque quando cada par de valor hexadecimal se repete, podemos escrever somente um dígito para cada par, por exemplo, #33cc66 pode ser escrito #3c6.
+                </p>
+
+                <p>
+                    <b>width: 500px;</b><br>
+                    Se você está realmente testando no navegador cada modificação nos arquivos html e css, deve ter reparado que o <b>figcaption</b> ocupa toda a largura da página e como definimos uma cor de fundo para o <b>figcaption</b>, ficou uma faixa cinza em toda a largura da página, para colocar essa faixa do tamanho da foto, usamos a propriedade <b>width</b> (largura) com o valor de 500 <b>pixels</b>, que é a largura do foto, podemos ver essa largura com o <b>Inspetor de Elementos</b> do <b>Google Chrome</b>.
+                </p>
+
+                <p>
+                    <b>height: 30px;</b><br>
+                    Aplica uma altura de 30 <b>pixels</b>.
+                </p>
+
+                <p>
+                    <b>margin: 0 auto;</b><br>
+                    Centraliza o <b>figcaption</b>, na verdade esse é um macete do <b>css</b>, pois o que estamos fazendo realmente é definindo uma margem 0 para cima (<b>top</b>) e para baixo (<b>bottom</b>) e uma margem <b>auto</b> (dividir o espaço) para a direita (<b>right</b>) e para a esquerda (<b>left</b>).
+                </p>
+
+                <p>
+                    <b>padding-top: 6px;</b><br>
+                    Note que o texto do <b>figcaption</b> ficou muito colado na parte de cima, uma das soluções possíveis para resolver esse problema é aplicar um espaçamento interno só no topo.
+                </p>
+
+                <p>
+                    <b>box-sizing: border-box;</b><br>
+                    Se você reparar a propriedade <b>padding</b> se soma ao tamanho do <b>figcaption</b>, os 30 <b>pixels</b> de altura do <b>figcaption</b> se somou aos 6 <b>pixels</b> do <b>padding-top</b>, mas como não queremos que isso aconteça, podemos definir o tamanho da caixa pela borda da caixa, o <b>padding</b> é aplicado sem aumentar o tamanho do <b>figcapiton</b>.
+                </p>
+
+                <p>
+                    No <b>css</b> não existe só uma maneira correta de fazer um estilo, mais a frente, veremos como fazer esse mesmo <b>layout</b> no <b>header</b> com outras propriedades <b>css</b>.
+                </p>
+
+                <p><b>Código css:</b></p>
+
+                <code><pre>
+.cabecalho {
+    width: 100%;
+    height: 80px;
+    background-color: #fdd73d;
+    font-size: 24px;
+}
+
+.corpo {
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+}
+
+.rodape {
+    width: 100%;
+    height: 60px;
+    background-color: #fdd73d;
+    font-size: 24px;
+}
+
+.corpo h1 {
+    margin-top: 0;
+}
+
+.cabecalho p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.rodape p {
+    margin-top: 0;
+}
+
+.logo {
+    display: inline-block;
+    padding: 10px;
+}
+
+.nav {
+    display: inline-block;
+    float: right;
+    padding: 10px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+h1, h2, figure {
+    text-align: center;
+}
+
+figcaption {
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    background-color: #686868;
+    color: #fff;
+    width: 500px;
+    height: 30px;
+    margin: 0 auto;
+    padding-top: 6px;
+    box-sizing: border-box;
+}</pre></code>
+
+				<p><b>Resultado no navegador:</b></p>
+
+				<iframe class="frame" name="interno" width="100%" height="800" src="iframe/exemplo-modelo-de-pagina-2.html"></iframe>
+
+            <div class="paginacao">
+                <a class="anterior" href="modelo-de-pagina.html"><< Anterior</a>
+                <a class="proxima" href="nav-e-listas.html">Próxima >></a>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+            var disqus_config = function () {
+            this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = document.title; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            
+            (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://aprenda-html.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+        </main>
+        <div class="clear"></div>
+        </div>
+        <footer>
+            <div class="rodape">
+                <a href="https://www.facebook.com/aprenda.html.10" target="_blank"><img class="rodape-logo" src="img/facebook.png" alt="Facebook Aprenda HTML" title="Facebook Aprenda HTML"></a>
+                <a href="https://twitter.com/html5_css3_js" target="_blank"><img class="rodape-logo" src="img/twitter.png" alt="Twitter Aprenda HTML" title="Twitter Aprenda HTML"></a>
+                <a href="https://github.com/aprendahtml/aprendahtml.github.io" target="_blank"><img class="rodape-logo" src="img/github.png" alt="GitHub Aprenda HTML" title="GitHub Aprenda HTML"></a>
+            </div>
+        </footer>
+        </div>
+        <script id="dsq-count-scr" src="//aprenda-html.disqus.com/count.js" async></script>
+    </body>
+</html>
