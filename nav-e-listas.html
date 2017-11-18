@@ -40,11 +40,195 @@
             <div class="corpo">
                 <h1>nav e Listas</h1>
 
-                
+                <p>
+                    Como dito anteriormente, devemos trocar a <b>div</b> que envolve o Menu de Navegação pelo elemento semântico <b>nav</b>, que representa exatamente um menu de navegação para as páginas do site. Não se deve usar o <b>nav</b> para todos os conjuntos de links do site, por exemplo, não se usa o <b>nav</b> em links de paginação e em links para outras páginas, como links para Mídias Sociais. A troca de <b>div</b> para <b>nav</b> não altera nada visualmente mas altera a semântica do site para os motores de busca da <em>Internet</em>.
+                </p>
+
+                <p>
+                    Normalmente, na <em>Internet</em>, para Menu de Navegação, se usa uma lista com links para acessar as páginas do site, como exemplo, vamos criar links para o Home, Fotos, Vídeos e Contato. Nesse caso essa lista não precisa ser ordenada, nem por número nem por letra, então vamos utilizar uma lista não ordenada com o elemento html <b>ul</b> (<b>unordered list</b>), dentro da tag <b>ul</b>, utilizamos o elemento html <b>li</b> (<b>list item</b>) para escrever o nome dos itens da lista.
+                </p>
+
+                <p>
+                    Note que os nomes da lista ficaram um abaixo do outro, mas nós queremos que fique um ao lado do outro e por padrão o elemento <b>ul</b> imprime os <b>bullets</b>, aquelas bolinhas ao lado do nome, que também não queremos. Para retirar os <b>bullets</b>, criamos um <b>class</b> no <b>ul</b> com o nome menu, e no arquivo <b>css</b> criamos para esse <b>class</b> a propriedade <b>list-style</b> com o valor <b>none</b>.
+                </p>
+
+                <p>
+                    Para que os itens da lista fiquem um ao lado do outro, adicionamos no arquivo <b>css</b>, no <b>li</b> que pertence ao <b>class</b> menu, a propriedade <b>display</b> com o valor <b>inline-block</b>.
+                </p>
+
+                <p>
+                    As mudanças efetuadas fizeram com o <b>nav</b> (onde está a lista e os itens da lista) ficasse maior que o <b>header</b> (a faixa com o fundo amarelo), descentralizando o <b>h1</b> (o título Receitas de Bolo), para resolver esse problema, adicionei no arquivo <b>css</b>, no <b>class</b> <b>nav</b>, a propriedade <b>height</b> com valor de <b>80 pixels</b>, que é a altura do <b>header</b> e ainda adicionei a propriedade <b>box-sizing</b> com o valor <b>border-box</b>, para que ele mantenha esse valor, mesmo se for adicionado <b>padding</b> e <b>border</b>.
+                </p>
+
+                <p>
+                    Vamos separar um pouco os nomes dos itens da lista e separar o último nome da lista da lateral do <b>header</b>, acrescentando no <b>li</b> do <b>class</b> menu, a propriedade <b>margin-right</b> com o valor de <b>20 pixels</b>.
+                </p>
+
+                <p>
+                    Ainda no <b>.menu li</b>, vamos mudar a <b>font</b> com as seguintes propriedades e valores:<br>
+                    <b>font-family: "Arial", sans-serif;</b><br>
+                    <b>font-weight: bold;</b><br>
+                    <b>text-transform: uppercase;</b><br>
+                    <b>font-size: 20px;</b>
+                </p>
+
+                <p>
+                    Agora vamos criar os links clicáveis para a lista de itens da lista não ordenada. Para isso usamos no arquivo html, o elemento html <b>a</b>, de <b>anchor</b> ou <b>âncora</b>, com o atributo obrigatório <b>href</b>, o valor do <b>href</b> é o caminho para o link.
+                </p>
+
+                <p>
+                    Note que o elemento <b>a</b> incluiu automaticamente a cor azul no link e o <b>underline</b>. Podemos modificar essas propriedades no arquivo <b>css</b>, no seletor <b>.menu&nbsp;li&nbsp;a</b>, adicionando a propriedade <b>text-decoration</b> com o valor <b>none</b>, para retirar o <b>underline</b> e adicionando a propriedade <b>color</b> com o valor #000 em hexadecimal para definir a cor preta. Repare que ao passar o <b>mouse</b> sobre os links o cursor muda, indicando ser um link, e se for clicado será redirecionado para uma página inválida porque ainda não temos as páginas indicadas pelo <b>href</b>.
+                </p>
+
+                <p>
+                    Vamos utilizar no arquivo <b>css</b>, o <b>pseudo</b> seletor <b>hover</b>, para quando o <b>mouse</b> passar por cima do link, mudar uma ou mais propriedades <b>css</b>, nesse exemplo, vamos mudar a cor da fonte de preto para cinza. O <b>hover</b> é escrito com dois pontos <b>(:)</b> depois do nome do elemento, nesse exemplo é escrito assim: <b>.menu&nbsp;li&nbsp;a:hover</b>, adicionamos a propriedade <b>color</b> com o valor #686868 em hexadecimal.
+                </p>
+
+                <p><b>Código html:</b></p>
+
+                <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-modelo-de-pagina-3.css&quot;&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Receitas de Bolo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header class=&quot;cabecalho&quot;&gt;
+        &lt;div class=&quot;logo&quot;&gt;
+            &lt;img src=&quot;img/logo.png&quot; alt=&quot;Logo do Site&quot; title=&quot;Logo do Site&quot;&gt;
+        &lt;/div&gt;
+        &lt;nav class=&quot;nav&quot;&gt;
+            &lt;ul class=&quot;menu&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;fotos.html&quot;&gt;Fotos&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;videos.html&quot;&gt;Vídeos&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;contato.html&quot;&gt;Contato&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;main class=&quot;corpo&quot;&gt;
+        &lt;h1&gt;Receitas de Bolo&lt;/h1&gt;
+
+        &lt;h2&gt;Bolo de Chocolate&lt;/h2&gt;
+
+        &lt;figure&gt;
+            &lt;img src=&quot;img/bolo-de-chocolate.jpg&quot; alt=&quot;Bolo de Chocolate&quot; title=&quot;Bolo de Chocolate&quot;&gt;
+            &lt;figcaption&gt;Bolo de Chocolate com Cobertura de Brigadeiro&lt;/figcaption&gt;
+        &lt;/figure&gt;
+
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/p&gt;
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/p&gt;
+    &lt;/main&gt;
+    &lt;footer class=&quot;rodape&quot;&gt;
+        &lt;p&gt;Rodapé&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+                <p><b>Código css:</b></p>
+
+                <code><pre>
+.cabecalho {
+    width: 100%;
+    height: 80px;
+    background-color: #fdd73d;
+    font-size: 24px;
+}
+
+.corpo {
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+}
+
+.rodape {
+    width: 100%;
+    height: 60px;
+    background-color: #fdd73d;
+    font-size: 24px;
+}
+
+.corpo h1 {
+    margin-top: 0;
+}
+
+.cabecalho p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.rodape p {
+    margin-top: 0;
+}
+
+.logo {
+    display: inline-block;
+    padding: 10px;
+}
+
+.nav {
+    height: 80px;
+    display: inline-block;
+    float: right;
+    padding: 10px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.menu li a:hover {
+    color: #686868;
+}
+
+h1, h2, figure {
+    text-align: center;
+}
+
+figcaption {
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    background-color: #686868;
+    color: #fff;
+    width: 500px;
+    height: 30px;
+    margin: 0 auto;
+    padding-top: 6px;
+    box-sizing: border-box;
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="800" src="iframe/exemplo-modelo-de-pagina-3.html"></iframe>
 
             <div class="paginacao">
                 <a class="anterior" href="img-figure-figcaption.html"><< Anterior</a>
-                <a class="proxima" href="#">Próxima >></a>
+                <a class="proxima" href="propriedade-flex-do-css.html">Próxima >></a>
             </div>
             <div id="disqus_thread"></div>
             <script>

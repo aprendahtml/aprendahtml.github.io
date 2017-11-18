@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109518086-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-109518086-1');
+        </script>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/estilo.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <title>Propriedade Flex do CSS</title>
+    </head>
+    <body>
+        <div class="container">
+        <header>
+            <nav class="menu">
+                <div class="logo">
+                    <a href="index.html" target="_self" title="aprendahtml.github.io"><img src="img/html.png" alt="HTML Logo" width="80px" height="80px"></a>
+                </div>
+                <div>
+                    <ul class="menu-lista">
+                        <li class="menu-item"><a class="menu-link menu-ativo" href="index.html">Home</a></li>
+                        <li class="menu-item"><a class="menu-link" href="o-que-e-html.html">HTML</a></li>
+                        <li class="menu-item"><a class="menu-link" href="css.html">CSS</a></li>
+                        <li class="menu-item"><a class="menu-link" href="javascript.html">JavaScript</a></li>
+                        <li class="menu-item"><a class="menu-link" href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <nav class="lateral">
+            <object data="menu-lateral.html"></object>
+        </nav>
+        <main>
+            <div class="corpo">
+                <h1>Propriedade Flex do CSS</h1>
+
+                <p>
+                    Para definir o layout do <b>header</b> usamos no arquivo <b>css</b>, as propriedade <b>display</b> com o valor <b>inline-block</b> e a propriedade <b>float</b> com o valor <b>right</b>, agora vamos tentar fazer o mesmo layout usando a propriedade <b>flex</b>.
+                </p>
+
+                <p>
+                    É muito mais simples e fácil definir o layout com a propriedade <b>flex</b>, no arquivo <b>css</b> adicione a propriedade <b>display</b> com o valor <b>flex</b> e a propriedade <b>justify-content</b> com o valor <b>space-between</b>, simples assim.
+                </p>
+
+                <p><b>Código html:</b></p>
+
+                <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-flex.css&quot;&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Exemplo Flex&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header class=&quot;cabecalho&quot;&gt;
+        &lt;div class=&quot;logo&quot;&gt;
+            &lt;img src=&quot;img/logo.png&quot; alt=&quot;Logo do Site&quot; title=&quot;Logo do Site&quot;&gt;
+        &lt;/div&gt;
+        &lt;nav class=&quot;nav&quot;&gt;
+            &lt;ul class=&quot;menu&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;fotos.html&quot;&gt;Fotos&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;videos.html&quot;&gt;Vídeos&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;contato.html&quot;&gt;Contato&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+                <p><b>Código css:</b></p>
+
+                <code><pre>
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    background-color: #fdd73d;
+    font-size: 24px;
+}
+
+.logo {
+    padding: 10px;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding-top: 25px;
+}
+
+.menu li {
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.menu li a:hover {
+    color: #686868;
+}</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="100" src="iframe/exemplo-flex.html"></iframe>
+
+                <p>Vamos ver outros exemplos com a propriedade <b>flex</b>, para isso vamos criar uma <b>div</b> com o <b>class</b> <b>container</b> e dentro dela vamos criar 3 outras <b>divs</b> com o <b>class</b> <b>box-1</b>, <b>box-2</b> e <b>box-3</b>, vamos definir no arquivo <b>css</b>, altura, largura e cor de fundo, com as propriedades <b>width</b>, <b>height</b> e <b>background-color</b> e no <b>class</b> <b>container</b> vamos adicionar a propriedade <b>display</b> com o valor <b>flex</b>.</p>
+
+                <p><b>Código html:</b></p>
+
+                <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-flex-1.css&quot;&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Exemplo Flex 1&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;box-1&quot;&gt;Box 1&lt;/div&gt;
+        &lt;div class=&quot;box-2&quot;&gt;Box 2&lt;/div&gt;
+        &lt;div class=&quot;box-3&quot;&gt;Box 3&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+                <p><b>Código css:</b></p>
+
+                <code><pre>
+.container {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    background-color: yellow;
+}
+
+.box-1 {
+    width: 200px;
+    height: 150px;
+    background-color: green;
+}
+
+.box-2 {
+    width: 200px;
+    height: 150px;
+    background-color: blue;
+}
+
+.box-3 {
+    width: 200px;
+    height: 150px;
+    background-color: magenta;
+}</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="250" src="iframe/exemplo-flex-1.html"></iframe>
+
+                <p>
+                    A propriedade <b>flex-direction</b>, que define a direção de fluxo dos <b>box</b> no <b>container</b>, pode receber os possíveis valores:<br>
+                    <b>row</b>: da esquerda para a direita, é o valor padrão, se a propriedade não for definida esse valor é usado automaticamente.<br>
+                    <b>row-reverse</b>: da direita para a esquerda.<br>
+                    <b>column</b>: de cima para baixo.<br>
+                    <b>column-reverse</b>: de baixo para cima.
+                </p>
+
+                <p>Vamos ver o exemplo de <b>row-reverse</b>, faça o teste com os outros valores.</p>
+
+                <p><b>Código css:</b></p>
+
+                <code><pre>
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 200px;
+    background-color: yellow;
+}
+
+.box-1 {
+    width: 200px;
+    height: 150px;
+    background-color: green;
+}
+
+.box-2 {
+    width: 200px;
+    height: 150px;
+    background-color: blue;
+}
+
+.box-3 {
+    width: 200px;
+    height: 150px;
+    background-color: magenta;
+}</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="250" src="iframe/exemplo-flex-2.html"></iframe>
+
+                <p>
+                    A propriedade <b>justify-content</b>, que define o alinhamento horizontal dos <b>box</b> no <b>container</b>, pode receber os possíveis valores:<br>
+                    <b>flex-start</b>: alinha os <b>box</b> à esquerda do <b>container</b>, é o valor padrão, se a propriedade não for definida esse valor é usado automaticamente.<br>
+                    <b>flex-end</b>: alinha os <b>box</b> à direita do <b>container</b>.<br>
+                    <b>center</b>: alinha os <b>box</b> ao centro do <b>container</b>.<br>
+                    <b>space-between</b>: alinha o primeiro <b>box</b> à esquerda, o último <b>box</b> à direita e os outros <b>box</b> são centralizados utilizando o espaçamento disponível.<br>
+                    <b>space-around</b>: é bem parecido com o <b>space-between</b>, a diferença é que é utilizado a metade dos espaços entre os <b>box</b>, antes do primeiro <b>box</b> e depois do último <b>box</b>, os outros <b>box</b> são centralizados utilizando o espaçamento disponível.<br>
+                    <b>initial</b>: usa o valor inicial, que é <b>flex-start</b>.<br>
+                    <b>inherit</b>: usa o valor da tag pai, se o valor não estiver definido, usa o valor padrão, que é <b>flex-start</b>.
+                </p>
+
+                <p>Vamos ver o exemplo de <b>space-around</b>, faça o teste com os outros valores.</p>
+
+                <p><b>Código css:</b></p>
+
+                <code><pre>
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 200px;
+    background-color: yellow;
+}
+
+.box-1 {
+    width: 200px;
+    height: 150px;
+    background-color: green;
+}
+
+.box-2 {
+    width: 200px;
+    height: 150px;
+    background-color: blue;
+}
+
+.box-3 {
+    width: 200px;
+    height: 150px;
+    background-color: magenta;
+}</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="250" src="iframe/exemplo-flex-3.html"></iframe>
+
+                <p>
+                    A propriedade <b>flex</b>, define o tamanho do <b>box</b> em relação ao espaço do <b>container</b>, portanto ela não deve ser definida no <b>container</b> e sim em cada <b>box</b>, no exemplo abaixo, temos 3 <b>box</b> dentro do <b>container</b>, no primeiro <b>box</b> vamos dar ao <b>flex</b> o valor 1, no segundo <b>box</b> vamos dar ao <b>flex</b> o valor 3 e no terceiro <b>box</b> vamos dar ao <b>flex</b> o valor 2. O navegador vai somar os valores do <b>flex</b> de todos os <b>box</b>, nesse exemplo é 6, então irá separar o espaço da largura do <b>container</b> por 6 e aplicará 1 espaço para o <b>box-1</b>, 3 espaços para o <b>box-2</b> e 2 espaços para o <b>box-3</b>.
+                </p>
+
+                <p>Vamos ver o exemplo de <b>flex</b>, faça o teste com outros valores.</p>
+
+                <p><b>Código css:</b></p>
+
+                <code><pre>
+.container {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    background-color: yellow;
+}
+
+.box-1 {
+    flex: 1;
+    width: 200px;
+    height: 150px;
+    background-color: green;
+}
+
+.box-2 {
+    flex: 3;
+    width: 200px;
+    height: 150px;
+    background-color: blue;
+}
+
+.box-3 {
+    flex: 2;
+    width: 200px;
+    height: 150px;
+    background-color: magenta;
+}</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="250" src="iframe/exemplo-flex-4.html"></iframe>
+
+            <div class="paginacao">
+                <a class="anterior" href="nav-e-listas.html"><< Anterior</a>
+                <a class="proxima" href="#">Próxima >></a>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+            var disqus_config = function () {
+            this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = document.title; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            
+            (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://aprenda-html.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+        </main>
+        <div class="clear"></div>
+        </div>
+        <footer>
+            <div class="rodape">
+                <a href="https://www.facebook.com/aprenda.html.10" target="_blank"><img class="rodape-logo" src="img/facebook.png" alt="Facebook Aprenda HTML" title="Facebook Aprenda HTML"></a>
+                <a href="https://twitter.com/html5_css3_js" target="_blank"><img class="rodape-logo" src="img/twitter.png" alt="Twitter Aprenda HTML" title="Twitter Aprenda HTML"></a>
+                <a href="https://github.com/aprendahtml/aprendahtml.github.io" target="_blank"><img class="rodape-logo" src="img/github.png" alt="GitHub Aprenda HTML" title="GitHub Aprenda HTML"></a>
+            </div>
+        </footer>
+        </div>
+        <script id="dsq-count-scr" src="//aprenda-html.disqus.com/count.js" async></script>
+    </body>
+</html>
