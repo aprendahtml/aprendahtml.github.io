@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109518086-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-109518086-1');
+        </script>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/estilo.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <title>Tabelas</title>
+    </head>
+    <body>
+        <div class="container">
+        <header>
+            <nav class="menu">
+                <div class="logo">
+                    <a href="index.html" target="_self" title="aprendahtml.github.io"><img src="img/html.png" alt="HTML Logo" width="80px" height="80px"></a>
+                </div>
+                <div>
+                    <ul class="menu-lista">
+                        <li class="menu-item"><a class="menu-link menu-ativo" href="index.html">Home</a></li>
+                        <li class="menu-item"><a class="menu-link" href="o-que-e-html.html">HTML</a></li>
+                        <li class="menu-item"><a class="menu-link" href="css.html">CSS</a></li>
+                        <li class="menu-item"><a class="menu-link" href="javascript.html">JavaScript</a></li>
+                        <li class="menu-item"><a class="menu-link" href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <nav class="lateral">
+            <object data="menu-lateral.html"></object>
+        </nav>
+        <main>
+            <div class="corpo">
+                <h1>Tabelas</h1>
+
+                <p>
+                    As tabelas, no html, são definidas pelo elemento <b>table</b>, mas esse elemento sozinho não produz nenhum efeito no navegador, ele precisa de outros elementos para mostrar a tabela no navegador, vamos ver agora esses outros elementos para montar uma tabela de forma <b>semântica</b> no html.
+                </p>
+
+                <p>
+                    Primeiro devemos utilizar o elemento <b>table</b>, que define uma tabela.
+                </p>
+
+                <p>
+                    Podemos, ou não, utilizar o element<b></b>o <b>caption</b>, para definir uma <b>legenda</b> ou um <b>título</b> para a tabela.
+                </p>
+
+                <p>
+                    Podemos, ou não, utilizar os elementos semânticos <b>thead</b> para definir o cabeçalho da tabela, <b>tbody</b> para definir o corpo da tabela e <b>tfoot</b> para definir o rodapé da tabela, não importa a ordem em que esses elementos são escritos, o <b>thead</b> sempre mostrará os itens na parte de cima da tabela, o <b>tfoot</b> sempre mostrará os itens na parte de baixo da tabela e o <b>tbody</b> sempre mostrará os itens entre o <b>thead</b> e o <b>tfoot</b>.
+                </p>
+
+                <p>
+                    Devemos utilizar o elemento <b>tr</b> (<b>table row</b>), que define uma linha na tabela. O <b>tr</b> também não produz nenhum efeito no navegador.
+                </p>
+
+                <p>No <b>thead</b>, dentro do <b>tr</b>, utilizamos o <b>th</b> (<b>table headings</b>), que define o título do cabaçalho da tabela.</p>
+
+                <p>
+                    No <b>tbody</b> e no <b>tfoot</b>, dentro do <b>tr</b>, utilizamos o <b>td</b> (<b>table data</b>), que define o dado da tabela. A diferença do <b>th</b> para o <b>td</b>, além da semântica, é que o <b>th</b> já aparece formatado em negrito e centralizado.
+                </p>
+
+                <p>
+                    Para definir as linhas numa tabela, utilizamos o elemento <b>tr</b>, não temos um elemento para definir as colunas, as colunas são definidas pelo número de <b>td</b> dentro de cada <b>tr</b> ou <b>th</b>, por exemplo, se tivermos 4 <b>td</b> dentro da <b>tr</b> então teremos 4 colunas na tabela.
+                </p>
+
+                <p>
+                    Para unir 2 colunas numa mesma linha, utilizamos o atributo <b>colspan</b> no elemento <b>td</b>, o valor do <b>colspan</b> é o número de colunas que queremos unir, no exemplo abaixo utilizamos o valor 2. Note que nesse exemplo, temos 4 colunas e como vamos unir 2 delas, o número de <b>td</b> dentro dessa <b>tr</b>, passa a ser 3 <b>td</b>, pois a 2ª <b>td</b> foi unida com a 1ª.
+                </p>
+
+                <p>
+                    Para unir 2 linhas numa mesma coluna, utilizamos o atributo <b>rowspan</b> no elemento <b>td</b>, o valor do <b>rowspan</b> é o número de linhas que queremos unir, no exemplo abaixo utilizamos o valor 2. Note que nesse exemplo, temos 6 linhas e a diferença para o <b>colspan</b> é que não diminuímos o número de <b>td</b> dentro dessa <b>tr</b>, nós devemos diminuir o número de <b>td</b> na <b>tr</b> de baixo, nessa tabela, cada <b>tr</b> tem 4 <b>td</b>, mas a <b>tr</b> abaixo do <b>rowspan</b> deve ter 3 <b>td</b>, pois uma vai se unir com o <b>rowspan</b> da <b>tr</b> acima.
+                </p>
+
+                <p>
+                    No arquivo <b>css</b>, além dos estilos já vistos, apliquei uma borda, com a propriedade <b>border</b>, e com o valor 2px solid #000, nos seletores <b>table</b>, <b>th</b> e <b>td</b>, esse estilo criou uma borda para cada elemento, para juntar essas bordas, utilizei no seletor <b>table</b> a propriedade <b>border-collapse</b> com o valor <b>collapse</b>. 
+                </p>
+
+                <p><b>Código html:</b></p>
+
+                <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-tabelas.css&quot;&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Exemplo Tabelas&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;table&gt;
+        &lt;caption&gt;Legenda ou Título da Tabela&lt;/caption&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Mês&lt;/th&gt;
+                &lt;th&gt;Entrada&lt;/th&gt;
+                &lt;th&gt;Saída&lt;/th&gt;
+                &lt;th&gt;Saldo&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Janeiro&lt;/td&gt;
+                &lt;td&gt;R$ 1.000,00&lt;/td&gt;
+                &lt;td&gt;R$ 500,00&lt;/td&gt;
+                &lt;td&gt;R$ 500,00&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Fevereiro&lt;/td&gt;
+                &lt;td&gt;R$ 800,00&lt;/td&gt;
+                &lt;td&gt;R$ 500,00&lt;/td&gt;
+                &lt;td&gt;R$ 300,00&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Março&lt;/td&gt;
+                &lt;td&gt;R$ 1.500,00&lt;/td&gt;
+                &lt;td&gt;R$ 800,00&lt;/td&gt;
+                &lt;td&gt;R$ 700,00&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td colspan=&quot;2&quot;&gt;Colspan com 2 colunas&lt;/td&gt;
+                &lt;td&gt;Teste&lt;/td&gt;
+                &lt;td&gt;Teste&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td rowspan=&quot;2&quot;&gt;Rowspan com 2 linhas&lt;/td&gt;
+                &lt;td&gt;Teste&lt;/td&gt;
+                &lt;td&gt;Teste&lt;/td&gt;
+                &lt;td&gt;Teste&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Teste&lt;/td&gt;
+                &lt;td&gt;Teste&lt;/td&gt;
+                &lt;td&gt;Teste&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+        &lt;tfoot&gt;
+            &lt;tr&gt;
+                &lt;td colspan=&quot;4&quot;&gt;Saldo Total: R$ 1.500,00&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tfoot&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+                <p><b>Código css:</b></p>
+
+                <code><pre>
+table {
+    width: 500px;
+    padding: 5px;
+    border: 2px solid #000;
+    border-collapse: collapse;
+}
+
+thead {
+    font-family: Arial, sans-serif;
+    background-color: #777;
+    color: #fff;
+}
+
+tbody {
+    background-color: #efefef;
+}
+
+tfoot {
+    font-family: Arial, sans-serif;
+    background-color: #777;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+
+th {
+    border: 2px solid #000;
+    padding: 5px;
+}
+
+td {
+    border: 2px solid #000;
+    padding: 5px;
+}
+
+caption {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 5px;
+}</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="300" src="iframe/exemplo-tabelas.html"></iframe>
+
+            <div class="paginacao">
+                <a class="anterior" href="propriedade-flex-do-css.html"><< Anterior</a>
+                <a class="proxima" href="#">Próxima >></a>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+            var disqus_config = function () {
+            this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = document.title; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            
+            (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://aprenda-html.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+        </main>
+        <div class="clear"></div>
+        </div>
+        <footer>
+            <div class="rodape">
+                <a href="https://www.facebook.com/aprenda.html.10" target="_blank"><img class="rodape-logo" src="img/facebook.png" alt="Facebook Aprenda HTML" title="Facebook Aprenda HTML"></a>
+                <a href="https://twitter.com/html5_css3_js" target="_blank"><img class="rodape-logo" src="img/twitter.png" alt="Twitter Aprenda HTML" title="Twitter Aprenda HTML"></a>
+                <a href="https://github.com/aprendahtml/aprendahtml.github.io" target="_blank"><img class="rodape-logo" src="img/github.png" alt="GitHub Aprenda HTML" title="GitHub Aprenda HTML"></a>
+            </div>
+        </footer>
+        </div>
+        <script id="dsq-count-scr" src="//aprenda-html.disqus.com/count.js" async></script>
+    </body>
+</html>

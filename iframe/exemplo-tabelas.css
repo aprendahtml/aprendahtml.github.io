@@ -1,0 +1,40 @@
+table {
+	width: 500px;
+	padding: 5px;
+	border: 2px solid #000;
+	border-collapse: collapse;
+}
+
+thead {
+	font-family: Arial, sans-serif;
+	background-color: #777;
+	color: #fff;
+}
+
+tbody {
+	background-color: #efefef;
+}
+
+tfoot {
+	font-family: Arial, sans-serif;
+	background-color: #777;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+}
+
+th {
+	border: 2px solid #000;
+	padding: 5px;
+}
+
+td {
+	border: 2px solid #000;
+	padding: 5px;
+}
+
+caption {
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
