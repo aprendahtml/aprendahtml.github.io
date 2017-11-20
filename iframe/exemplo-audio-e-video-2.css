@@ -1,0 +1,22 @@
+.media {
+	background-color: #e5e5e5;
+	width: 500px;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 5px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px #000;
+}
+
+iframe {
+	width: 400px;
+	display: block;
+	margin: 0 auto;
+	padding: 5px 0 25px 0;
+}
+
+.media h2 {
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+}

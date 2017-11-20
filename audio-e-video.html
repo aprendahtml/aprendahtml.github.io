@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109518086-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-109518086-1');
+        </script>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/estilo.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <title>Áudio e Vídeo</title>
+    </head>
+    <body>
+        <div class="container">
+        <header>
+            <nav class="menu">
+                <div class="logo">
+                    <a href="index.html" target="_self" title="aprendahtml.github.io"><img src="img/html.png" alt="HTML Logo" width="80px" height="80px"></a>
+                </div>
+                <div>
+                    <ul class="menu-lista">
+                        <li class="menu-item"><a class="menu-link menu-ativo" href="index.html">Home</a></li>
+                        <li class="menu-item"><a class="menu-link" href="o-que-e-html.html">HTML</a></li>
+                        <li class="menu-item"><a class="menu-link" href="css.html">CSS</a></li>
+                        <li class="menu-item"><a class="menu-link" href="javascript.html">JavaScript</a></li>
+                        <li class="menu-item"><a class="menu-link" href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <nav class="lateral">
+            <object data="menu-lateral.html"></object>
+        </nav>
+        <main>
+            <div class="corpo">
+                <h1>Áudio e Vídeo</h1>
+
+                <p>
+                    Para adicionar um <b>áudio</b> na página html, abrimos e fechamos a tag <b>audio</b>, dentro da tag <b>audio</b> adicionamos o elemento html <b>source</b>, que só tem tag de abertura, e adicionamos o atributo <b>src</b>, com o caminho para o arquivo de áudio, no exemplo abaixo o valor é <b>media/whatsapp.mp3</b> e o atributo <b>type</b>, com o valor do tipo do arquivo, no exemplo abaixo o valor é <b>audio/mpeg</b>. Os elementos escritos dentro da tag <b>audio</b> não serão exibidos pelo navegador, por exemplo um parágrafo, um título ou uma imagem, se quiser inserir algum elemento, o faça antes ou depois da tag <b>audio</b>. Para mostrar os controles de <em>Play</em>, Tempo e Volume, adicione o atributo <b>controls</b> na tag de abertura do elemento <b>audio</b>, esse atributo é <b>booleano</b>, portanto não precisa de valor.
+                </p>
+
+                <p>
+                    Adicionamos um título para o áudio com a tag <b>h2</b>, um link para download do áudio com a tag <b>a</b> e uma imagem de download com a tag <b>img</b>. Na tag <b>a</b>, além do atributo <b>href</b>, com o caminho para o arquivo de áudio, adicionamos o atributo <b>download</b>, o valor do atributo <b>download</b> é o nome que o usuário vai baixar o arquivo de áudio, no exemplo abaixo, o caminho do arquivo é <b>media/whatsapp.mp3</b> e o valor do atributo <b>download</b> é <b>toque-download.mp3</b>, nesse caso o usuário vai fazer o download do arquivo <b>whatsapp.mp3</b> mas o arquivo vai ser baixado com o nome <b>toque-whatsapp.mp3</b>. Para facilitar os estilos, vou englobar todas as tags numa <b>div</b> com <b>class</b> media. Note que a imagem de download ficou ao lado dos controles de áudio, isso acontece porque os elementos <b>audio</b>, <b>img</b> e <b>a</b> são elementos <b>inline</b>, resolvemos esse problema aplicando no seletor <b>audio</b> a propriedade <b>display</b> com o valor <b>block</b>.
+                </p>
+
+                <p><b>Código html:</b></p>
+
+                <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-audio-e-video.css&quot;&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Exemplo Áudio e Vídeo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;media&quot;&gt;
+        &lt;h2&gt;Toque do WhatsApp&lt;/h2&gt;
+        &lt;audio controls&gt;
+            &lt;source src=&quot;media/whatsapp.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+        &lt;/audio&gt;
+        &lt;a href=&quot;media/whatsapp.mp3&quot; download=&quot;toque-whatsapp.mp3&quot;&gt;&lt;img src=&quot;img/download.png&quot; alt=&quot;Clique para fazer o Download&quot;&gt;&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+                <p><b>Código css:</b></p>
+
+                <code><pre>
+.media {
+    background-color: #e5e5e5;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #000;
+}
+
+audio {
+    display: block;
+    margin: 0 auto;
+    padding: 5px 0;
+}
+
+.media img {
+    width: 200px;
+    height: 75px;
+    padding: 5px;
+}
+
+.media h2 {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="230" src="iframe/exemplo-audio-e-video.html"></iframe>
+
+                <p>
+                    Para adicionar um <b>vídeo</b> na página html é praticamente o mesmo procedimento para adicionar um <b>áudio</b>, apenas trocamos o elemento <b>audio</b> pelo elemento <b>video</b> e definimos a largura (<b>width</b>) do vídeo no arquivo <b>css</b>, no seletor <b>video</b>. Também trocamos o valor do atributo <b>type</b> do elemento <b>source</b> para <b>video/mp4</b>, se utilizarmos um vídeo em <b>mp4</b>.
+                </p>
+
+                <p><b>Código html:</b></p>
+
+                <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-audio-e-video-1.css&quot;&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Exemplo Áudio e Vídeo 1&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;media&quot;&gt;
+        &lt;h2&gt;Vídeo de Amostra&lt;/h2&gt;
+        &lt;video controls&gt;
+            &lt;source src=&quot;media/sample-720x480.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;a href=&quot;media/sample-720x480.mp4&quot; download=&quot;sample.mp4&quot;&gt;&lt;img src=&quot;img/download.png&quot; alt=&quot;Clique para fazer o Download&quot;&gt;&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+                <p><b>Código css:</b></p>
+
+                <code><pre>
+.media {
+    background-color: #e5e5e5;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #000;
+}
+
+video {
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+    padding: 5px 0;
+}
+
+.media img {
+    width: 200px;
+    height: 75px;
+    padding: 5px;
+}
+
+.media h2 {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="500" src="iframe/exemplo-audio-e-video-1.html"></iframe>
+
+                <p>
+                    Na <b>Internet</b> é muito comum inserir vídeos do <b>YouTube</b> nas páginas html, isso é muito fácil de fazer, se chama <b>embed</b>, que é embutir.
+                </p>
+
+                <p>
+                    No site do <b>YouTube</b> escolha o vídeo que você quer inserir, abaixo do vídeo, clique em <b>Compartilhar</b>, no quadro que abriu, clique em <b>Incorporar</b>, no outro quadro que abriu, escolha as <b>Opções de Incorporação</b> e clique em <b>Copiar</b>, agora é só colar o código na sua página html.
+                </p>
+
+                <p>
+                    Como trocamos no arquivo html, o elemento <b>audio</b> ou <b>video</b> pelo elemento <b>iframe</b>, o trocamos também no arquivo <b>css</b> e como não podemos fazer <b>download</b> do <b>YouTube</b>, de forma direta, retiramos no arquivo html, as tags <b>a</b> e <b>img</b> e retiramos no arquivo <b>css</b>, o seletor <b>.media img</b>.
+                </p>
+
+                <p>
+                    Ao retirar o link e a imagem do botão de <b>Download</b>, o vídeo do elemento <b>iframe</b> ficou muito colado com o fundo da <b>div</b>, resolvemos esse problema adicionando no arquivo <b>css</b>, um <b>padding-bottom</b> do seletor <b>iframe</b>, como já temos a propriedade <b>padding</b> com o valor <b>5px 0</b>, esse valor equivale a <b>5px</b> para <b>padding-top</b> e <b>padding-bottom</b> e <b>0px</b> para <b>padding-right</b> e <b>padding-left</b>, como queremos mudar o valor do <b>padding-bottom</b>, usamos os 4 valores na propriedade <b>padding</b>, <b>5px 0 25px 0</b>, lembrando que o primeiro valor é do <b>top</b> (cima) e vai girando em sentido horário, <b>right</b> (direita), <b>bottom</b> (baixo) e <b>left</b> (esquerda).
+                </p>
+
+                <p><b>Código html:</b></p>
+
+                <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-audio-e-video-2.css&quot;&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Exemplo Áudio e Vídeo 2&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;media&quot;&gt;
+        &lt;h2&gt;Vídeo do YouTube&lt;/h2&gt;
+        &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/CH1XGdu-hzQ?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+                <p><b>Código css:</b></p>
+
+                <code><pre>
+.media {
+    background-color: #e5e5e5;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #000;
+}
+
+iframe {
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+    padding: 5px 0 25px 0;
+}
+
+.media h2 {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="450" src="iframe/exemplo-audio-e-video-2.html"></iframe>
+
+            <div class="paginacao">
+                <a class="anterior" href="tabelas.html"><< Anterior</a>
+                <a class="proxima" href="#">Próxima >></a>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+            var disqus_config = function () {
+            this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = document.title; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            
+            (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://aprenda-html.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+        </main>
+        <div class="clear"></div>
+        </div>
+        <footer>
+            <div class="rodape">
+                <a href="https://www.facebook.com/aprenda.html.10" target="_blank"><img class="rodape-logo" src="img/facebook.png" alt="Facebook Aprenda HTML" title="Facebook Aprenda HTML"></a>
+                <a href="https://twitter.com/html5_css3_js" target="_blank"><img class="rodape-logo" src="img/twitter.png" alt="Twitter Aprenda HTML" title="Twitter Aprenda HTML"></a>
+                <a href="https://github.com/aprendahtml/aprendahtml.github.io" target="_blank"><img class="rodape-logo" src="img/github.png" alt="GitHub Aprenda HTML" title="GitHub Aprenda HTML"></a>
+            </div>
+        </footer>
+        </div>
+        <script id="dsq-count-scr" src="//aprenda-html.disqus.com/count.js" async></script>
+    </body>
+</html>
