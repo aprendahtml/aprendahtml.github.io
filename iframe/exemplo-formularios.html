@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<link rel="stylesheet" href="exemplo-formularios.css">
+	<meta charset="utf-8">
+	<title>Exemplo Formulários</title>
+</head>
+<body>
+	<div class="formulario">
+		<form method="post" action="enviar.php">
+	
+			<label for="nameId">Nome:</label>
+			<input type="text" id="nameId" name="name" placeholder="Digite aqui o seu nome" required autofocus minlength="3" maxlength="40">
+
+			<label for="emailId">e-mail:</label>
+			<input type="email" id="emailId" name="email" placeholder="Digite aqui o seu e-mail" required>
+	
+			<label for="telId">Telefone:</label>
+			<input type="tel" id="telId" name="tel" placeholder="Digite aqui o seu telefone">
+
+			<label for="dataNascId">Data de Nascimento:</label>
+			<input type="date" id="dataNascId" name="datanasc">
+
+			<label for="siteId">Endereço do seu site:</label>
+			<input type="url" id="siteId" name="site" placeholder="Digite aqui o endereço do seu site">
+
+			<label for="depId">Dos 513 Deputados Federais, quantos são corruptos?</label>
+			<input type="number" id="depId" name="dep" min="0" max="513" placeholder="Digite o número aqui. Não vale escrever todos.">
+			
+			<label for="notaId">Nota do Site:</label>
+			<div class="range">
+				<span>0</span> <span>1</span> <span>2</span> <span>3</span> <span>4</span> <span>5</span> <span>6</span> <span>7</span> <span>8</span> <span>9</span> <span>10</span>
+			</div>
+			<input type="range" id="notaId" name="nota" min="0" max="10" list="lista">
+			<datalist id="lista">
+				<option value="0" label="0">
+				<option value="1">
+				<option value="2">
+				<option value="3">
+				<option value="4">
+				<option value="5" label="5">
+				<option value="6">
+				<option value="7">
+				<option value="8">
+				<option value="9">
+				<option value="10" label="10">
+			</datalist>
+
+			<label for="corId">Escolha uma cor:</label>
+			<input type="color" id="corId" name="cor">
+
+			<label for="sexoId">Qual é o seu sexo?</label><br>
+			<label><input type="radio" id="sexoId" name="sexo" value="masculino" checked>Masculino</label>
+			<label><input type="radio" id="sexoId" name="sexo" value="feminino">Feminino</label>
+			<label><input type="radio" id="sexoId" name="sexo" value="no-info">Prefiro não informar</label>
+
+			
+			<br><label for="timeId">Para qual time você torce?</label>
+			<select id="timeId" name="time">
+					<option value="">Escolha aqui o seu time</option>
+				<optgroup label="Times Paulistas">
+					<option value="corinthians">Corinthians</option>
+					<option value="sao paulo">São Paulo</option>
+					<option value="santos">Santos</option>
+					<option value="palmeiras">Palmeiras</option>
+				<optgroup label="Times Cariocas">
+					<option value="flamengo">Flamengo</option>
+					<option value="fluminense">Fluminense</option>
+					<option value="vasco">Vasco</option>
+					<option value="botafogo">Botafogo</option>
+			</select>
+
+			<label for="linuxId">Qual Linux você prefere?</label>
+			<input list="linuxId" name="linux">
+			<datalist id="linuxId">
+				<option value="Red Hat">
+				<option value="Debian">
+				<option value="Ubuntu">
+				<option value="Mint">
+				<option value="Fedora">
+				<option value="CentOs">
+				<option value="Suse">
+			</datalist>
+
+			<label for="messageId">Mensagem:</label>
+			<textarea id="messageId" name="message" placeholder="Digite aqui a sua mensagem" maxlength="400"></textarea>
+
+			<input type="submit" name="submit" value="Enviar">
+	
+		</form>
+	</div>
+</body>
+</html> 

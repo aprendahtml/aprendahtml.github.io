@@ -1,0 +1,55 @@
+.formulario {
+	background-color: #e5e5e5;
+	width: 400px;
+	margin: 0 auto;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px #000;
+}
+
+input, select {
+	width: 385px;
+	display: block;
+	padding: 5px;
+	margin-bottom: 15px;
+}
+
+textarea {
+	width: 385px;
+	height: 150px;
+	display: block;
+	padding: 5px;
+	margin-bottom: 15px;
+	font-family: sans-serif;	/* Para a fonte ser a mesma do input */
+}
+
+.range {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 5px;
+}
+
+.range span {
+	margin-left: 9px;
+}
+
+.range span:last-of-type {
+	margin-left: 3px; 
+	margin-right: 8px;
+}
+
+input[type="color"] {
+	width: 100px;
+}
+
+input[type="submit"] {
+	width: 100px;
+	margin: 0 auto;
+}
+
+input[type="radio"] {
+	display: inline-block;
+	width: 20px;
+	margin-top: 8px;
+	margin-left: 5px;
+}
