@@ -40,7 +40,653 @@
             <div class="corpo">
                 <h1>Formulários</h1>
 
-                
+                <p>
+                    Muitas páginas da <b>Internet</b> usam formulários, seja para fazer <b>login</b>, enviar uma mensagem, fazer contato ou até mesmo no <b>e-commerce</b>. No <b>HTML 5</b> foi implementado muitos elementos e atributos semânticos para os formulários. Vamos ver alguns exemplos.
+                </p>
+
+                <p>
+                    Para se implementar um formulário em html, primeiro abrimos e fechamos a tag com o elemento <b>form</b> e dentro dele adicionamos os campos do formulário.
+                </p>
+
+                <p>
+                    Dentro da tag de abertura <b>form</b>, adicionamos os atributos <b>method</b>, <b>action</b> e <b>name</b>.
+                </p>
+
+                <p>
+                    No atributo <b>method</b>, nesse exemplo, vamos utilizar o valor <b>post</b>, esse valor poderia ser <b>get</b>, esse atributo define o método de envio do formulário.
+                </p>
+
+                <p>
+                    No atributo <b>action</b>, nesse exemplo, vamos utilizar o valor <b>enviar.php</b>, esse valor define a ação que vai acontecer quando o formulário for enviado, nesse caso será executado o arquivo <b>enviar.php</b>.
+                </p>
+
+                <p>
+                    No atributo <b>name</b>, nesse exemplo, vamos utilizar o valor <b>formulario</b>, esse valor define uma variável, a seguir veremos que cada campo do formulário será definida com um <b>name</b>. A tag <b>form</b> sozinha não mostra nada no navegador.
+                </p>
+
+                <code><pre>
+&lt;body&gt;
+    &lt;form method=&quot;post&quot; action=&quot;enviar.php&quot; name=&quot;formulario&quot;&gt;
+      
+    &lt;/form&gt;
+&lt;/body&gt;</pre></code>
+
+                <p>
+                    Antes do campo do formulário vamos adicionar um texto para mostrar ao usuário qual informação estamos solicitando, nesse caso o nome do usuário, então vamos inserir o texto <b>Nome:</b>, para isso vamos envolver o texto com a tag <b>label</b>. Se o usuário clicar no texto que está entre a tag <b>label</b>, o <b>cursor</b> vai para o campo de entrada de dados para o usuário digitar, mas é preciso informar ao <b>label</b> para qual campo do formulário ele deve colocar o <b>cursor</b>, para isso usamos o atributo <b>for</b> na tag de abertura <b>label</b>, nesse exemplo inserimos o valor <b>nameId</b>, que será o mesmo valor que vamos utilizar no atributo <b>id</b>, que vamos inserir na tag de abertura do campo do formulário, o que vamos ver mais a frente.
+                </p>
+
+                <p>
+                    Vamos adicionar no formulário um campo para o usuário digitar o seu nome, para isso utilizamos o elemento <b>input</b> e adicionamos o atributo <b>type</b>, que define o tipo de entrada de dados no formulário, que nesse caso utiliza o valor <b>text</b>, porque o tipo de dado que o usuário vai passar para o formulário para informar o seu nome é um texto.
+                </p>
+
+                <p>
+                    Vamos adicionar o atributo <b>id</b> com o valor <b>nameId</b>, o mesmo valor que usamos no atributo <b>for</b> na tag <b>label</b>, então estamos ligando o <b>label</b> a este campo do formulário.
+                </p>
+
+                <p>
+                    Vamos adicionar o atributo <b>name</b> com o valor <b>name</b>, para definir a variável <b>name</b> que irá receber o valor que o usuário digitar, mais a frente veremos como utilizar essa variável.
+                </p>
+
+                <p>
+                    Vamos adicionar o atributo <b>placeholder</b> com o valor <b>Digite aqui o seu nome</b>, sem o <b>placeholder</b> o campo para digitar o nome fica em branco, com o <b>placeholder</b> esse valor aparece escrito no campo de entrada, como se fosse uma dica para o usuário, que assim que começar a digitar o <b>placeholder</b> é apagado.
+                </p>
+
+                <p>
+                    Vamos adicionar o atributo <b>required</b> que não recebe valor por ser um atributo <b>booleano</b>, ele informa que esse campo é requerido, é obrigatório, se não for inserido nenhuma informação o formulário não será enviado e será mostrado uma mensagem de erro.
+                </p>
+
+                <p>
+                    Vamos adicionar o atributo <b>autofocus</b> que não recebe valor por ser um atributo <b>booleando</b>, ele informa que assim que o formulário for lido pelo navegador, o cursor deve ser inserido no campo do formulário com o atributo <b>autofocus</b>, por isso um formulário que tem vários campos só deve ter um campo com <b>autofocus</b>.
+                </p>
+
+                <p>
+                    Vamos adicionar o atributo <b>minlength</b> com o valor 3, para definir o número mínimo de caracteres que deve ser inserido, nesse caso se o formulário for enviado com o nome com menos de 3 caracteres o formulário não será enviado e será mostrado uma mensagem de erro.
+                </p>
+
+                <p>
+                    Vamos adicionar o atributo <b>maxlength</b> com o valor 40, para definir o número máximo de caracteres que deve ser inserido, nesse caso o usuário não conseguirá digitar mais de 40 caracteres no campo e mesmo se o usuário copiar um texto com mais de 40 caracteres, quando o texto for colado nesse campo, só vai aparecer 40 caracteres, portanto o <b>maxlength</b> não retorna erro, lembrando que espaço também é contado como caracter.
+                </p>
+
+                <p><b>Código html:</b></p>
+
+                <code><pre>
+&lt;body&gt;
+    &lt;form method=&quot;post&quot; action=&quot;enviar.php&quot; name=&quot;formulario&quot;&gt;
+
+        &lt;label for=&quot;nameId&quot;&gt;Nome:&lt;/label&gt;
+        &lt;input type=&quot;text&quot; id=&quot;nameId&quot; name=&quot;name&quot; placeholder=&quot;Digite aqui o seu nome&quot; required autofocus minlength=&quot;3&quot; maxlength=&quot;40&quot;&gt;
+
+    &lt;/form&gt;
+&lt;/body&gt;</pre></code>
+
+                    <p><b>Resultado no navegador:</b></p>
+
+                    <iframe class="frame" name="interno" width="100%" height="100" src="iframe/exemplo-formularios-1.html"></iframe>
+
+                    <p>
+                        Vamos incluir no formulário um campo para receber o <b>e-mail</b> do usuário, a diferença básica é o valor do atributo <b>type</b> que será <b>email</b>, lembrando que os valores dos atributos <b>id</b> e <b>name</b> devem ser únicos para cada campo e usaremos também os atributos <b>placeholder</b> e <b>required</b>.
+                    </p>
+
+                    <p><b>Código html:</b></p>
+
+                    <code><pre>
+&lt;body&gt;
+    &lt;form method=&quot;post&quot; action=&quot;enviar.php&quot; name=&quot;formulario&quot;&gt;
+
+        &lt;label for=&quot;emailId&quot;&gt;e-mail:&lt;/label&gt;
+        &lt;input type=&quot;email&quot; id=&quot;emailId&quot; name=&quot;email&quot; placeholder=&quot;Digite aqui o seu e-mail&quot; required&gt;
+
+    &lt;/form&gt;
+&lt;/body&gt;</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="100" src="iframe/exemplo-formularios-2.html"></iframe>
+
+                <p>
+                    Vamos incluir no formulário um campo para receber o <b>telefone</b> do usuário, a diferença básica é o valor do atributo <b>type</b> que será <b>tel</b>, lembrando que os valores dos atributos <b>id</b> e <b>name</b> devem ser únicos para cada campo e usaremos também o atributo <b>placeholder</b>.
+                </p>
+
+                <p><b>Código html:</b></p>
+
+                <code><pre>
+&lt;body&gt;
+    &lt;form method=&quot;post&quot; action=&quot;enviar.php&quot; name=&quot;formulario&quot;&gt;
+
+        &lt;label for=&quot;telId&quot;&gt;Telefone:&lt;/label&gt;
+        &lt;input type=&quot;tel&quot; id=&quot;telId&quot; name=&quot;tel&quot; placeholder=&quot;Digite aqui o seu telefone&quot;&gt;
+
+    &lt;/form&gt;
+&lt;/body&gt;</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="100" src="iframe/exemplo-formularios-3.html"></iframe>
+
+                <p>
+                    Vamos incluir no formulário um campo para receber a <b>data de nascimento</b> do usuário, a diferença básica é o valor do atributo <b>type</b> que será <b>date</b>, lembrando que os valores dos atributos <b>id</b> e <b>name</b> devem ser únicos para cada campo. Existem outros valores que podemos atribuir ao atributo <b>type</b> para se trabalhar com datas em formulários, como <b>datetime</b>, <b>month</b>, <b>week</b>, <b>time</b> e <b>datetime-local</b>.
+                </p>
+
+                <p><b>Código html:</b></p>
+
+                <code><pre>
+&lt;body&gt;
+    &lt;form method=&quot;post&quot; action=&quot;enviar.php&quot; name=&quot;formulario&quot;&gt;
+
+        &lt;label for=&quot;dataNascId&quot;&gt;Data de Nascimento:&lt;/label&gt;
+        &lt;input type=&quot;date&quot; id=&quot;dataNascId&quot; name=&quot;datanasc&quot;&gt;
+
+    &lt;/form&gt;
+&lt;/body&gt;</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="100" src="iframe/exemplo-formularios-4.html"></iframe>
+
+                <p>
+                    Vamos incluir no formulário um campo para receber o endereço do <b>site</b> do usuário, a diferença básica é o valor do atributo <b>type</b> que será <b>url</b>, lembrando que os valores dos atributos <b>id</b> e <b>name</b> devem ser únicos para cada campo e usaremos também o atributo <b>placeholder</b>. Lembrando que no <b>url</b> o usuário precisa digitar <b>http:</b>, <b>https:</b> ou <b>ftp:</b>.
+                </p>
+
+                <p><b>Código html:</b></p>
+
+                <code><pre>
+&lt;body&gt;
+    &lt;form method=&quot;post&quot; action=&quot;enviar.php&quot; name=&quot;formulario&quot;&gt;
+
+        &lt;label for=&quot;siteId&quot;&gt;Endereço do seu site:&lt;/label&gt;
+        &lt;input type=&quot;url&quot; id=&quot;siteId&quot; name=&quot;site&quot; placeholder=&quot;Digite aqui o endereço do seu site&quot;&gt;
+
+    &lt;/form&gt;
+&lt;/body&gt;</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="100" src="iframe/exemplo-formularios-5.html"></iframe>
+
+                <p>
+                    Vamos incluir no formulário um campo para receber um <b>número</b> do usuário, a diferença básica é o valor do atributo <b>type</b> que será <b>number</b>, lembrando que os valores dos atributos <b>id</b> e <b>name</b> devem ser únicos para cada campo e usaremos também o atributo <b>placeholder</b>, o atributo <b>min</b>, com o valor mínimo que será aceito e o atributo <b>max</b>, com o valor máximo que será aceito. O número pode ser passado pelo usuário digitando diretamente no campo ou clicando nas setas para cima ou para baixo no final do campo.
+                </p>
+
+                <p><b>Código html:</b></p>
+
+                <code><pre>
+&lt;body&gt;
+    &lt;form method=&quot;post&quot; action=&quot;enviar.php&quot; name=&quot;formulario&quot;&gt;
+
+        &lt;label for=&quot;depId&quot;&gt;Dos 513 Deputados Federais, quantos são corruptos?&lt;/label&gt;
+        &lt;input type=&quot;number&quot; id=&quot;depId&quot; name=&quot;dep&quot; min=&quot;0&quot; max=&quot;513&quot; placeholder=&quot;Digite o número aqui. Não vale escrever todos.&quot;&gt;            
+
+    &lt;/form&gt;
+&lt;/body&gt;</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="100" src="iframe/exemplo-formularios-6.html"></iframe>
+
+                <p>
+                    Vamos incluir no formulário um campo para que o usuário escolha um valor através de um <b>controle deslizante</b> utilizando o valor <b>range</b> no atributo <b>type</b> no elemento <b>input</b>, usamos além do <b>id</b> e <b>name</b>, o atributo <b>min</b>, passando o valor mínimo, o atributo <b>max</b>, passando o valor máximo e o atributo <b>list</b> passando o valor do <b>id</b> do elemento <b>datalist</b> que vamos criar para passar os valores do <b>range</b>. 
+                </p>
+
+                <p>
+                    Abaixo da tag <b>input</b>, abrimos e fechamos a tag <b>datalist</b> com o atributo <b>id</b> com o mesmo valor passado ao atributo <b>list</b> do <b>input</b>, nesse exemplo, lista. Dentro da tag <b>datalist</b>, adicionamos o elemento <b>option</b> com o atributo <b>value</b> com cada valor do <b>range</b>, nesse exemplo criamos <b>option</b> de valor 0 até o valor 10.
+                </p><b></b>
+
+                <p>
+                    Entre o <b>label</b> e o <b>input</b>, criamos uma <b>div</b> com um <b>class</b> de valor <b>range</b> e dentro dela adicionamos vários <b>span</b> de 0 a 10 para mostrar esses valores acima do <b>range</b> e para que possamos aplicar os estilos <b>css</b>.
+                </p>
+
+                <p><b>Código html:</b></p>
+
+                <code><pre>
+&lt;body&gt;
+    &lt;form method=&quot;post&quot; action=&quot;enviar.php&quot; name=&quot;formulario&quot;&gt;
+
+    &lt;label for=&quot;notaId&quot;&gt;Nota do Site:&lt;/label&gt;
+    &lt;div class=&quot;range&quot;&gt;
+        &lt;span&gt;0&lt;/span&gt;&lt;span&gt;1&lt;/span&gt;&lt;span&gt;2&lt;/span&gt;&lt;span&gt;3&lt;/span&gt;&lt;span&gt;4&lt;/span&gt;&lt;span&gt;5&lt;/span&gt;&lt;span&gt;6&lt;/span&gt;&lt;span&gt;7&lt;/span&gt;&lt;span&gt;8&lt;/span&gt;&lt;span&gt;9&lt;/span&gt;&lt;span&gt;10&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type=&quot;range&quot; id=&quot;notaId&quot; name=&quot;nota&quot; min=&quot;0&quot; max=&quot;10&quot; list=&quot;lista&quot;&gt;
+    &lt;datalist id=&quot;lista&quot;&gt;
+        &lt;option value=&quot;0&quot;&gt;
+        &lt;option value=&quot;1&quot;&gt;
+        &lt;option value=&quot;2&quot;&gt;
+        &lt;option value=&quot;3&quot;&gt;
+        &lt;option value=&quot;4&quot;&gt;
+        &lt;option value=&quot;5&quot;&gt;
+        &lt;option value=&quot;6&quot;&gt;
+        &lt;option value=&quot;7&quot;&gt;
+        &lt;option value=&quot;8&quot;&gt;
+        &lt;option value=&quot;9&quot;&gt;
+        &lt;option value=&quot;10&quot;&gt;
+    &lt;/datalist&gt;
+
+    &lt;/form&gt;
+&lt;/body&gt;</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="100" src="iframe/exemplo-formularios-7.html"></iframe>
+
+                <p>
+                    Vamos incluir no formulário um campo para o usuário escolher uma <b>cor</b>, a diferença básica é o valor do atributo <b>type</b> que será <b>color</b>, lembrando que os valores dos atributos <b>id</b> e <b>name</b> devem ser únicos para cada campo e usaremos também o atributo <b>value</b> com o valor <b>#ff0000</b>, para mostrar a cor vermelha, por padrão o <b>color</b> mostra a cor preta, vale lembrar que a cor, em <b>value</b>, tem que ser escrito em hexadecimal, com a cerquilha <b>(#)</b> e os seis dígitos, não pode ser escrito de forma resumida, como <b>#f00</b>, essa forma resumida funciona no <b>css</b>.
+                </p>
+
+                <p><b>Código html:</b></p>
+
+                <code><pre>
+&lt;body&gt;
+    &lt;form method=&quot;post&quot; action=&quot;enviar.php&quot; name=&quot;formulario&quot;&gt;
+
+        &lt;label for=&quot;corId&quot;&gt;Escolha uma cor:&lt;/label&gt;
+        &lt;input type=&quot;color&quot; id=&quot;corId&quot; name=&quot;cor&quot; value=&quot;#ff0000&quot;&gt;                    
+
+    &lt;/form&gt;
+&lt;/body&gt;</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="100" src="iframe/exemplo-formularios-8.html"></iframe>
+
+                <p>
+                    Vamos incluir no formulário um campo chamado <b>radio button</b>, no qual nós passamos ao usuário algumas opções para ele escolher clicando na opção desejada, normalmente o <b>radio</b> é usado quando o usuário deve escolher somente uma das opções disponíveis. O valor do <b>type</b> é <b>radio</b> e além do <b>id</b> e <b>name</b>, usamos o atributo <b>value</b> com o valor de retorno para cada opção, nesse exemplo para a opção Masculino o valor retornado será masculino e assim por diante, o valor do <b>value</b> é o que vai aparecer para você quando o usuário enviar o formulário, no primeiro <b>radio</b> incluímos o atributo <b>checked</b>, que por ser um atributo <b>booleano</b>, não recebe valor, o <b>checked</b> é para deixar marcado essa opção no formulário, portanto só deve ser usado em uma das opções do <b>radio</b>, note também que envolvemos todo o <b>input</b> e o nome da opção com a tag <b>label</b>, para que o usuário ao clicar no nome da opção, também marque o <b>radio</b>.
+                </p>
+
+                <p><b>Código html:</b></p>
+
+                <code><pre>
+&lt;body&gt;
+    &lt;form method=&quot;post&quot; action=&quot;enviar.php&quot; name=&quot;formulario&quot;&gt;
+
+        &lt;label for=&quot;sexoId&quot;&gt;Qual é o seu sexo?&lt;/label&gt;&lt;br&gt;
+        &lt;label&gt;&lt;input type=&quot;radio&quot; id=&quot;sexoId&quot; name=&quot;sexo&quot; value=&quot;masculino&quot; checked&gt;Masculino&lt;/label&gt;
+        &lt;label&gt;&lt;input type=&quot;radio&quot; id=&quot;sexoId&quot; name=&quot;sexo&quot; value=&quot;feminino&quot;&gt;Feminino&lt;/label&gt;
+        &lt;label&gt;&lt;input type=&quot;radio&quot; id=&quot;sexoId&quot; name=&quot;sexo&quot; value=&quot;nao informado&quot;&gt;Prefiro não informar&lt;/label&gt;
+
+    &lt;/form&gt;
+&lt;/body&gt;</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="100" src="iframe/exemplo-formularios-9.html"></iframe>
+
+                <p>
+                    Vamos incluir no formulário um campo chamado <b>caixa de seleção</b> ou <b>combo box</b>, no qual o usuário clica numa caixa como um <b>menu dropbox</b> e escolhe uma opção. Esse campo é diferente dos outros porque não é definido com o elemento <b>input</b>, é definido pelo elemento <b>select</b>, que é aberto e fechado, onde incluímos os atributos <b>id</b> e <b>name</b>.
+                </p>
+
+                <p>
+                    Dentro do <b>select</b> adicionamos o elemento <b>option</b>, que é aberto e fechado, com o atributo <b>value</b> com o valor vazio, abrindo e fechando aspas duplas <b>("")</b> e dentro deste primeiro <b>option</b>, com o valor de <b>value</b> vazio, escrevemos uma mensagem para o usuário, como se fosse um <b>placeholder</b>, nesse exemplo escrevemos Escolha aqui o seu time.
+                </p>
+
+                <p>
+                    Nos próximos <b>option</b> adicionamos o valor em <b>value</b>, conforme o retorno que queremos do formulário, nesse exemplo, na opção Corinthians adicionamos o valor corinthians.
+                </p>
+
+                <p>
+                    Podemos ainda adicionar o elemento <b>optgroup</b>, como foi feito nesse exemplo, a tag do <b>optgroup</b> só é aberta e dentro dela adicionamos o atributo <b>label</b> com o valor do nome do grupo de opções, nesse exemplo usamos 2 <b>optgroup</b>, um com valor Times Paulistas e outro com valor Times Cariocas, esse valor de <b>label</b> não é uma opção para o usuário escolher, serve também como um <b>placeholder</b>.
+                </p>
+
+                <p><b>Código html:</b></p>
+
+                <code><pre>
+&lt;body&gt;
+    &lt;form method=&quot;post&quot; action=&quot;enviar.php&quot; name=&quot;formulario&quot;&gt;
+
+        &lt;label for=&quot;timeId&quot;&gt;Para qual time você torce?&lt;/label&gt;
+        &lt;select id=&quot;timeId&quot; name=&quot;time&quot;&gt;
+            &lt;option value=&quot;&quot;&gt;Escolha aqui o seu time&lt;/option&gt;
+        &lt;optgroup label=&quot;Times Paulistas&quot;&gt;
+            &lt;option value=&quot;corinthians&quot;&gt;Corinthians&lt;/option&gt;
+            &lt;option value=&quot;sao paulo&quot;&gt;São Paulo&lt;/option&gt;
+            &lt;option value=&quot;santos&quot;&gt;Santos&lt;/option&gt;
+            &lt;option value=&quot;palmeiras&quot;&gt;Palmeiras&lt;/option&gt;
+        &lt;optgroup label=&quot;Times Cariocas&quot;&gt;
+            &lt;option value=&quot;flamengo&quot;&gt;Flamengo&lt;/option&gt;
+            &lt;option value=&quot;fluminense&quot;&gt;Fluminense&lt;/option&gt;
+            &lt;option value=&quot;vasco&quot;&gt;Vasco&lt;/option&gt;
+            &lt;option value=&quot;botafogo&quot;&gt;Botafogo&lt;/option&gt;
+        &lt;/select&gt;
+
+    &lt;/form&gt;
+&lt;/body&gt;</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="100" src="iframe/exemplo-formularios-10.html"></iframe>
+
+                <p>
+                    Vamos incluir no formulário um <b>campo de texto</b> onde o usuário vai digitar uma resposta, a diferença é que ao clicar no campo de texto aparece algumas opções <b>pré-definidas</b> que o usuário pode escolher e ao digitar alguma letra as opções ficam restritas a essa letra, mas o usuário pode digitar outra resposta qualquer que não esteja listada nas opções.
+                </p>
+
+                <p>
+                    Esse campo também é criado com o elemento <b>input</b> mas não utiliza o atributo <b>type</b>, utilizamos o atributo <b>list</b> com o valor <b></b>do <b>id</b>, também não usamos o <b>id</b> no <b>input</b>, usaremos no <b>datalist</b>, adicionamos no <b>input</b> os atributos <b>name</b> e <b>placeholder</b>.
+                </p>
+
+                <p>
+                    Abrimos e fechamos a tag <b>datalist</b> e na tag de abertura adicionamos o atributo <b>id</b>. Dentro do <b>datalist</b> usamos o elemento <b>option</b>, só com a tag de abertura e com o atributo <b>value</b> com o valor da opção que queremos passar ao usuário. Usamos quantos <b>option</b> que acharmos necessário.
+                </p>
+
+                <p><b>Código html:</b></p>
+
+                <code><pre>
+&lt;body&gt;
+    &lt;form method=&quot;post&quot; action=&quot;enviar.php&quot; name=&quot;formulario&quot;&gt;
+
+        &lt;label for=&quot;linuxId&quot;&gt;Qual Linux você prefere?&lt;/label&gt;
+        &lt;input list=&quot;linuxId&quot; name=&quot;linux&quot; placeholder=&quot;Responda aqui&quot;&gt;
+        &lt;datalist id=&quot;linuxId&quot;&gt;
+            &lt;option value=&quot;Red Hat&quot;&gt;
+            &lt;option value=&quot;Debian&quot;&gt;
+            &lt;option value=&quot;Ubuntu&quot;&gt;
+            &lt;option value=&quot;Mint&quot;&gt;
+            &lt;option value=&quot;Fedora&quot;&gt;
+            &lt;option value=&quot;CentOs&quot;&gt;
+            &lt;option value=&quot;Suse&quot;&gt;
+        &lt;/datalist&gt;
+
+    &lt;/form&gt;
+&lt;/body&gt;</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="100" src="iframe/exemplo-formularios-11.html"></iframe>
+
+                <p>
+                    Vamos incluir no formulário um campo chamado <b>checkbox</b>, onde nós passamos algumas opções para o usuário escolher, clicando e marcando a opção desejada, no <b>checkbox</b> o usuário pode escolher mais de uma opção.
+                </p>
+
+                <p>
+                    O <b>checkbox</b> é envolvido por uma caixa ou um quadro, onde é feita uma pergunta ao usuário para que ele possa escolher as opções. Essa caixa é definida pela tag <b>fieldset</b>, que é aberta e fechada, e dentro do <b>fieldset</b> adicionamos a tag <b>legend</b>, que é aberta e fechada, e dentro da tag <b>legend</b> escrevemos o texto com a pergunta ao usuário.
+                </p>
+
+                <p>
+                    Abaixo da tag <b>legend</b>, ainda dentro do <b>fieldset</b>, incluímos as tags <b>input</b>, que só é aberta, e a tag <b>label</b>, que é aberta e fechada.
+                </p>
+
+                <p>
+                    Na tag <b>input</b> adicionamos o atributo <b>type</b> com o valor <b>checkbox</b>, adicionamos também os atributos <b>id</b>, <b>name</b> e <b>value</b>.
+                </p>
+
+                <p>
+                    Abaixo da tag <b>input</b> adicionamos a tag <b>label</b> com o atributo <b>for</b> com o valor passado ao <b>id</b> do <b>input</b>, dentro da tag <b>label</b> escrevemos o nome da opção. Após a tag de fechamento <b>label</b>, adicionamos o elemento <b>br</b> para quebrar uma linha, o que não precisa ser adicionado ao último <b>label</b> do <b>fieldset</b>, com a última opção.
+                </p>
+
+                <p><b>Código html:</b></p>
+
+                <code><pre>
+&lt;body&gt;
+    &lt;form method=&quot;post&quot; action=&quot;enviar.php&quot; name=&quot;formulario&quot;&gt;
+
+        &lt;fieldset&gt;
+            &lt;legend&gt;Qual é o seu estilo musical preferido?&lt;/legend&gt;
+
+            &lt;input type=&quot;checkbox&quot; id=&quot;mpbId&quot; name=&quot;musica&quot; value=&quot;mpb&quot;&gt;
+            &lt;label for=&quot;mpbId&quot;&gt;MPB&lt;/label&gt;&lt;br&gt;
+
+            &lt;input type=&quot;checkbox&quot; id=&quot;rockId&quot; name=&quot;musica&quot; value=&quot;rock&quot;&gt;
+            &lt;label for=&quot;rockId&quot;&gt;Rock&lt;/label&gt;&lt;br&gt;
+
+            &lt;input type=&quot;checkbox&quot; id=&quot;popId&quot; name=&quot;musica&quot; value=&quot;pop&quot;&gt;
+            &lt;label for=&quot;popId&quot;&gt;Pop&lt;/label&gt;&lt;br&gt;
+
+            &lt;input type=&quot;checkbox&quot; id=&quot;sertanejoId&quot; name=&quot;musica&quot; value=&quot;sertanejo&quot;&gt;
+            &lt;label for=&quot;sertanejoId&quot;&gt;Sertanejo&lt;/label&gt;&lt;br&gt;
+
+            &lt;input type=&quot;checkbox&quot; id=&quot;pagodeId&quot; name=&quot;musica&quot; value=&quot;pagode&quot;&gt;
+            &lt;label for=&quot;pagodeId&quot;&gt;Pagode&lt;/label&gt;&lt;br&gt;
+
+            &lt;input type=&quot;checkbox&quot; id=&quot;funkId&quot; name=&quot;musica&quot; value=&quot;funk&quot;&gt;
+            &lt;label for=&quot;funkId&quot;&gt;Funk&lt;/label&gt;
+        &lt;/fieldset&gt;
+
+    &lt;/form&gt;
+&lt;/body&gt;</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="200" src="iframe/exemplo-formularios-12.html"></iframe>
+
+                <p>
+                    Vamos incluir no formulário um campo chamado <b>textarea</b> que é uma área para o usuário incluir um texto, normalmente usado para o usuário enviar uma mensagem.
+                </p>
+
+                <p>
+                    Para adicionar o <b>textarea</b> não usamos a tag <b>input</b>, usamos a tag <b>textarea</b>, que é aberta e fechada, dentro da tag de abertura do <b>textarea</b> adicionamos os atributos <b>id</b>, <b>name</b> e <b>placeholder</b>. Podemos, ainda, incluir o atributo <b>maxlength</b> com o valor em número, nesse exemplo demos o valor de 400, esse valor define o número máximo de caracteres que o usuário pode digitar no campo de texto, lembrando que espaço também é contado como caracter.
+                </p>
+
+                <p><b>Código html:</b></p>
+
+                <code><pre>
+&lt;body&gt;
+    &lt;form method=&quot;post&quot; action=&quot;enviar.php&quot; name=&quot;formulario&quot;&gt;
+
+        &lt;label for=&quot;messageId&quot;&gt;Mensagem:&lt;/label&gt;
+        &lt;textarea id=&quot;messageId&quot; name=&quot;message&quot; placeholder=&quot;Digite aqui a sua mensagem&quot; maxlength=&quot;400&quot;&gt;&lt;/textarea&gt;
+
+    &lt;/form&gt;
+&lt;/body&gt;</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="100" src="iframe/exemplo-formularios-13.html"></iframe>
+
+                <p>
+                    Para finalizar o nosso formulário vamos incluir um <b>botão</b> para que o usuário possa <b>enviar</b> o formulário. Para isso usamos a tag <b>input</b> com o atributo <b>type</b> com o valor <b>submit</b>, o atributo <b>name</b> com o valor <b>submit</b> e com o atributo <b>value</b> com o valor que você queira escrever no botão, nesse exemplo demos o valor <b>Enviar</b>.
+                </p>
+
+                <p><b>Código html:</b></p>
+
+                <code><pre>
+&lt;body&gt;
+    &lt;form method=&quot;post&quot; action=&quot;enviar.php&quot; name=&quot;formulario&quot;&gt;
+
+        &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Enviar&quot;&gt;
+
+    &lt;/form&gt;
+&lt;/body&gt;</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="100" src="iframe/exemplo-formularios-14.html"></iframe>
+
+                <p>
+                    Vamos juntar todos os campos em um formulário único e aplicar alguns estilos css, para isso vamos envolver todo o <b>form</b> com uma <b>div</b> e incluir o atributo <b>class</b> com o valor <b>formulario</b> para facilitar a aplicação dos estilos no arquivo <b>css</b>.
+                </p>
+
+                <p><b>Código html:</b></p>
+
+                <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-formularios.css&quot;&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Exemplo Formulários&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;formulario&quot;&gt;
+        &lt;form method=&quot;post&quot; action=&quot;enviar.php&quot; name=&quot;formulario&quot;&gt;
+    
+            &lt;label for=&quot;nameId&quot;&gt;Nome:&lt;/label&gt;
+            &lt;input type=&quot;text&quot; id=&quot;nameId&quot; name=&quot;name&quot; placeholder=&quot;Digite aqui o seu nome&quot; required autofocus minlength=&quot;3&quot; maxlength=&quot;40&quot;&gt;
+
+            &lt;label for=&quot;emailId&quot;&gt;e-mail:&lt;/label&gt;
+            &lt;input type=&quot;email&quot; id=&quot;emailId&quot; name=&quot;email&quot; placeholder=&quot;Digite aqui o seu e-mail&quot; required&gt;
+    
+            &lt;label for=&quot;telId&quot;&gt;Telefone:&lt;/label&gt;
+            &lt;input type=&quot;tel&quot; id=&quot;telId&quot; name=&quot;tel&quot; placeholder=&quot;Digite aqui o seu telefone&quot;&gt;
+
+            &lt;label for=&quot;dataNascId&quot;&gt;Data de Nascimento:&lt;/label&gt;
+            &lt;input type=&quot;date&quot; id=&quot;dataNascId&quot; name=&quot;datanasc&quot;&gt;
+
+            &lt;label for=&quot;siteId&quot;&gt;Endereço do seu site:&lt;/label&gt;
+            &lt;input type=&quot;url&quot; id=&quot;siteId&quot; name=&quot;site&quot; placeholder=&quot;Digite aqui o endereço do seu site&quot;&gt;
+
+            &lt;label for=&quot;depId&quot;&gt;Dos 513 Deputados Federais, quantos são corruptos?&lt;/label&gt;
+            &lt;input type=&quot;number&quot; id=&quot;depId&quot; name=&quot;dep&quot; min=&quot;0&quot; max=&quot;513&quot; placeholder=&quot;Digite o número aqui. Não vale escrever todos.&quot;&gt;
+            
+            &lt;label for=&quot;notaId&quot;&gt;Nota do Site:&lt;/label&gt;
+            &lt;div class=&quot;range&quot;&gt;
+                &lt;span&gt;0&lt;/span&gt;&lt;span&gt;1&lt;/span&gt;&lt;span&gt;2&lt;/span&gt;&lt;span&gt;3&lt;/span&gt;&lt;span&gt;4&lt;/span&gt;&lt;span&gt;5&lt;/span&gt;&lt;span&gt;6&lt;/span&gt;&lt;span&gt;7&lt;/span&gt;&lt;span&gt;8&lt;/span&gt;&lt;span&gt;9&lt;/span&gt;&lt;span&gt;10&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;input type=&quot;range&quot; id=&quot;notaId&quot; name=&quot;nota&quot; min=&quot;0&quot; max=&quot;10&quot; list=&quot;lista&quot;&gt;
+            &lt;datalist id=&quot;lista&quot;&gt;
+                &lt;option value=&quot;0&quot;&gt;
+                &lt;option value=&quot;1&quot;&gt;
+                &lt;option value=&quot;2&quot;&gt;
+                &lt;option value=&quot;3&quot;&gt;
+                &lt;option value=&quot;4&quot;&gt;
+                &lt;option value=&quot;5&quot;&gt;
+                &lt;option value=&quot;6&quot;&gt;
+                &lt;option value=&quot;7&quot;&gt;
+                &lt;option value=&quot;8&quot;&gt;
+                &lt;option value=&quot;9&quot;&gt;
+                &lt;option value=&quot;10&quot;&gt;
+            &lt;/datalist&gt;
+
+            &lt;label for=&quot;corId&quot;&gt;Escolha uma cor:&lt;/label&gt;
+            &lt;input type=&quot;color&quot; id=&quot;corId&quot; name=&quot;cor&quot; value=&quot;#ff0000&quot;&gt;
+
+            &lt;label for=&quot;sexoId&quot;&gt;Qual é o seu sexo?&lt;/label&gt;&lt;br&gt;
+            &lt;label&gt;&lt;input type=&quot;radio&quot; id=&quot;sexoId&quot; name=&quot;sexo&quot; value=&quot;masculino&quot; checked&gt;Masculino&lt;/label&gt;
+            &lt;label&gt;&lt;input type=&quot;radio&quot; id=&quot;sexoId&quot; name=&quot;sexo&quot; value=&quot;feminino&quot;&gt;Feminino&lt;/label&gt;
+            &lt;label&gt;&lt;input type=&quot;radio&quot; id=&quot;sexoId&quot; name=&quot;sexo&quot; value=&quot;nao informado&quot;&gt;Prefiro não informar&lt;/label&gt;
+
+            &lt;br&gt;&lt;label for=&quot;timeId&quot;&gt;Para qual time você torce?&lt;/label&gt;
+            &lt;select id=&quot;timeId&quot; name=&quot;time&quot;&gt;
+                &lt;option value=&quot;&quot;&gt;Escolha aqui o seu time&lt;/option&gt;
+            &lt;optgroup label=&quot;Times Paulistas&quot;&gt;
+                &lt;option value=&quot;corinthians&quot;&gt;Corinthians&lt;/option&gt;
+                &lt;option value=&quot;sao paulo&quot;&gt;São Paulo&lt;/option&gt;
+                &lt;option value=&quot;santos&quot;&gt;Santos&lt;/option&gt;
+                &lt;option value=&quot;palmeiras&quot;&gt;Palmeiras&lt;/option&gt;
+            &lt;optgroup label=&quot;Times Cariocas&quot;&gt;
+                &lt;option value=&quot;flamengo&quot;&gt;Flamengo&lt;/option&gt;
+                &lt;option value=&quot;fluminense&quot;&gt;Fluminense&lt;/option&gt;
+                &lt;option value=&quot;vasco&quot;&gt;Vasco&lt;/option&gt;
+                &lt;option value=&quot;botafogo&quot;&gt;Botafogo&lt;/option&gt;
+            &lt;/select&gt;
+
+            &lt;label for=&quot;linuxId&quot;&gt;Qual Linux você prefere?&lt;/label&gt;
+            &lt;input list=&quot;linuxId&quot; name=&quot;linux&quot; placeholder=&quot;Responda aqui&quot;&gt;
+            &lt;datalist id=&quot;linuxId&quot;&gt;
+                &lt;option value=&quot;Red Hat&quot;&gt;
+                &lt;option value=&quot;Debian&quot;&gt;
+                &lt;option value=&quot;Ubuntu&quot;&gt;
+                &lt;option value=&quot;Mint&quot;&gt;
+                &lt;option value=&quot;Fedora&quot;&gt;
+                &lt;option value=&quot;CentOs&quot;&gt;
+                &lt;option value=&quot;Suse&quot;&gt;
+            &lt;/datalist&gt;
+
+            &lt;fieldset&gt;
+                &lt;legend&gt;Qual é o seu estilo musical preferido?&lt;/legend&gt;
+
+                &lt;input type=&quot;checkbox&quot; id=&quot;mpbId&quot; name=&quot;musica&quot; value=&quot;mpb&quot;&gt;
+                &lt;label for=&quot;mpbId&quot;&gt;MPB&lt;/label&gt;&lt;br&gt;
+
+                &lt;input type=&quot;checkbox&quot; id=&quot;rockId&quot; name=&quot;musica&quot; value=&quot;rock&quot;&gt;
+                &lt;label for=&quot;rockId&quot;&gt;Rock&lt;/label&gt;&lt;br&gt;
+
+                &lt;input type=&quot;checkbox&quot; id=&quot;popId&quot; name=&quot;musica&quot; value=&quot;pop&quot;&gt;
+                &lt;label for=&quot;popId&quot;&gt;Pop&lt;/label&gt;&lt;br&gt;
+
+                &lt;input type=&quot;checkbox&quot; id=&quot;sertanejoId&quot; name=&quot;musica&quot; value=&quot;sertanejo&quot;&gt;
+                &lt;label for=&quot;sertanejoId&quot;&gt;Sertanejo&lt;/label&gt;&lt;br&gt;
+
+                &lt;input type=&quot;checkbox&quot; id=&quot;pagodeId&quot; name=&quot;musica&quot; value=&quot;pagode&quot;&gt;
+                &lt;label for=&quot;pagodeId&quot;&gt;Pagode&lt;/label&gt;&lt;br&gt;
+
+                &lt;input type=&quot;checkbox&quot; id=&quot;funkId&quot; name=&quot;musica&quot; value=&quot;funk&quot;&gt;
+                &lt;label for=&quot;funkId&quot;&gt;Funk&lt;/label&gt;
+            &lt;/fieldset&gt;
+
+            &lt;label for=&quot;messageId&quot;&gt;Mensagem:&lt;/label&gt;
+            &lt;textarea id=&quot;messageId&quot; name=&quot;message&quot; placeholder=&quot;Digite aqui a sua mensagem&quot; maxlength=&quot;400&quot;&gt;&lt;/textarea&gt;
+
+            &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Enviar&quot;&gt;
+    
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+                <p><b>Código css:</b></p>
+
+                <code><pre>
+.formulario {
+    background-color: #e5e5e5;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #000;
+}
+
+input, select {
+    width: 385px;
+    display: block;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+select {
+    width: 400px;
+}
+
+textarea {
+    width: 385px;
+    height: 150px;
+    display: block;
+    padding: 5px;
+    margin-bottom: 15px;
+    font-family: sans-serif;
+}
+
+fieldset {
+    width: inherit;
+    margin-bottom: 15px;
+}
+
+fieldset input {
+    display: inline;
+    width: 20px;
+    margin-bottom: 15px;
+}
+
+.range {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.range span {
+    margin-left: 9px;
+}
+
+.range span:last-of-type {
+    margin-left: 3px; 
+    margin-right: 8px;
+}
+
+input[type="color"] {
+    width: 100px;
+}
+
+input[type="submit"] {
+    width: 100px;
+    margin: 0 auto;
+}
+
+input[type="radio"] {
+    display: inline-block;
+    width: 20px;
+    margin-top: 8px;
+    margin-left: 5px;
+}</pre></code>
+
+                <p><b>Resultado no navegador:</b></p>
+
+                <iframe class="frame" name="interno" width="100%" height="1300" src="https://aprendahtml.000webhostapp.com/exemplo-formularios.html"></iframe>
 
             <div class="paginacao">
                 <a class="anterior" href="audio-e-video.html"><< Anterior</a>
@@ -76,3 +722,5 @@
         <script id="dsq-count-scr" src="//aprenda-html.disqus.com/count.js" async></script>
     </body>
 </html>
+
+

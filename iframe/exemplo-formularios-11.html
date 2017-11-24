@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Exemplo Formulários</title>
+</head>
+<body>
+	<div class="formulario">
+		<form method="post" action="enviar.php" name="formulario">
+
+			<label for="linuxId">Qual Linux você prefere?</label>
+			<input list="linuxId" name="linux" placeholder="Responda aqui">
+			<datalist id="linuxId">
+				<option value="Red Hat">
+				<option value="Debian">
+				<option value="Ubuntu">
+				<option value="Mint">
+				<option value="Fedora">
+				<option value="CentOs">
+				<option value="Suse">
+			</datalist>
+	
+		</form>
+	</div>
+</body>
+</html>

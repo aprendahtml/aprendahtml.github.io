@@ -10,6 +10,7 @@
     $sexo = $_POST['sexo'];
     $time = $_POST['time'];
     $linux = $_POST['linux'];
+    $musica = $_POST['musica'];
     $message = $_POST['message'];
     $from = 'De: Aprenda HTML'; 
     $to = 'titenq2@gmail.com'; 
@@ -21,6 +22,12 @@
             Data de Nascimento: $datanasc\n
             Endereço do Site: $site\n
             Número de Deputados Federais Corruptos: $dep\n
+            Nota do Site: $nota\n
+            Cor Favorita: $cor\n
+            Sexo: $sexo\n
+            Time Preferido: $time\n
+            Linux Preferido: $linux\n
+            Estilo Musical: $musica\n
             Mensagem:\n $message";
 				
     if ($_POST['submit']) {
