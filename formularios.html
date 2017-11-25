@@ -40,7 +40,7 @@
             <div class="corpo">
                 <h1>Formulários</h1>
 
-                <p>
+                 <p>
                     Muitas páginas da <b>Internet</b> usam formulários, seja para fazer <b>login</b>, enviar uma mensagem, fazer contato ou até mesmo no <b>e-commerce</b>. No <b>HTML 5</b> foi implementado muitos elementos e atributos semânticos para os formulários. Vamos ver alguns exemplos.
                 </p>
 
@@ -67,7 +67,7 @@
                 <code><pre>
 &lt;body&gt;
     &lt;form method=&quot;post&quot; action=&quot;enviar.php&quot; name=&quot;formulario&quot;&gt;
-      
+
     &lt;/form&gt;
 &lt;/body&gt;</pre></code>
 
@@ -119,17 +119,17 @@
     &lt;/form&gt;
 &lt;/body&gt;</pre></code>
 
-                    <p><b>Resultado no navegador:</b></p>
+                <p><b>Resultado no navegador:</b></p>
 
-                    <iframe class="frame" name="interno" width="100%" height="100" src="iframe/exemplo-formularios-1.html"></iframe>
+                <iframe class="frame" name="interno" width="100%" height="100" src="iframe/exemplo-formularios-1.html"></iframe>
 
-                    <p>
-                        Vamos incluir no formulário um campo para receber o <b>e-mail</b> do usuário, a diferença básica é o valor do atributo <b>type</b> que será <b>email</b>, lembrando que os valores dos atributos <b>id</b> e <b>name</b> devem ser únicos para cada campo e usaremos também os atributos <b>placeholder</b> e <b>required</b>.
-                    </p>
+                <p>
+                    Vamos incluir no formulário um campo para receber o <b>e-mail</b> do usuário, a diferença básica é o valor do atributo <b>type</b> que será <b>email</b>, lembrando que os valores dos atributos <b>id</b> e <b>name</b> devem ser únicos para cada campo e usaremos também os atributos <b>placeholder</b> e <b>required</b>.
+                </p>
 
-                    <p><b>Código html:</b></p>
+                <p><b>Código html:</b></p>
 
-                    <code><pre>
+                <code><pre>
 &lt;body&gt;
     &lt;form method=&quot;post&quot; action=&quot;enviar.php&quot; name=&quot;formulario&quot;&gt;
 
@@ -229,7 +229,7 @@
 
                 <p>
                     Abaixo da tag <b>input</b>, abrimos e fechamos a tag <b>datalist</b> com o atributo <b>id</b> com o mesmo valor passado ao atributo <b>list</b> do <b>input</b>, nesse exemplo, lista. Dentro da tag <b>datalist</b>, adicionamos o elemento <b>option</b> com o atributo <b>value</b> com cada valor do <b>range</b>, nesse exemplo criamos <b>option</b> de valor 0 até o valor 10.
-                </p><b></b>
+                </p>
 
                 <p>
                     Entre o <b>label</b> e o <b>input</b>, criamos uma <b>div</b> com um <b>class</b> de valor <b>range</b> e dentro dela adicionamos vários <b>span</b> de 0 a 10 para mostrar esses valores acima do <b>range</b> e para que possamos aplicar os estilos <b>css</b>.
@@ -273,12 +273,12 @@
 
                 <p><b>Código html:</b></p>
 
-                <code><pre>
+                 <code><pre>
 &lt;body&gt;
     &lt;form method=&quot;post&quot; action=&quot;enviar.php&quot; name=&quot;formulario&quot;&gt;
 
-        &lt;label for=&quot;corId&quot;&gt;Escolha uma cor:&lt;/label&gt;
-        &lt;input type=&quot;color&quot; id=&quot;corId&quot; name=&quot;cor&quot; value=&quot;#ff0000&quot;&gt;                    
+    &lt;label for=&quot;corId&quot;&gt;Escolha uma cor:&lt;/label&gt;
+    &lt;input type=&quot;color&quot; id=&quot;corId&quot; name=&quot;cor&quot; value=&quot;#ff0000&quot;&gt;                    
 
     &lt;/form&gt;
 &lt;/body&gt;</pre></code>
@@ -293,14 +293,14 @@
 
                 <p><b>Código html:</b></p>
 
-                <code><pre>
+                 <code><pre>
 &lt;body&gt;
     &lt;form method=&quot;post&quot; action=&quot;enviar.php&quot; name=&quot;formulario&quot;&gt;
 
-        &lt;label for=&quot;sexoId&quot;&gt;Qual é o seu sexo?&lt;/label&gt;&lt;br&gt;
-        &lt;label&gt;&lt;input type=&quot;radio&quot; id=&quot;sexoId&quot; name=&quot;sexo&quot; value=&quot;masculino&quot; checked&gt;Masculino&lt;/label&gt;
-        &lt;label&gt;&lt;input type=&quot;radio&quot; id=&quot;sexoId&quot; name=&quot;sexo&quot; value=&quot;feminino&quot;&gt;Feminino&lt;/label&gt;
-        &lt;label&gt;&lt;input type=&quot;radio&quot; id=&quot;sexoId&quot; name=&quot;sexo&quot; value=&quot;nao informado&quot;&gt;Prefiro não informar&lt;/label&gt;
+    &lt;label for=&quot;sexoId&quot;&gt;Qual é o seu sexo?&lt;/label&gt;&lt;br&gt;
+    &lt;label&gt;&lt;input type=&quot;radio&quot; id=&quot;sexoId&quot; name=&quot;sexo&quot; value=&quot;masculino&quot; checked&gt;Masculino&lt;/label&gt;
+    &lt;label&gt;&lt;input type=&quot;radio&quot; id=&quot;sexoId&quot; name=&quot;sexo&quot; value=&quot;feminino&quot;&gt;Feminino&lt;/label&gt;
+    &lt;label&gt;&lt;input type=&quot;radio&quot; id=&quot;sexoId&quot; name=&quot;sexo&quot; value=&quot;nao informado&quot;&gt;Prefiro não informar&lt;/label&gt;
 
     &lt;/form&gt;
 &lt;/body&gt;</pre></code>
@@ -331,7 +331,7 @@
 &lt;body&gt;
     &lt;form method=&quot;post&quot; action=&quot;enviar.php&quot; name=&quot;formulario&quot;&gt;
 
-        &lt;label for=&quot;timeId&quot;&gt;Para qual time você torce?&lt;/label&gt;
+        &lt;br&gt;&lt;label for=&quot;timeId&quot;&gt;Para qual time você torce?&lt;/label&gt;
         &lt;select id=&quot;timeId&quot; name=&quot;time&quot;&gt;
             &lt;option value=&quot;&quot;&gt;Escolha aqui o seu time&lt;/option&gt;
         &lt;optgroup label=&quot;Times Paulistas&quot;&gt;
@@ -393,21 +393,14 @@
                 <p>
                     Vamos incluir no formulário um campo chamado <b>checkbox</b>, onde nós passamos algumas opções para o usuário escolher, clicando e marcando a opção desejada, no <b>checkbox</b> o usuário pode escolher mais de uma opção.
                 </p>
-
                 <p>
                     O <b>checkbox</b> é envolvido por uma caixa ou um quadro, onde é feita uma pergunta ao usuário para que ele possa escolher as opções. Essa caixa é definida pela tag <b>fieldset</b>, que é aberta e fechada, e dentro do <b>fieldset</b> adicionamos a tag <b>legend</b>, que é aberta e fechada, e dentro da tag <b>legend</b> escrevemos o texto com a pergunta ao usuário.
                 </p>
-
                 <p>
                     Abaixo da tag <b>legend</b>, ainda dentro do <b>fieldset</b>, incluímos as tags <b>input</b>, que só é aberta, e a tag <b>label</b>, que é aberta e fechada.
                 </p>
-
                 <p>
-                    Na tag <b>input</b> adicionamos o atributo <b>type</b> com o valor <b>checkbox</b>, adicionamos também os atributos <b>id</b>, <b>name</b> e <b>value</b>.
-                </p>
-
-                <p>
-                    Abaixo da tag <b>input</b> adicionamos a tag <b>label</b> com o atributo <b>for</b> com o valor passado ao <b>id</b> do <b>input</b>, dentro da tag <b>label</b> escrevemos o nome da opção. Após a tag de fechamento <b>label</b>, adicionamos o elemento <b>br</b> para quebrar uma linha, o que não precisa ser adicionado ao último <b>label</b> do <b>fieldset</b>, com a última opção.
+                    Na tag <b>input</b> adicionamos o atributo <b>type</b> com o valor <b>checkbox</b>, adicionamos também os atributos <b>id</b>, <b>name</b> e <b>value</b>. Abaixo da tag <b>input</b> adicionamos a tag <b>label</b> com o atributo <b>for</b> com o valor passado ao <b>id</b> do <b>input</b>, dentro da tag <b>label</b> escrevemos o nome da opção. Após a tag de fechamento <b>label</b>, adicionamos o elemento <b>br</b> para quebrar uma linha, o que não precisa ser adicionado ao último <b>label</b> do <b>fieldset</b>, com a última opção.
                 </p>
 
                 <p><b>Código html:</b></p>
@@ -604,7 +597,7 @@
             &lt;textarea id=&quot;messageId&quot; name=&quot;message&quot; placeholder=&quot;Digite aqui a sua mensagem&quot; maxlength=&quot;400&quot;&gt;&lt;/textarea&gt;
 
             &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Enviar&quot;&gt;
-    
+
         &lt;/form&gt;
     &lt;/div&gt;
 &lt;/body&gt;
@@ -722,5 +715,3 @@ input[type="radio"] {
         <script id="dsq-count-scr" src="//aprenda-html.disqus.com/count.js" async></script>
     </body>
 </html>
-
-
