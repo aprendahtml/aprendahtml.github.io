@@ -1,0 +1,9 @@
+@charset “utf-8”;
+
+.normal {
+	font-variant: normal;
+}
+
+.small-caps {
+	font-variant: small-caps;
+}

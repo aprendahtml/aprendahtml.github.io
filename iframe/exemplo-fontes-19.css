@@ -1,0 +1,9 @@
+@charset “utf-8”;
+
+.ws-1 {
+	word-spacing: 20px;
+}
+
+.ws-2 {
+	word-spacing: -5px;
+}

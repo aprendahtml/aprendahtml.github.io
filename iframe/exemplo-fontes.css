@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Sangue';
+    src: local("Nosifer"),
+    url("fonts/Nosifer-Regular.ttf");
+}
+
+p {
+	font-family: Sangue, fantasy;
+	font-size: 18px;
+	color: #f00;
+}

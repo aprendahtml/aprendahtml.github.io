@@ -1,0 +1,21 @@
+@charset “utf-8”;
+
+p {
+	margin: 0;
+}
+
+.vw {
+	font-size: 10vw;
+}
+
+.vh {
+	font-size: 10vh;
+}
+
+.vmin {
+	font-size: 10vmin;
+}
+
+.vmax {
+	font-size: 10vmax;
+}

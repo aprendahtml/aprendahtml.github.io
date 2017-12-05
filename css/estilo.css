@@ -17,22 +17,20 @@ main {
 	height: 100%;
 }
 
-main h1 {
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 24px;
-	text-align: center;
-}
-
 nav {
 	width: 100%;
 	max-width: 100%;
 	box-sizing: border-box;
 }
 
-h1 {
+h1, h2 {
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 18px;
+	font-size: 24px;
 	text-align: center;
+}
+
+h2 {
+	padding-top: 105px;
 }
 
 pre {
@@ -275,10 +273,6 @@ figcaption {
 	color: #d3d3d3;
 }
 
-/*.menu-ativo {
-	color: #d3d3d3;
-}*/
-
 .logo {
 	display: inline-block;
 	float: left;
@@ -295,6 +289,27 @@ figcaption {
 	font-size: 24px;
 	text-align: center;
 	margin-top: 10px;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.li-font {
+	display: inline-block;
+	margin: 30px 40px 0 0;
+}
+
+.li-font a {
+	font-size: 18px;
+}
+
+.nav-font {
+	text-align: center;
+}
+
+#vh {
+	max-height: 60vh; 
 }
 
 #disqus_thread {

@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+p {
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 30px;
+}
+
+.container {
+	display: flex;
+	width: 1000px;
+	height: 150px;
+	background-image: url(img/rosto.jpg);
+}
+
+.fundo {
+	width: 200px;
+	height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.alfa-1 {
+	background-color: rgba(255, 255, 0, .1);
+}
+
+.alfa-2 {
+	background-color: rgba(255, 255, 0, .2);
+}
+
+.alfa-3 {
+	background-color: rgba(255, 255, 0, .3);
+}
+
+.alfa-4 {
+	background-color: rgba(255, 255, 0, .4);
+}
+
+.alfa-5 {
+	background-color: rgba(255, 255, 0, .5);
+}
+
+.alfa-6 {
+	background-color: rgba(255, 255, 0, .6);
+}
+
+.alfa-7 {
+	background-color: rgba(255, 255, 0, .7);
+}
+
+.alfa-8 {
+	background-color: rgba(255, 255, 0, .8);
+}
+
+.alfa-9 {
+	background-color: rgba(255, 255, 0, .9);
+}
+
+.alfa-10 {
+	background-color: rgba(255, 255, 0, 1);
+}
+

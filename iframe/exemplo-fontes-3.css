@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Times New Roman';
+    src: local("Times New Roman"),
+    url("fonts/Times_New_Roman.ttf");
+}
+
+@font-face {
+    font-family: 'Georgia';
+    src: local("Georgia"),
+    url("fonts/Georgia.ttf");
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: local("Arial"),
+    url("fonts/Arial.ttf");
+}
+
+@font-face {
+    font-family: 'Verdana';
+    src: local("Verdana"),
+    url("fonts/Verdana.ttf");
+}
+
+@font-face {
+    font-family: 'Courier New';
+    src: local("Courier New"),
+    url("fonts/Courier_New.ttf");
+}
+
+@font-face {
+    font-family: 'PT Mono';
+    src: local("PT Mono"),
+    url("fonts/PTM55FT.ttf");
+}
+
+@font-face {
+    font-family: 'Great Vibes';
+    src: local("Great Vibes"),
+    url("fonts/GreatVibes-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Rock Salt';
+    src: local("Rock Salt"),
+    url("fonts/RockSalt-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Flavors';
+    src: local("Flavors"),
+    url("fonts/Flavors-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Ranchers';
+    src: local("Ranchers"),
+    url("fonts/Ranchers-Regular.ttf");
+}
+
+p {
+    font-size: 26px;
+}
+
+.times {
+	font-family: "Times New Roman", serif;
+}
+
+.georgia {
+	font-family: "Georgia", serif;
+}
+
+.arial {
+	font-family: "Arial", sans-serif;
+}
+
+.verdana {
+	font-family: "Verdana", sans-serif;
+}
+
+.courier {
+	font-family: "Courier New", monospace;
+}
+
+.pt {
+	font-family: "PT Mono", monospace;
+}
+
+.great {
+	font-family: "Great Vibes", cursive;
+}
+
+.rock {
+	font-family: "Rock Salt", cursive;
+}
+
+.flavors {
+	font-family: "Flavors", fantasy;
+}
+
+.ranchers {
+	font-family: "Ranchers", fantasy;
+}

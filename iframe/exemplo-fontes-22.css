@@ -1,0 +1,37 @@
+@charset “utf-8”;
+
+.ws-1 {
+	width: 400px;
+	border: 2px solid #000;
+	margin: 20px;
+	white-space: normal;
+}
+
+.ws-2 {
+	width: 400px;
+	border: 2px solid #000;
+	margin: 20px;
+	white-space: nowrap;
+}
+
+.ws-3 {
+	width: 400px;
+	border: 2px solid #000;
+	margin: 20px;
+	white-space: pre;
+}
+
+.ws-4 {
+	width: 400px;
+	border: 2px solid #000;
+	margin: 20px;
+	white-space: pre-wrap;
+}
+
+.ws-5 {
+	width: 400px;
+	border: 2px solid #000;
+	margin: 20px;
+	white-space: pre-line;
+}
+

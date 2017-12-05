@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+p {
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 30px;
+}
+
+.container {
+	display: flex;
+	width: 1000px;
+	height: 150px;
+}
+
+.white {
+	width: 200px;
+	height: 150px;
+	background-color: white;
+	border: 1px solid black;
+	border-right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.black {
+	width: 200px;
+	height: 150px;
+	background-color: black;
+	border: 1px solid black;
+	border-right: 0;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.red {
+	width: 200px;
+	height: 150px;
+	background-color: red;
+	border: 1px solid black;
+	border-right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.green {
+	width: 200px;
+	height: 150px;
+	background-color: green;
+	border: 1px solid black;
+	border-right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.blue {
+	width: 200px;
+	height: 150px;
+	background-color: blue;
+	border: 1px solid black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.yellow {
+	width: 200px;
+	height: 150px;
+	background-color: yellow;
+	border: 1px solid black;
+	border-right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.gold {
+	width: 200px;
+	height: 150px;
+	background-color: gold;
+	border: 1px solid black;
+	border-right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.orange {
+	width: 200px;
+	height: 150px;
+	background-color: orange;
+	border: 1px solid black;
+	border-right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.silver {
+	width: 200px;
+	height: 150px;
+	background-color: silver;
+	border: 1px solid black;
+	border-right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.purple {
+	width: 200px;
+	height: 150px;
+	background-color: purple;
+	border: 1px solid black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}

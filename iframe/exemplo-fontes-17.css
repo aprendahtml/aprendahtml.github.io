@@ -1,0 +1,14 @@
+@charset “utf-8”;
+
+.up {
+	text-transform: uppercase;
+}
+
+.lo {
+	text-transform: lowercase;
+}
+
+.ca {
+	text-transform: capitalize;
+}
+

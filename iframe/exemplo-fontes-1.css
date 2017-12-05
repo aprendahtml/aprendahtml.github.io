@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+.fonte-shadows {
+	font-family: "Shadows Into Light", cursive;
+	font-size: 24px;
+}
+
+.fonte-ubuntu {
+	font-family: Ubuntu, sans-serif;
+	font-size: 24px;
+}

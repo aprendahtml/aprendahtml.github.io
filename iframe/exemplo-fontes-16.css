@@ -1,0 +1,41 @@
+@charset “utf-8”;
+
+.underline {
+	text-decoration: underline;
+}
+
+.overline {
+	text-decoration: overline;
+}
+
+.line-through {
+	text-decoration: line-through;
+}
+
+.uo {
+	text-decoration: underline overline;
+}
+
+.uol {
+	text-decoration: underline overline line-through;
+}
+
+.cor {
+	text-decoration: underline #f00;
+}
+
+.double {
+	text-decoration: line-through double;
+}
+
+.dotted {
+	text-decoration:  underline overline dotted;
+}
+
+.dashed {
+	text-decoration: underline dashed;
+}
+
+.wavy {
+	text-decoration: underline #ff0 wavy;
+}

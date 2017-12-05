@@ -1,0 +1,9 @@
+@charset “utf-8”;
+
+.ls-1 {
+	letter-spacing: 3px;
+}
+
+.ls-2 {
+	letter-spacing: -2px;
+}

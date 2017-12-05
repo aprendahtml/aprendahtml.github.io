@@ -1,0 +1,2085 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109518086-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-109518086-1');
+        </script>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/estilo.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <title>Fontes</title>
+    </head>
+    <body>
+        <div class="container">
+        <header>
+            <nav class="menu">
+                <div class="logo">
+                    <a href="index.html" target="_self" title="aprendahtml.github.io"><img src="img/html.png" alt="HTML Logo" width="80px" height="80px"></a>
+                </div>
+                <div>
+                    <ul class="menu-lista">
+                        <li class="menu-item"><a class="menu-link menu-ativo" href="index.html">Home</a></li>
+                        <li class="menu-item"><a class="menu-link" href="o-que-e-html.html">HTML</a></li>
+                        <li class="menu-item"><a class="menu-link" href="css.html">CSS</a></li>
+                        <li class="menu-item"><a class="menu-link" href="javascript.html">JavaScript</a></li>
+                        <li class="menu-item"><a class="menu-link" href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <nav class="lateral">
+            <object data="menu-lateral.html"></object>
+        </nav>
+        <main>
+            <div class="corpo">
+                <h1>Fontes</h1>
+
+            <p>
+                <b>Fonte</b> é o conjunto de caracteres que formam um tipo de letra caracterizado por uma determinada forma. No arquivo html só escrevemos o texto, a escolha do tipo da fonte e toda a sua formatação, como tamanho, cor, alinhamento e outros atributos são especificados no arquivo <b>css</b>.
+            </p>
+
+            <p>
+                No arquivo <b>css</b> primeiro definimos o <b>charset</b> com a codificação de caracteres:
+            </p>
+
+            <code><pre>
+@charset "utf-8";</pre></code>
+
+            <nav class="nav-font">
+                <ul class="lateral-lista">
+                    <li class="lateral-item li-font"><a href="#font-family" target="_parent" class="lateral-link">font-family</a></li>
+                    <li class="lateral-item li-font"><a href="#font-face" target="_parent" class="lateral-link">@font-face</a></li>
+                    <li class="lateral-item li-font"><a href="#web-fonts" target="_parent" class="lateral-link">Web Fonts</a></li>
+                    <li class="lateral-item li-font"><a href="#color" target="_parent" class="lateral-link">color</a></li>
+                    <li class="lateral-item li-font"><a href="#font-size" target="_parent" class="lateral-link">font-size</a></li>
+                    <li class="lateral-item li-font"><a href="#font-style" target="_parent" class="lateral-link">font-style</a></li>
+                    <li class="lateral-item li-font"><a href="#font-weight" target="_parent" class="lateral-link">font-weight</a></li>
+                    <li class="lateral-item li-font"><a href="#font-variant" target="_parent" class="lateral-link">font-variant</a></li>
+                    <li class="lateral-item li-font"><a href="#text-indent" target="_parent" class="lateral-link">text-indent</a></li>
+                    <li class="lateral-item li-font"><a href="#text-align" target="_parent" class="lateral-link">text-align</a></li>
+                    <li class="lateral-item li-font"><a href="#text-decoration" target="_parent" class="lateral-link">text-decoration</a></li>
+                    <li class="lateral-item li-font"><a href="#text-transform" target="_parent" class="lateral-link">text-transform</a></li>
+                    <li class="lateral-item li-font"><a href="#text-shadow" target="_parent" class="lateral-link">text-shadow</a></li>
+                    <li class="lateral-item li-font"><a href="#word-spacing" target="_parent" class="lateral-link">word-spacing</a></li>
+                    <li class="lateral-item li-font"><a href="#letter-spacing" target="_parent" class="lateral-link">letter-spacing</a></li>
+                    <li class="lateral-item li-font"><a href="#line-height" target="_parent" class="lateral-link">line-height</a></li>
+                    <li class="lateral-item li-font"><a href="#white-space" target="_parent" class="lateral-link">white-space</a></li>
+                    <li class="lateral-item li-font"><a href="#word-wrap" target="_parent" class="lateral-link">word-wrap</a></li>
+                    <li class="lateral-item li-font"><a href="#entities" target="_parent" class="lateral-link">&amp;nbsp; e &amp;shy;</a></li>
+                    <li class="lateral-item li-font"><a href="#tags" target="_parent" class="lateral-link">&lt;br&gt; &lt;wbr&gt; &lt;sub&gt; &lt;sup&gt; &lt;em&gt; &lt;b&gt;</a></li>
+                </ul>
+            </nav>
+
+            <article>
+
+            <h2 id="font-family">Propriedade font-family</h2>
+
+            <p>
+                Para definirmos o tipo da fonte usamos no seletor a propriedade <b>font-family</b>, no valor usamos o nome da fonte:
+            </p>
+
+            <code><pre>
+h1 {
+    font-family: Arial;
+}
+</pre></code>
+
+            <p>
+                O navegador só vai usar a fonte <b>Arial</b> se ela estiver instalada no computador, ou dispositivo, do usuário, senão o navegador vai usar uma fonte genérica. Para amenizar esse problema, podemos definir uma ou mais fontes para serem usadas, no caso da primeira não estiver instalada, e no caso de nenhuma delas estiver instalada, podemos definir uma família genérica da fonte.
+            </p>
+
+            <p>
+                Existem 5 famílias genéricas de fonte:
+            </p>
+
+            <p>
+                <b>serif</b>: são fontes normais com serifa, serifa é um pequeno prolongamento no final das hastes das letras, normalmente são usadas em parágrafos.
+            </p>
+
+            <p>
+                <b>sans-serif</b>: são fontes normais sem serifa, normalmente são usadas em títulos.
+            </p>
+
+            <p>
+                <b>monospace</b>: são fontes mono-espaçadas, ou seja, todo caracter ocupa a mesma largura, normalmente a letra <b>o</b> ocupa uma largura maior que a letra <b>i</b>, mas em fontes <b>monospace</b> todas as letras têm a mesma largura. As fontes <b>monospace</b> eram usadas em máquinas de escrever e normalmente são usadas em código de programação.
+            </p>
+
+            <p>
+                <b>cursive</b>: são fontes cursivas, ou seja, são fontes que têm o estilo de escrita manual.
+            </p>
+
+            <p>
+                <b>fantasy</b>: são fontes decorativas, diferentes, elaboradas, de difícil leitura, normalmente usadas em marcas, logotipos, <em>slogan</em> ou títulos.
+            </p>
+
+            <code><pre>
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}</pre></code>
+
+            <p>
+                No exemplo do arquivo <b>css</b> acima, o navegador vai renderizar todos os <b>h1</b> com a fonte <b>Arial</b>, se o usuário não tiver a fonte <b>Arial</b> instalada, o navegador vai renderizar todos os <b>h1</b> com a fonte <b>Helvetica</b>, se o usuário também não tiver a fonte <b>Helvetica</b> instalada, o navegador vai renderizar todos os <b>h1</b> com uma fonte genérica sem serifa.
+            </p>
+
+            <p><b>Exemplo de fontes:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="650" src="iframe/exemplo-fontes-3.html"></iframe>
+
+            </article>
+
+            <article>
+
+            <h2 id="font-face">@font-face</h2>
+
+            <p>
+                Se quisermos que o navegador renderize exatamente a fonte especificada, mesmo que o usuário não tenha a fonte instalada, podemos usar o <b>@font-face</b> onde adicionamos o atributo <b>font-family</b> com o valor do nome que queremos usar para a fonte, não é obrigatório usar o nome da fonte, podemos usar qualquer nome mas devemos utilizar esse mesmo nome no arquivo <b>css</b>, adicionamos também o atributo <b>src</b> com o caminho para o arquivo da fonte, primeiro passamos o caminho <b>local</b>, que será usado caso o usuário tenha a fonte instalada no computador, e depois o caminho <b>url</b>, para que o navegador baixe o arquivo de fonte.
+            </p>
+
+            <code><pre>
+@font-face {
+    font-family: 'Sangue';
+    src: local("Nosifer"),
+         url("fonts/Nosifer-Regular.ttf");
+}</pre></code>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;p&gt;Testando @font-face com a fonte Nosifer utilizando o nome Sangue.&lt;/p&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Sangue';
+    src: local("Nosifer"),
+    url("fonts/Nosifer-Regular.ttf");
+}
+
+p {
+    font-family: Sangue, fantasy;
+    font-size: 18px;
+    color: #f00;
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="100" src="iframe/exemplo-fontes.html"></iframe>
+
+            </article>
+
+            <article>
+
+            <h2 id="web-fonts">Web Fonts</h2>
+
+            <p>
+                Também podemos utilizar fontes diretamente da Internet, de repositórios de fontes, vamos utilizar nesse exemplo o <a class="link-externo" href="https://fonts.google.com" target="_blank">Google Fonts</a>.
+            </p>
+
+            <p>
+                Entre no endereço <a class="link-externo" href="https://fonts.google.com" target="_blank">https://fonts.google.com</a>, navegue no site e escolha a sua fonte, nesse exemplo eu usei a fonte <b>'Shadows Into Light'</b> para ser usada diretamente da internet, clique no sinal de <b>+</b>, na parte inferior aparece um banner escrito <b>“1 Family Selected”</b>, clique nesse <em>banner</em>, para utilizar essa fonte copie o código que aparece embaixo de <span class="uppercase"><b>standard</b></span> dentro de <span class="uppercase"><b>embed</b></span> e cole dentro da tag <b>head</b> do seu arquivo <b>html</b>, nesse exemplo o código é:
+            </p>
+
+            <code><pre>
+&lt;link href=&quot;https://fonts.googleapis.com/css?family=Shadows+Into+Light&quot; rel=&quot;stylesheet&quot;&gt;</pre></code>
+
+            <p>
+                Copie também o código abaixo de <b>Specify in CSS</b> e cole no arquivo <b>css</b>, nesse exemplo o código é:
+            </p>
+            
+            <code><pre>
+font-family: 'Shadows Into Light', cursive;</pre></code>
+
+            <p>
+                Se não for usar a fonte agora, você pode comentar a linha utilizando <b>/*</b> no começo e <b>*/</b> no final.
+            </p>
+
+            <p>
+                É possível fazer a referência a mais de uma fonte dentro da tag <b>link</b>, é só adicionar o caracter <b>pipe</b> (<b>|</b>), que é a barra vertical, após o nome da primeira fonte, antes do fechamento das aspas duplas (<b>“</b>) e incluir o nome da outra fonte, nesse exemplo eu vou incluir a fonte <b>Ubuntu</b>, nesse exemplo o código é:
+            </p>
+
+            <code><pre>
+&lt;link href=&quot;https://fonts.googleapis.com/css?family=Shadows+Into+Light|Ubuntu&quot; rel=&quot;stylesheet&quot;&gt;</pre></code>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-1.css&quot;&gt;
+        &lt;link href=&quot;https://fonts.googleapis.com/css?family=Shadows+Into+Light|Ubuntu&quot; rel=&quot;stylesheet&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 1&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;p class=&quot;fonte-shadows&quot;&gt;Testando fonte externa &quot;Shadows Into Light&quot;.&lt;/p&gt;
+        &lt;p class=&quot;fonte-ubuntu&quot;&gt;Testando fonte externa &quot;Ubuntu&quot;.&lt;/p&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset "utf-8";
+
+.fonte-shadows {
+    font-family: "Shadows Into Light", cursive;
+    font-size: 24px;
+}
+
+.fonte-ubuntu {
+    font-family: Ubuntu, sans-serif;
+    font-size: 24px;
+}</pre></code>
+            
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="150" src="iframe/exemplo-fontes-1.html"></iframe>
+
+            <p>
+                No <b>Google Chrome</b> existe uma <b>extensão</b>, chamada <a class="link-externo" href="https://chrome.google.com/webstore/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?utm_source=chrome-app-launcher-info-dialog" target="_blank">WhatFont</a>, que ao se colocar o cursor sobre uma fonte, ela mostra o nome da fonte utilizada.
+            </p>
+
+            </article>
+
+            <article>
+
+            <h2 id="color">Propriedade color</h2>
+
+            <p>
+                Para definir as cores das fontes usamos no arquivo <b>css</b> a propriedade <b>color</b> com o valor da cor a ser utilizada, o valor da cor pode ser passado pelo <b>nome</b>, por <b>hexadecimal</b>, por <b>rgb</b>, por <b>rgba</b>, por <b>hsl</b> ou por <b>hsla</b>, é recomendado utilizar o valor em <b>hexadecimal</b>, no caso de se utilizar o canal <b>alfa</b> (canal de transparência) na cor, é recomendado utilizar o valor em <b>rgba</b>.
+            </p>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-2.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 2&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;p class=&quot;color-nome&quot;&gt;Testando propriedade color com valor nome&lt;/p&gt;
+        &lt;p class=&quot;color-hexadecimal&quot;&gt;Testando propriedade color com valor hexadecimal&lt;/p&gt;
+        &lt;p class=&quot;color-rgb&quot;&gt;Testando propriedade color com valor rgb&lt;/p&gt;
+        &lt;p class=&quot;color-rgba&quot;&gt;Testando propriedade color com valor rgba&lt;/p&gt;
+        &lt;p class=&quot;color-hsl&quot;&gt;Testando propriedade color com valor hsl&lt;/p&gt;
+        &lt;p class=&quot;color-hsla&quot;&gt;Testando propriedade color com valor hsla&lt;/p&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset "utf-8";
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.color-nome {
+    color: red;
+}
+
+.color-hexadecimal {
+    color: #ff0000;
+}
+
+.color-rgb {
+    color: rgb(255, 0, 0);
+}
+
+.color-rgba {
+    color: rgba(255, 0, 0, .5);
+}
+
+.color-hsl {
+    color: hsl(0, 100%, 50%);
+}
+
+.color-hsla {
+    color: hsla(0, 100%, 50%, .5);
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="400" src="iframe/exemplo-fontes-2.html"></iframe>
+
+            <p>
+                Note que mesmo utilizando notações diferentes no valor das cores, todas elas utilizam a cor vermelha, mesmo o <b>rgba</b> e o <b>hsla</b>, que parece que está utilizando uma cor rosa mas está utilizando a cor vermelha com o canal <b>alfa</b> de transparência em 50%.
+            </p>
+
+            <p>
+                As cores na Internet utiliza o padrão de cores do monitor, que é <b>rgb</b>, que é a sigla para <b>red</b>, <b>green</b> e <b>blue</b>, respectivamente vermelho, verde e azul. O padrão <b>rgb</b> utiliza 8 <b>bits</b> para cada cor, na base binária, 2<sup>8</sup> totaliza 256 valores possíveis, de 0 a 255. Com 256 valores disponíveis para vermelho, verde e azul, obtemos 256<sup>3</sup> totalizando 16.777.216 cores.
+            </p>
+
+            <p>
+                No <b>Google Chrome</b> existe uma <b>extensão</b>, chamada <a class="link-externo" href="https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?utm_source=chrome-app-launcher-info-dialog" target="_blank">ColorZilla</a>, que ao se colocar o cursor sobre uma cor nos é mostrado o seu valor em rgb e em hexadecimal e clicando na cor podemos ver o seu valor em hsl.
+            </p>
+
+            <p><b>Exemplo de cores com valor em nome, rgb, hexadecimal e hsl:</b></p>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-4.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 4&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;white&quot;&gt;&lt;p&gt;white &lt;br&gt; rgb(255, 255, 255) &lt;br&gt; #fff &lt;br&gt; hsl(0, 0%, 100%)&lt;/p&gt;&lt;/div&gt;
+            &lt;div class=&quot;black&quot;&gt;&lt;p&gt;black &lt;br&gt; rgb(0, 0, 0) &lt;br&gt; #000 &lt;br&gt; hsl(0, 0%, 0%)&lt;/p&gt;&lt;/div&gt;
+            &lt;div class=&quot;red&quot;&gt;&lt;p&gt;red &lt;br&gt; rgb(255, 0, 0) &lt;br&gt; #f00 &lt;br&gt; hsl(0, 100%, 50%)&lt;/p&gt;&lt;/div&gt;
+            &lt;div class=&quot;green&quot;&gt;&lt;p&gt;green &lt;br&gt; rgb(0, 128, 0) &lt;br&gt; #008000 &lt;br&gt; hsl(120, 100%, 25%)&lt;/p&gt;&lt;/div&gt;
+            &lt;div class=&quot;blue&quot;&gt;&lt;p&gt;blue &lt;br&gt; rgb(0, 0, 255) &lt;br&gt; #00f &lt;br&gt; hsl(240, 100%, 50%)&lt;/p&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;yellow&quot;&gt;&lt;p&gt;yellow &lt;br&gt; rgb(255, 255, 0) &lt;br&gt; #ff0 &lt;br&gt; hsl(60, 100%, 50%)&lt;/p&gt;&lt;/div&gt;
+            &lt;div class=&quot;gold&quot;&gt;&lt;p&gt;gold &lt;br&gt; rgb(255, 215, 0) &lt;br&gt; #ffd700 &lt;br&gt; hsl(51, 100%, 50%)&lt;/p&gt;&lt;/div&gt;
+            &lt;div class=&quot;orange&quot;&gt;&lt;p&gt;orange &lt;br&gt; rgb(255, 165, 0) &lt;br&gt; #ffa500 &lt;br&gt; hsl(39, 100%, 50%)&lt;/p&gt;&lt;/div&gt;
+            &lt;div class=&quot;silver&quot;&gt;&lt;p&gt;silver &lt;br&gt; rgb(192, 192, 192) &lt;br&gt; #c0c0c0 &lt;br&gt; hsl(0, 0%, 75%)&lt;/p&gt;&lt;/div&gt;
+            &lt;div class=&quot;purple&quot;&gt;&lt;p&gt;purple &lt;br&gt; rgb(128, 0, 128) &lt;br&gt; #800080 &lt;br&gt; hsl(300, 100%, 25%)&lt;/p&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset "utf-8";
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+}
+
+.container {
+    display: flex;
+    width: 1000px;
+    height: 150px;
+}
+
+.white {
+    width: 200px;
+    height: 150px;
+    background-color: white;
+    border: 1px solid black;
+    border-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.black {
+    width: 200px;
+    height: 150px;
+    background-color: black;
+    border: 1px solid black;
+    border-right: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.red {
+    width: 200px;
+    height: 150px;
+    background-color: red;
+    border: 1px solid black;
+    border-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.green {
+    width: 200px;
+    height: 150px;
+    background-color: green;
+    border: 1px solid black;
+    border-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blue {
+    width: 200px;
+    height: 150px;
+    background-color: blue;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.yellow {
+    width: 200px;
+    height: 150px;
+    background-color: yellow;
+    border: 1px solid black;
+    border-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gold {
+    width: 200px;
+    height: 150px;
+    background-color: gold;
+    border: 1px solid black;
+    border-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orange {
+    width: 200px;
+    height: 150px;
+    background-color: orange;
+    border: 1px solid black;
+    border-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.silver {
+    width: 200px;
+    height: 150px;
+    background-color: silver;
+    border: 1px solid black;
+    border-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.purple {
+    width: 200px;
+    height: 150px;
+    background-color: purple;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="350" src="iframe/exemplo-fontes-4.html"></iframe>
+
+            <p>
+                Note que o valor em <b>hexadecimal</b> é antecedido pelo caracter <b>cerquilha</b> <b>(#)</b> e esse valor é formado por 3 pares de caracteres, cada par é equivalente ao valor de <b>red</b>, <b>green</b> e <b>blue</b>, respectivamente, então em <b>#ffd700</b>, o <b>ff</b> é o valor do <b>vermelho</b>, o <b>d7</b> é o valor do <b>verde</b> e o <b>00</b> é o valor do <b>azul</b>, note também que se cada um dos 3 valores forem de pares iguais, podemos escrever o valor em <b>hexadecimal</b> de forma abreviada, por exemplo, o valor <b>#ffff00</b> pode ser escrito <b>#ff0</b>.
+            </p>
+
+            <p>
+                O valor em <b>rgb</b> também pode ser escrito de forma <b>percentual</b>, por exemplo:
+            </p>
+
+            <p><b>rgb(100%, 0%, 100%)</b></p>
+
+            <p>
+                Essa forma em percentual é equivalente a <b>rgb(255, 0, 255)</b>.
+            </p>
+
+            <p>
+                O valor em <b>hsl</b>, que é a abreviação para <b>hue</b> (tom), <b>saturation</b> (saturação) e <b>lightness</b> (luminosidade), recebe o valor de <b>hue</b> em graus e os valores de <b>saturation</b> e <b>lightness</b> em percentual, mesmo se o valor do <b>saturation</b> e do <b>lightness</b> forem 0, deve-se colocar o sinal de por cento (<b>%</b>), por exemplo:
+            </p>
+
+            <p><b>hsl(120, 0%, 25%)</b></p>
+
+            <p>
+                Os valores em <b>rgba</b> e <b>hsla</b> seguem os mesmos princípios do <b>rgb</b> e do <b>hsl</b>, a única diferença é a adição do canal <b>alfa</b> de transparência, que recebe um valor de 0 a 1, divididos em decimais, como 0, 0.1, 0.2, ..., 0.9 e 1, podemos suprimir o 0 à esquerda do ponto (<b>.</b>), então 0.1 pode ser escrito de forma abreviada como .1, o valor 0 é totalmente transparente e o valor 1 é totalmente opaco, então quanto menor o valor de <b>alfa</b> a transparência é maior e quanto maior o valor de <b>alfa</b> a transparência é menor.
+            </p>
+
+            <p><b>Exemplo de cores cor valor alfa:</b></p>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-5.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 5&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;fundo alfa-1&quot;&gt;&lt;p&gt;rgba(255, 255, 0, .1)&lt;/p&gt;&lt;/div&gt;
+            &lt;div class=&quot;fundo alfa-2&quot;&gt;&lt;p&gt;rgba(255, 255, 0, .2)&lt;/p&gt;&lt;/div&gt;
+            &lt;div class=&quot;fundo alfa-3&quot;&gt;&lt;p&gt;rgba(255, 255, 0, .3)&lt;/p&gt;&lt;/div&gt;
+            &lt;div class=&quot;fundo alfa-4&quot;&gt;&lt;p&gt;rgba(255, 255, 0, .4)&lt;/p&gt;&lt;/div&gt;
+            &lt;div class=&quot;fundo alfa-5&quot;&gt;&lt;p&gt;rgba(255, 255, 0, .5)&lt;/p&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;fundo alfa-6&quot;&gt;&lt;p&gt;rgba(255, 255, 0, .6)&lt;/p&gt;&lt;/div&gt;
+            &lt;div class=&quot;fundo alfa-7&quot;&gt;&lt;p&gt;rgba(255, 255, 0, .7)&lt;/p&gt;&lt;/div&gt;
+            &lt;div class=&quot;fundo alfa-8&quot;&gt;&lt;p&gt;rgba(255, 255, 0, .8)&lt;/p&gt;&lt;/div&gt;
+            &lt;div class=&quot;fundo alfa-9&quot;&gt;&lt;p&gt;rgba(255, 255, 0, .9)&lt;/p&gt;&lt;/div&gt;
+            &lt;div class=&quot;fundo alfa-10&quot;&gt;&lt;p&gt;rgba(255, 255, 0, 1)&lt;/p&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset "utf-8";
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+}
+
+.container {
+    display: flex;
+    width: 1000px;
+    height: 150px;
+    background-image: url(img/rosto.jpg);
+}
+
+.fundo {
+    width: 200px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alfa-1 {
+    background-color: rgba(255, 255, 0, .1);
+}
+
+.alfa-2 {
+    background-color: rgba(255, 255, 0, .2);
+}
+
+.alfa-3 {
+    background-color: rgba(255, 255, 0, .3);
+}
+
+.alfa-4 {
+    background-color: rgba(255, 255, 0, .4);
+}
+
+.alfa-5 {
+    background-color: rgba(255, 255, 0, .5);
+}
+
+.alfa-6 {
+    background-color: rgba(255, 255, 0, .6);
+}
+
+.alfa-7 {
+    background-color: rgba(255, 255, 0, .7);
+}
+
+.alfa-8 {
+    background-color: rgba(255, 255, 0, .8);
+}
+
+.alfa-9 {
+    background-color: rgba(255, 255, 0, .9);
+}
+
+.alfa-10 {
+    background-color: rgba(255, 255, 0, 1);
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="350" src="iframe/exemplo-fontes-5.html"></iframe>
+
+            <p>
+                Ainda existe um valor de cor em <b>degradê</b>, que é o <b>gradient</b>, que se divide em <b>linear-gradient</b> e <b>radial-gradient</b>, mas como o <b>gradient</b> é renderizado como uma imagem e só pode ser aplicado em propriedades que aceitem uma imagem como valor e não pode ser usado em fontes, veremos esse valor mais adiante.
+            </p>
+
+            </article>
+
+            <article>
+
+            <h2 id="font-size">Propriedade font-size</h2>
+
+            <p>
+                A propriedade font-size define o tamanho da fonte, aparentemente é bem simples de se usar, é só definir o seletor e aplicar a propriedade font-size com o valor do tamanho da fonte que queremos, é esse valor que começa a complicar, porque temos vários tipos de valores que podemos usar no font-size, por exemplo:
+            </p>
+
+            <code><pre>
+font-size: xx-small;
+font-size: x-small;
+font-size: small;
+font-size: medium;
+font-size: large;
+font-size: x-large;
+font-size: xx-large;
+font-size: smaller;
+font-size: larger;
+font-size: 14px;
+font-size: 1.5em;
+font-size: 1.5rem;
+font-size: 50%;
+font-size: 8ch;
+font-size: 2vw;
+font-size: 1.5vh;
+font-size: 2.2vmin;
+font-size: 1.8vmax;
+font-size: 3ex;
+font-size: 28pt;
+font-size: 10in;
+font-size: 10cm;
+font-size: 100mm;
+font-size: 18pc;</pre></code>
+
+            <p>
+                Os valores <b>xx-small</b>, <b>x-small</b>, <b>small</b>, <b>medium</b>, <b>large</b>, <b>x-large</b> e <b>xx-large</b> são equivalentes a extra extra pequeno, extra pequeno, pequeno, médio, grande, extra grande e extra extra grande, vamos ver um exemplo desses valores aplicados ao elemento <b>h1</b>:
+            </p>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-6.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 6&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;h1 class=&quot;xx-small&quot;&gt;font-size xx-small&lt;/h1&gt;
+        &lt;h1 class=&quot;x-small&quot;&gt;font-size x-small&lt;/h1&gt;
+        &lt;h1 class=&quot;small&quot;&gt;font-size small&lt;/h1&gt;
+        &lt;h1 class=&quot;medium&quot;&gt;font-size medium&lt;/h1&gt;
+        &lt;h1 class=&quot;large&quot;&gt;font-size large&lt;/h1&gt;
+        &lt;h1 class=&quot;x-large&quot;&gt;font-size x-large&lt;/h1&gt;
+        &lt;h1 class=&quot;xx-large&quot;&gt;font-size xx-large&lt;/h1&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset "utf-8";
+
+.xx-small {
+    font-size: xx-small;
+}
+
+.x-small {
+    font-size: x-small;
+}
+
+.small {
+    font-size: small;
+}
+
+.medium {
+    font-size: medium;
+}
+
+.large {
+    font-size: large;
+}
+
+.x-large {
+    font-size: x-large;
+}
+
+.xx-large {
+    font-size: xx-large;
+}
+
+.smaller {
+    font-size: smaller;
+}
+
+.larger {
+    font-size: larger;
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="250" src="iframe/exemplo-fontes-6.html"></iframe>
+
+            <p>
+                Os valores <b>smaller</b> e <b>larger</b> são equivalentes a menor que e a maior que, esse <b>que</b> é relativo ao elemento pai, então uma <b>div</b> com um <b>font-size</b> de 28 pixels, sua <b>div</b> filha com <b>font-size</b>  com valor <b>smaller</b> será menor que 28 pixels e sua <b>div</b> filha com <b>font-size</b> com valor <b>larger</b> será maior que 28 pixels.
+            </p>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-7.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 7&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;div class=&quot;pai&quot;&gt;
+            &lt;p&gt;font-size com 28 pixels da div pai&lt;/p&gt;
+            &lt;div class=&quot;filha-1&quot;&gt;
+                &lt;p&gt;font-size smaller da div filha&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;filha-2&quot;&gt;
+                &lt;p&gt;font-size larger da div filha&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset "utf-8";
+
+.pai {
+    font-size: 28px;
+}
+
+.filha-1 {
+    font-size: smaller;
+}
+
+.filha-2 {
+    font-size: larger;
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="250" src="iframe/exemplo-fontes-7.html"></iframe>
+
+            <p>
+                O valor em <b>px</b> (<b>pixel</b>) é equivalente ao menor ponto visível na tela, provavelmente seja o valor para tamanho mais utilizado na Internet, um <b>font-size</b> de 14px quer dizer que a fonte terá 14 <b>pixels</b> de altura e o tamanho desse <b>pixel</b> vai variar conforme o dispositivo e a tela em que será exibido. Veja um exemplo de um <b>zoom</b> da letra <b>a</b> com 14 <b>pixels</b> de altura:
+            </p>
+
+            <figure>
+                <img src="img/a-pixel.png" alt="Zoom da letra a em pixels" title="Zoom da letra a em pixels">
+            </figure>
+
+            <p>
+                O valor em <b>em</b> é equivalente a 100% do tamanho da sua tag pai, por exemplo, se na tag <b>body</b> for atribuído um font-size de valor 14px, e nas tags filhas de <b>body</b> for atribuído um <b>font-size</b> de <b>1.5em</b>, esse valor é equivalente a 21px, ou seja 14 X 1.5.
+            </p>
+
+            <p>
+                Vamos fazer um exemplo com 3 <b>divs</b>, uma dentro da outra, onde o pai da primeira <b>div</b> é a tag <b>body</b>, o pai da segunda <b>div</b> é a tag da <b>div1</b> e o pai da terceira <b>div</b> é a tag da <b>div2</b>. Em cada <b>div</b> vamos adicionar a propriedade <b>class</b> com o valor <b>em</b>.
+            </p>
+
+            <p>
+                No arquivo <b>css</b> vamos adicionar no seletor <b>body</b> a propriedade <b>font-size</b> com o valor 14 pixels. No seletor <b>.em</b> vamos adicionar a propriedade <b>font-size</b> com o valor <b>1.5em</b>.
+            </p>
+
+            <p>
+                Na primeira <b>div</b> o valor do <b>font-size</b> vai ser equivalente a 21px, que é 1.5 X 14px, pois o elemento pai da primeira <b>div</b>, que é a tag <b>body</b>, tem o valor do <b>font-size</b> de 14px.
+            </p>
+
+            <p>
+                Na segunda <b>div</b> o valor do <b>font-size</b> vai ser equivalente a 31.5px, que é 1.5 X 21px, pois o elemento pai da segunda <b>div</b>, que é a tag da primeira <b>div</b>, tem o valor do <b>font-size</b> de 21px.
+            </p>
+
+            <p>
+                Na terceira <b>div</b> o valor do <b>font-size</b> vai ser equivalente a 47.25px, que é 1.5 X 31.5px, pois o elemento pai da terceira <b>div</b>, que é a tag da segunda <b>div</b>, tem o valor do <b>font-size</b> de 31.5px.
+            </p>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-8.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 8&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;div class=&quot;em&quot;&gt;
+            &lt;p&gt;Teste em 1&lt;/p&gt;
+            &lt;div class=&quot;em&quot;&gt;
+                &lt;p&gt;Teste em 2&lt;/p&gt;
+                &lt;div class=&quot;em&quot;&gt;
+                    &lt;p&gt;Teste em 3&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset “utf-8”;
+
+body {
+    font-size: 14px;
+}
+
+.em {
+    font-size: 1.5em;
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="300" src="iframe/exemplo-fontes-8.html"></iframe>
+
+            <p>
+                O valor em <b>rem</b> é equivalente a 100% do tamanho da tag <b>root</b> (raiz), ou seja, da tag <b>html</b>.
+            </p>
+
+            <p>
+                Vamos fazer o mesmo exemplo acima mas com o valor da <b>class</b> como <b>rem</b> e no arquivo <b>css</b> vamos adicionar no seletor <b>html</b> a propriedade <b>font-size</b> com o valor 18px e vamos adicionar no seletor <b>.rem</b> a propriedade <b>font-size</b> com o valor 1.5rem.
+            </p>
+
+            <p>
+                Note que todas as 3 <b>divs</b> tem o mesmo tamanho de fonte, pois o <b>rem</b> leva em consideração o valor da tag <b>raiz</b>, ou seja, leva em consideração o valor da tag <b>html</b>, que é 18px, então as 3 <b>divs</b> tem o <b>font-size</b> com o valor equivalente a 27px, que é 1.5 X 18px.
+            </p>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-9.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 9&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;div class=&quot;rem&quot;&gt;
+            &lt;p&gt;Teste rem 1&lt;/p&gt;
+            &lt;div class=&quot;rem&quot;&gt;
+                &lt;p&gt;Teste rem 2&lt;/p&gt;
+                &lt;div class=&quot;rem&quot;&gt;
+                    &lt;p&gt;Teste rem 3&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset “utf-8”;
+
+html {
+    font-size: 18px;
+}
+
+.rem {
+    font-size: 1.5rem;
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="250" src="iframe/exemplo-fontes-9.html"></iframe>
+
+            <p>
+                O valor em <b>%</b> (<b>por cento</b>) é relativo ao valor do <b>font-size</b> do seu elemento pai, por exemplo, numa <b>div</b> com <b>font-size</b> de 16px e dentro dela tivermos um parágrafo com o valor do <b>font-size</b> de 150%, esse valor é equivalente a 24px.
+            </p>
+
+            <p>
+                O valor de <b>1ch</b> é equivalente a largura do caracter <b>0</b> (<b>zero</b>) da fonte escolhida, portanto esse valor é variável conforme a fonte. Normalmente é utilizada para indentação de parágrafos.
+            </p>
+
+            <p>
+                Os valores <b>vw</b>, <b>vh</b>, <b>vmin</b> e <b>vmax</b> são relativos ao valor do <b>viewport</b>. <b>Viewport</b> é a parte visível da página html na tela do dispositivo, que pode ser um monitor, a tela de um <em>notebook</em>, um <em>smartphone</em>, sem contar com a parte não visível se rolarmos a barra de rolagem, portanto se redimensionarmos a janela do navegador diminuindo o seu tamanho, o tamanho do <b>viewport</b> será menor.
+            </p>
+
+            <p>
+                O valor <b>vw</b> (<b>viewport width</b>) é equivalente a 1/100 (um centésimo) da largura do <b>viewport</b>, por exemplo, se a largura do <b>viewport</b> for 1200px, <b>1vw</b> é equivalente a 12px.
+            </p>
+
+            <p>
+                O valor <b>vh</b> (<b>viewport height</b>) é equivalente a 1/100 (um centésimo) da altura do <b>viewport</b>, por exemplo, se a altura do <b>viewport</b> for 960px, <b>1vh</b> é equivalente a 9.6px.
+            </p>
+
+            <p>
+                O valor <b>vmin</b> e <b>vmax</b> são equivalentes a 1/100 (um centésimo) da altura ou da largura do <b>viewport</b>, o <b>vmin</b> usa o menor valor entre o <b>width</b> e o <b>height</b> do <b>viewport</b> e o <b>vmax</b> usa o maior valor entre o <b>width</b> e <b>height</b> do <b>viewport</b>, por exemplo, se a largura do <b>viewport</b> for 1200px e a altura do <b>viewport</b> for 800px, <b>1vmin</b> é equivalente a 8px e <b>1vmax</b> é equivalente a 12px, e se a largura do <b>viewport</b> for 720px e a altura do <b>viewport</b> for 968px, <b>1vmin</b> é equivalente a 7.2px e <b>1vmax</b> é equivalente a 9.68px.<b></b>
+            </p>
+
+            <p>
+                Vamos ver um exemplo com o valor de <b>10vw</b>, <b>10vh</b>, <b>10vmin</b> e <b>10vmax</b>, redimensione a tela do seu navegador, aumentando e diminuindo a altura e a largura da janela e veja que o tamanho das fontes mudam conforme o tamanho do <b>viewport</b>.
+            </p>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-10.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 10&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+    &lt;p class=&quot;vw&quot;&gt;font-size: 10vw&lt;/p&gt;
+    &lt;p class=&quot;vh&quot;&gt;font-size: 10vh&lt;/p&gt;
+    &lt;p class=&quot;vmin&quot;&gt;font-size: 10vmin&lt;/p&gt;
+    &lt;p class=&quot;vmax&quot;&gt;font-size: 10vmax&lt;/p&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset “utf-8”;
+
+p {
+    margin: 0;
+}
+
+.vw {
+    font-size: 10vw;
+}
+
+.vh {
+    font-size: 10vh;
+}
+
+.vmin {
+    font-size: 10vmin;
+}
+
+.vmax {
+    font-size: 10vmax;
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" id="vh" name="interno" width="100%" height="400" src="iframe/exemplo-fontes-10.html"></iframe>
+
+            <p>
+                Note que nesse exemplo o <b>viewport</b> levado em consideração é da janela do <b>iframe</b>, do retângulo branco onde estão as letras. Se quiser testar em tela cheia acesse essa <a class="link-externo" href="https://aprendahtml.github.io/iframe/exemplo-fontes-10.html" target="_blank">página</a>.
+            </p>
+
+            <p>
+                O valor de <b>1ex</b> é equivalente a altura do caracter <b>x</b> (<b>xis minúsculo</b>) da fonte utilizada, portanto esse valor é variável conforme a fonte utilizada.
+            </p>
+
+            <p>
+                O valor de <b>1pt</b> (<b>ponto</b>) é equivalente a 1/72in (<b>polegadas</b>).
+            </p>
+
+            <p>
+                Os valores em <b>in</b> (<b>polegada</b>), <b>cm</b> (<b>centímetro</b>) e <b>mm</b> (<b>milímetro</b>) é o mesmo do sistema métrico.
+            </p>
+
+            <p>
+                O valor de <b>1pc</b> (<b>pica</b>) é equivalente a 1/6in (<b>polegadas</b>).
+            </p>
+
+            </article>
+
+            <article>
+
+            <h2 id="font-style">Propriedade font-style</h2>
+
+            <p>
+                A propriedade <b>font-style</b> aplica um estilo à fonte, que pode receber 3 valores: <b>normal</b>, <b>italic</b> (itálico) e <b>oblique</b> (oblíqua).
+            </p>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-11.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 11&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;h1 class=&quot;normal&quot;&gt;font-style: normal;&lt;/h1&gt;
+        &lt;h1 class=&quot;italic&quot;&gt;font-style: italic;&lt;/h1&gt;
+        &lt;h1 class=&quot;oblique&quot;&gt;font-style: oblique;&lt;/h1&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset “utf-8”;
+
+.normal {
+    font-style: normal;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.oblique {
+    font-style: oblique;
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="220" src="iframe/exemplo-fontes-11.html"></iframe>
+
+            </article>
+
+            <article>
+
+            <h2 id="font-weight">Propriedade font-weight</h2>
+
+            <p>
+                A propriedade <b>font-weight</b> aplica um peso à fonte, peso nesse caso, se refere ao <b>negrito</b> na fonte. O <b>font-weight</b> pode receber os seguintes valores:
+            </p>
+
+            <code><pre>
+font-weight: normal;
+font-weight: bold;
+font-weight: bolder;
+font-weight: lighter;
+font-weight: 100;
+font-weight: 200;
+font-weight: 300;
+font-weight: 400;
+font-weight: 500;
+font-weight: 600;
+font-weight: 700;
+font-weight: 800;
+font-weight: 900;</pre></code>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-12.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 12&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;h3 class=&quot;normal&quot;&gt;font-weight: normal;&lt;/h3&gt;
+        &lt;h3 class=&quot;bold&quot;&gt;font-weight: bold;&lt;/h3&gt;
+        &lt;h3 class=&quot;bolder&quot;&gt;font-weight: bolder;&lt;/h3&gt;
+        &lt;h3 class=&quot;lighter&quot;&gt;font-weight: lighter;&lt;/h3&gt;
+        &lt;h3 class=&quot;w-100&quot;&gt;font-weight: 100;&lt;/h3&gt;
+        &lt;h3 class=&quot;w-200&quot;&gt;font-weight: 200;&lt;/h3&gt;
+        &lt;h3 class=&quot;w-300&quot;&gt;font-weight: 300;&lt;/h3&gt;
+        &lt;h3 class=&quot;w-400&quot;&gt;font-weight: 400;&lt;/h3&gt;
+        &lt;h3 class=&quot;w-500&quot;&gt;font-weight: 500;&lt;/h3&gt;
+        &lt;h3 class=&quot;w-600&quot;&gt;font-weight: 600;&lt;/h3&gt;
+        &lt;h3 class=&quot;w-700&quot;&gt;font-weight: 700;&lt;/h3&gt;
+        &lt;h3 class=&quot;w-800&quot;&gt;font-weight: 800;&lt;/h3&gt;
+        &lt;h3 class=&quot;w-900&quot;&gt;font-weight: 900;&lt;/h3&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset “utf-8”;
+
+.normal {
+    font-weight: normal;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+.lighter {
+    font-weight: lighter;
+}
+
+.w-100 {
+    font-weight: 100;
+}
+
+.w-200 {
+    font-weight: 200;
+}
+
+.w-300 {
+    font-weight: 300;
+}
+
+.w-400 {
+    font-weight: 400;
+}
+
+.w-500 {
+    font-weight: 500;
+}
+
+.w-600 {
+    font-weight: 600;
+}
+
+.w-700 {
+    font-weight: 700;
+}
+
+.w-800 {
+    font-weight: 800;
+}
+
+.w-900 {
+    font-weight: 900;
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="600" src="iframe/exemplo-fontes-12.html"></iframe>
+
+            </article>
+
+            <article>
+
+            <h2 id="font-variant">Propriedade font-variant</h2>
+
+            <p>
+                A propriedade <b>font-variant</b> pode receber 2 valores, <b>normal</b>, e <b>small-caps</b>, que transforma todos os caracteres minúsculos em caracteres maiúsculos mas com a mesma altura do caracter minúsculo, esse efeito é chamado de <b><em>versalete</em></b>.
+            </p>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-13.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 13&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;h2 class=&quot;normal&quot;&gt;Fonte com font-variant Normal&lt;/h2&gt;
+        &lt;h2 class=&quot;small-caps&quot;&gt;Fonte com font-variant Small-Caps&lt;/h2&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset “utf-8”;
+
+.normal {
+    font-variant: normal;
+}
+
+.small-caps {
+    font-variant: small-caps;
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="150" src="iframe/exemplo-fontes-13.html"></iframe>
+
+            </article>
+
+            <article>
+
+            <h2 id="text-indent">Propriedade text-indent</h2>
+
+            <p>
+                A propriedade <b>text-indent</b> aplica uma <b>indentação</b> à primeira linha de um parágrafo. Vamos ver um exemplo com 3 parágrafos, o primeiro com o <b>text-indent</b> com valor de 10px o segundo com o valor de 20px e o terceiro com o valor de 30px.
+            </p>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-14.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 14&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;p class=&quot;ti-1&quot;&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/p&gt;
+        
+        &lt;p class=&quot;ti-2&quot;&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/p&gt;
+        
+        &lt;p class=&quot;ti-3&quot;&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/p&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset “utf-8”;
+
+.ti-1 {
+    text-indent: 10px;
+}
+
+.ti-2 {
+    text-indent: 20px;
+}
+
+.ti-3 {
+    text-indent: 30px;
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="250" src="iframe/exemplo-fontes-14.html"></iframe>
+
+            </article>
+
+            <article>
+
+            <h2 id="text-align">Propriedade text-align</h2>
+
+            <p>
+                 A propriedade <b>text-align</b> aplica um alinhamento ao texto conforme o seu valor, <b>right</b> (alinha o texto à direita), <b>left</b> (alinha o texto à esquerda), <b>center</b> (alinha o texto ao centro, centraliza o texto) e <b>justify</b> (alinha o texto à direita e à esquerda ao mesmo tempo, justifica o texto). Se não for definido um valor para o <b>text-align</b>, é aplicado o valor <b>left</b> como padrão.
+            </p>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-15.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 15&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;h2&gt;text-align: right;&lt;/h2&gt;
+
+        &lt;p class=&quot;right&quot;&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/p&gt;
+
+        &lt;h2&gt;text-align: left;&lt;/h2&gt;
+
+        &lt;p class=&quot;left&quot;&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/p&gt;
+
+        &lt;h2&gt;text-align: center;&lt;/h2&gt;
+
+        &lt;p class=&quot;center&quot;&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/p&gt;
+
+        &lt;h2&gt;text-align: justify;&lt;/h2&gt;
+
+        &lt;p class=&quot;justify&quot;&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/p&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset “utf-8”;
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.justify {
+    text-align: justify;
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="550" src="iframe/exemplo-fontes-15.html"></iframe>
+
+            </article>
+
+            <article>
+
+            <h2 id="text-decoration">Propriedade text-decoration</h2>
+
+            <p>
+                A propriedade <b>text-decoration</b> aplica uma decoração ao texto conforme o seu valor, <b>underline</b> (aplica uma linha abaixo do texto), <b>overline</b> (aplica uma linha acima do texto), <b>line-through</b> (aplica uma linha no meio do texto) e <b>none</b> (deleta todas as decorações do texto).
+            </p>
+
+            <p>
+                Logo após a definição da posição da linha do <b>text-decoration</b> podemos definir uma <b>cor</b> para essa linha e ainda podemos definir um <b>estilo</b> para essa linha, que pode receber os seguintes valores: <b>solid</b> (que é o valor padrão), <b>double</b>, <b>dotted</b>, <b>dashed</b> e <b>wavy</b>.
+            </p>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-16.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 16&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;h2 class=&quot;underline&quot;&gt;text-decoration: underline;&lt;/h2&gt;
+        &lt;h2 class=&quot;overline&quot;&gt;text-decoration: overline;&lt;/h2&gt;
+        &lt;h2 class=&quot;line-through&quot;&gt;text-decoration: line-through;&lt;/h2&gt;
+        &lt;h2 class=&quot;uo&quot;&gt;text-decoration: underline overline;&lt;/h2&gt;
+        &lt;h2 class=&quot;uol&quot;&gt;text-decoration: underline overline line-through;&lt;/h2&gt;
+        &lt;h2 class=&quot;cor&quot;&gt;text-decoration: underline #f00;&lt;/h2&gt;
+        &lt;h2 class=&quot;double&quot;&gt;text-decoration: line-through double;&lt;/h2&gt;
+        &lt;h2 class=&quot;dotted&quot;&gt;text-decoration:  underline overline dotted;&lt;/h2&gt;
+        &lt;h2 class=&quot;dashed&quot;&gt;text-decoration: underline dashed;&lt;/h2&gt;
+        &lt;h2 class=&quot;wavy&quot;&gt;text-decoration: underline #ff0 wavy;&lt;/h2&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset “utf-8”;
+
+.underline {
+    text-decoration: underline;
+}
+
+.overline {
+    text-decoration: overline;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.uo {
+    text-decoration: underline overline;
+}
+
+.uol {
+    text-decoration: underline overline line-through;
+}
+
+.cor {
+    text-decoration: underline #f00;
+}
+
+.double {
+    text-decoration: line-through double;
+}
+
+.dotted {
+    text-decoration:  underline overline dotted;
+}
+
+.dashed {
+    text-decoration: underline dashed;
+}
+
+.wavy {
+    text-decoration: underline #ff0 wavy;
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="550" src="iframe/exemplo-fontes-16.html"></iframe>
+
+            </article>
+
+            <article>
+
+            <h2 id="text-transform">Propriedade text-transform</h2>
+
+            <p>
+                A propriedade <b>text-transform</b> aplica uma <b>capitalização</b> (transformar em maiúscula) ao texto, independente de como o texto foi escrito no código html. O <b>text-transform</b> aceita os seguintes valores: <b>uppercase</b> (transforma todas as letras em maiúsculas), <b>lowercase</b> (transforma todas as letras em minúsculas), <b>capitalize</b> (transforma só a primeira letra de cada palavra em maiúscula) e <b>none</b> (deleta todas as transformações do texto).
+            </p>
+
+            <p>
+                Vale lembrar que <b>semanticamente</b>, não é correto escrever palavras em maiúsculas no arquivo html, somente no caso de siglas, se vocẽ quiser mostrar palavras em maiúsculas, o correto é escrevê-la em minúscula, ou capitalizada (somente a primeira letra em maiúscula) no arquivo html e transformá-la em maiúscula no arquivo <b>css</b> através da propriedade <b>text-transform</b> com o valor <b>uppercase</b>.
+            </p>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-17.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 17&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;h2 class=&quot;up&quot;&gt;Exemplo text-transform Uppercase&lt;/h2&gt;
+        &lt;h2 class=&quot;lo&quot;&gt;Exemplo text-transform Lowercase&lt;/h2&gt;
+        &lt;h2 class=&quot;ca&quot;&gt;Exemplo text-transform Capitalize&lt;/h2&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset “utf-8”;
+
+.up {
+    text-transform: uppercase;
+}
+
+.lo {
+    text-transform: lowercase;
+}
+
+.ca {
+    text-transform: capitalize;
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="200" src="iframe/exemplo-fontes-17.html"></iframe>
+
+            </article>
+
+            <article>
+
+            <h2 id="text-shadow">Propriedade text-shadow</h2>
+
+            <p>
+                A propriedade <b>text-shadow</b> aplica uma sombra ao texto, pode ser passado 4 valores ao <b>text-shadow</b>, o primeiro valor determina o deslocamento horizontal, sendo o valor positivo o deslocamento é para a direita e o valor negativo o deslocamento é para a esquerda, o segundo valor determina o deslocamento vertical, sendo o valor positivo o deslocamento é para baixo e o valor negativo o deslocamento é para cima, o terceiro valor determina o <b>blur radius</b>, que é o raio de desfoque da sombra, esse valor é opcional e se não for usado a sombra será opaca, o quarto valor determina a cor da sombra, esse valor é opcional e se não for usado a sombra terá a mesma cor da fonte. Para aplicar mais de uma sombra ao texto é só separar os valores das sombras com vírgula (<b>,</b>).
+            </p>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-18.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 18&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;h2 class=&quot;tx-1&quot;&gt;text-shadow: 4px 4px;&lt;/h2&gt;
+        &lt;h2 class=&quot;tx-2&quot;&gt;text-shadow: 2px 2px 3px #f00;&lt;/h2&gt;
+        &lt;h2 class=&quot;tx-3&quot;&gt;text-shadow: -2px -2px 3px #f00;&lt;/h2&gt;
+        &lt;h2 class=&quot;tx-4&quot;&gt;text-shadow: 8px 20px #f0f, -8px -20px #f00;&lt;/h2&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset “utf-8”;
+
+.tx-1 {
+    text-shadow: 4px 4px;
+}
+
+.tx-2 {
+    text-shadow: 2px 2px 3px #f00;
+}
+
+.tx-3 {
+    text-shadow: -2px -2px 3px #f00;
+}
+
+.tx-4 {
+    text-shadow: 8px 20px #f0f, -8px -20px #f00;
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="250" src="iframe/exemplo-fontes-18.html"></iframe>
+
+            </article>
+
+            <article>
+
+            <h2 id="word-spacing">Propriedade word-spacing</h2>
+
+            <p>
+                A propriedade <b>word-spacing</b> aplica um espaçamento entre as palavras, se o valor passado for negativo o espaçamento entre as palavras é diminuído.
+            </p>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-19.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 19&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;h2&gt;Texto sem word-spacing&lt;/h2&gt;
+        &lt;h2 class=&quot;ws-1&quot;&gt;Texto com word-spacing de 20 pixels&lt;/h2&gt;
+        &lt;h2 class=&quot;ws-2&quot;&gt;Texto com word-spacing de -5 pixels&lt;/h2&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset “utf-8”;
+
+.ws-1 {
+    word-spacing: 20px;
+}
+
+.ws-2 {
+    word-spacing: -5px;
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="200" src="iframe/exemplo-fontes-19.html"></iframe>
+
+            </article>
+
+            <article>
+
+            <h2 id="letter-spacing">Propriedade letter-spacing</h2>
+
+            <p>
+                A propriedade <b>letter-spacing</b> aplica um espaçamento entre as letras de um texto (<b>tracking</b>), a distância entre as letras é passada através do valor, exemplo, <b>letter-spacing</b>: 3px; aplica um espaçamento de 3 pixels entre as letras. Para aproximar as letras use um valor negativo, por exemplo, <b>letter-spacing</b>: -2px;.
+            </p>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-20.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 20&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;h2&gt;Texto sem letter-spacing&lt;/h2&gt;
+        &lt;h2 class=&quot;ls-1&quot;&gt;Texto com letter-spacing de 3 pixels&lt;/h2&gt;
+        &lt;h2 class=&quot;ls-2&quot;&gt;Texto com letter-spacing de -2 pixels&lt;/h2&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset “utf-8”;
+
+.ls-1 {
+    letter-spacing: 3px;
+}
+
+.ls-2 {
+    letter-spacing: -2px;
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="200" src="iframe/exemplo-fontes-20.html"></iframe>
+
+            </article>
+
+            <article>
+
+            <h2 id="line-height">Propriedade line-height</h2>
+
+            <p>
+                A propriedade <b>line-height</b> aplica um espaçamento entre as linhas de um texto.
+            </p>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-21.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 21&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;h3&gt;Parágrafo sem line-height:&lt;/h3&gt;
+
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/p&gt;
+
+        &lt;h3&gt;Parágrafo com line-height de 30 pixels:&lt;/h3&gt;
+
+        &lt;p class=&quot;lh&quot;&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/p&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset “utf-8”;
+
+.lh {
+    line-height: 30px;
+}</pre></code>
+
+            <p><b>Resultado no navegador</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="300" src="iframe/exemplo-fontes-21.html"></iframe>
+
+            </article>
+
+            <article>
+
+            <h2 id="white-space">Propriedade white-space</h2>
+
+            <p>
+                A propriedade <b>white-space</b> aplica um valor aos espaços em branco e as tabulações do texto. O <b>white-space</b> pode receber os seguintes valores com as seguintes aplicações:
+            </p>
+
+            <p>
+                <b>white-space: normal;</b>: mais de um espaço em branco, tabulação e quebra de linha serão ignorados pelo navegador, o texto será quebrado ao atingir o limite do <b>container</b> e o restante do texto será exibido na linha de baixo.
+            </p>
+            
+            <p>
+                <b>white-space: nowrap;</b>: mais de um espaço em branco, tabulação e quebra de linha serão ignorados pelo navegador, o texto não será quebrado ao atingir o limite do <b>container</b> e será exibido todo em uma linha.
+            </p>
+            
+            <p>
+                <b>white-space: pre;</b>: mais de um espaço em branco, tabulação e quebra de linha serão exibidos pelo navegador, o texto não será quebrado ao atingir o limite do <b>container</b> e será exibido todo em uma linha.
+            </p>
+            
+            <p>
+                <b>white-space: pre-wrap;</b>: mais de um espaço em branco, tabulação e quebra de linha serão exibidos pelo navegador, o texto será quebrado ao atingir o limite do <b>container</b> e o restante do texto será exibido na linha de baixo.
+            </p>
+            
+            <p>
+                <b>white-space: pre-line;</b>: mais de um espaço em branco e tabulação serão ignorados pelo navegador, quebras de linha serão exibidos pelo navegador, o texto será quebrado ao atingir o limite do <b>container</b> e o restante do texto será exibido na linha de baixo.
+            </p>
+
+            <p>
+                Vamos ver um exemplo com os 5 valores do <b>white-space</b> em um <b>container</b> pequeno para entendermos melhor:
+            </p>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-22.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 22&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;div class=&quot;ws-1&quot;&gt;
+            &lt;p&gt;
+                    white-space: normal;
+                Com o valor      normal, os múltiplos espaços em branco, as tabulações e as quebras de linha serão ignorados pelo navegador e quando o texto chegar ao limite do container ele será quebrado e continuará na linha de baixo.
+            &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;ws-2&quot;&gt;
+            &lt;p&gt;
+                    white-space: nowrap;
+                Espaços, tabulações e quebras serão ignorados e não tem quebra de linha, ultrapassando o limite do container.
+            &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;ws-3&quot;&gt;
+            &lt;p&gt;
+                    white-space: pre;
+                Espaços, tabulações e quebras serão exibidos e não tem quebra de linha, ultrapassando o limite do container.
+        &lt;/div&gt;
+
+        &lt;div class=&quot;ws-4&quot;&gt;
+            &lt;p&gt;
+                    white-space: pre-wrap;
+                Com o valor      pre-wrap, os múltiplos espaços em branco, as tabulações e as quebras de linha serão exibidos pelo navegador e quando o texto chegar ao limite do container ele será quebrado e continuará na linha de baixo.
+            &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;ws-5&quot;&gt;
+            &lt;p&gt;
+                    white-space: pre-line;
+                Com o valor      pre-line, os múltiplos espaços em branco, as tabulações serão ignorados e as quebras de linha serão exibidas pelo navegador e quando o texto chegar ao limite do container ele será quebrado e continuará na linha de baixo.
+            &lt;/p&gt;
+        &lt;/div&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset “utf-8”;
+
+.ws-1 {
+    width: 400px;
+    border: 2px solid #000;
+    margin: 20px;
+    white-space: normal;
+}
+
+.ws-2 {
+    width: 400px;
+    border: 2px solid #000;
+    margin: 20px;
+    white-space: nowrap;
+}
+
+.ws-3 {
+    width: 400px;
+    border: 2px solid #000;
+    margin: 20px;
+    white-space: pre;
+}
+
+.ws-4 {
+    width: 400px;
+    border: 2px solid #000;
+    margin: 20px;
+    white-space: pre-wrap;
+}
+
+.ws-5 {
+    width: 400px;
+    border: 2px solid #000;
+    margin: 20px;
+    white-space: pre-line;
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="900" src="iframe/exemplo-fontes-22.html"></iframe>
+
+            </article>
+
+            <article>
+
+            <h2 id="word-wrap">Propriedade word-wrap</h2>
+
+            <p>
+                A propriedade <b>word-wrap</b> aplica uma quebra de linha no meio da palavra quando essa palavra for maior que o <b>container</b>, o <b>word-wrap</b> pode receber 2 valores: <b>normal</b>, que não faz a quebra de linha no meio da palavra, nesse caso a palavra se for maior que o <b>container</b>, ela irá ultrapassar os limites do <b>container</b>, e <b>break-word</b> que faz a quebra de linha no meio da palavra na posição onde a letra chegar no limite do <b>container</b> continuando a escrever a palavra na linha de baixo.
+            </p>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-23.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 23&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;div&gt;
+            &lt;h3&gt;word-wrap: normal;&lt;/h3&gt;
+            &lt;p class=&quot;normal&quot;&gt;
+                Testando o word-wrap: normal; com palavras superhipermegagigagrandes como inconstitucionalissimamente e endereços da internet como https://aprendahtml.github.com.    
+            &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div&gt;
+            &lt;h3&gt;word-wrap: break-word;&lt;/h3&gt;
+            &lt;p class=&quot;break-word&quot;&gt;
+                Testando o word-wrap: break-word; com palavras superhipermegagigagrandes como inconstitucionalissimamente e endereços da internet como https://aprendahtml.github.com. 
+            &lt;/p&gt;
+        &lt;/div&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset “utf-8”;
+
+div {
+    width: 150px;
+    border: 2px solid #000;
+    margin: 20px;
+}
+
+.normal {
+    word-wrap: normal;
+}
+
+.break-word {
+    word-wrap: break-word;
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="650" src="iframe/exemplo-fontes-23.html"></iframe>
+
+            </article>
+
+            <article>
+
+            <h2 id="entities">&amp;nbsp; e &amp;shy;</h2>
+
+            <p> 
+                &amp;nbsp; (<b>non-breaking space</b>) e &amp;shy; (<b>soft hyphen</b>) são entidades html (<b>html entities</b>), o &amp;nbsp; aplica um espaço não quebrável, ou seja, as palavras entre esse espaço sempre estarão juntas mesmo se a página for redimensionada e o &amp;shy; se for necessário aplica uma quebra de linha com um hífen no meio da palavra onde ele foi inserido. Vamos ver um exemplo:
+            </p>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 24&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;div&gt;
+            &lt;p&gt;
+                Testando o non-&amp;nbsp;breaking&amp;nbsp;space.
+            &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div&gt;
+            &lt;p&gt;
+                Testando o soft hyphen com a palavra incons&amp;shy;titucio&amp;shy;nalis&amp;shy;simamente. 
+            &lt;/p&gt;
+        &lt;/div&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset “utf-8”;
+
+div {
+    width: 150px;
+    border: 2px solid #000;
+    margin: 20px;
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="250" src="iframe/exemplo-fontes-24.html"></iframe>
+
+            </article>
+
+            <article>
+
+            <h2 id="tags">Tags &lt;br&gt; &lt;wbr&gt; &lt;sub&gt; &lt;sup&gt; &lt;em&gt; &lt;b&gt;</h2>
+
+            <p>
+                A tag <b>&lt;br&gt;</b> só é aberta e aplica uma quebra de linha.
+            </p>
+
+            <p>
+                A tag <b>&lt;wbr&gt;</b> só é aberta e aplica uma quebra de linha no meio de uma palavra se for necessário.
+            </p>
+
+            <p>
+                A tag <b>&lt;sub&gt;</b> é aberta e fechada e aplica um subscrito.
+            </p>
+
+            <p>
+                A tag <b>&lt;sup&gt;</b> é aberta e fechada e aplica um sobrescrito.
+            </p>
+
+            <p>
+                A tag <b>&lt;em&gt;</b> é aberta e fechada e aplica uma ênfase, um itálico.
+            </p>
+
+            <p>
+                A tag <b>&lt;br&gt;</b> é aberta e fechada e aplica um negrito.
+            </p>
+
+            <p><b>Código html:</b></p>
+
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;exemplo-fontes-25.css&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Exemplo Fontes 25&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;div&gt;
+            &lt;p&gt;
+                O texto será quebrado aqui&lt;br&gt;
+                onde foi inserido a tag br e continua na linha de baixo.
+            &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div&gt;
+            &lt;p&gt;
+                Onde foi inserido a tag wbr é o possível local para a quebra de linha na palavra incons&lt;wbr&gt;titucio&lt;wbr&gt;nalis&lt;wbr&gt;simamente.
+            &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div&gt;
+            &lt;p&gt;
+                H&lt;sub&gt;2&lt;/sub&gt;O a tag sub fez o subscrito do caracter 2.
+            &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div&gt;
+            &lt;p&gt;
+                10m&lt;sup&gt;2&lt;/sup&gt; a tag sup fez o sobrescrito do caracter 2.
+            &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div&gt;
+            &lt;p&gt;
+                A tag &lt;em&gt;em&lt;/em&gt; aplica uma &lt;em&gt;ênfase&lt;/em&gt; ao texto selecionado.
+            &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div&gt;
+            &lt;p&gt;
+                A tag &lt;b&gt;b&lt;/b&gt; aplica um &lt;b&gt;negrito&lt;/b&gt; ao texto selecionado.
+            &lt;/p&gt;
+        &lt;/div&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+            <p><b>Código css:</b></p>
+
+            <code><pre>
+@charset “utf-8”;
+
+div {
+    width: 300px;
+    border: 2px solid #000;
+    margin: 20px;
+}</pre></code>
+
+            <p><b>Resultado no navegador:</b></p>
+
+            <iframe class="frame" name="interno" width="100%" height="600" src="iframe/exemplo-fontes-25.html"></iframe>
+
+            </article>
+
+            <div class="paginacao">
+                <a class="anterior" href="formularios.html"><< Anterior</a>
+                <a class="proxima" href="#">Próxima >></a>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+            var disqus_config = function () {
+            this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = document.title; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            
+            (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://aprenda-html.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+        </main>
+        <div class="clear"></div>
+        </div>
+        <footer>
+            <div class="rodape">
+                <a href="https://www.facebook.com/aprenda.html.10" target="_blank"><img class="rodape-logo" src="img/facebook.png" alt="Facebook Aprenda HTML" title="Facebook Aprenda HTML"></a>
+                <a href="https://twitter.com/html5_css3_js" target="_blank"><img class="rodape-logo" src="img/twitter.png" alt="Twitter Aprenda HTML" title="Twitter Aprenda HTML"></a>
+                <a href="https://github.com/aprendahtml/aprendahtml.github.io" target="_blank"><img class="rodape-logo" src="img/github.png" alt="GitHub Aprenda HTML" title="GitHub Aprenda HTML"></a>
+            </div>
+        </footer>
+        </div>
+        <script id="dsq-count-scr" src="//aprenda-html.disqus.com/count.js" async></script>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+@charset “utf-8”;
+
+.ti-1 {
+	text-indent: 10px;
+}
+
+.ti-2 {
+	text-indent: 20px;
+}
+
+.ti-3 {
+	text-indent: 30px;
+}

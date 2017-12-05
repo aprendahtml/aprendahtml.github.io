@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.pai {
+	font-size: 28px;
+}
+
+.filha-1 {
+	font-size: smaller;
+}
+
+.filha-2 {
+	font-size: larger;
+}
