@@ -308,6 +308,12 @@ figcaption {
 	text-align: center;
 }
 
+a:-webkit-any-link {
+    color: #fff;
+    cursor: auto;
+    text-decoration: none;
+}
+
 #vh {
 	max-height: 60vh; 
 }
